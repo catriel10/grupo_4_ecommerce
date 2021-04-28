@@ -12,12 +12,13 @@ https://www.bershka.com/
 https://www.pullandbear.com/ww/woman-n6417
 https://www.rapsodia.com.ar/
 https://www.zara.com/ar/
+https://malta.com.ar/
 
 
 Integrantes
 Francisco Puig: 37 años, adm de empresas, trabajo en la industria fintech liderando equipos de negocio y producto. 
 Catriel Basile: 
-Stefania An: 
+Stefania An: 22 años, estudiante de la carrera de Relaciones Internacionales. 
 
 
 
