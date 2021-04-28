@@ -15,7 +15,8 @@ Stefi:
 
 
 3- Buscar inspiración en referentes del mercado 5 sitios de referencia
-Benchmark: https://www.bershka.com/  
+Benchmark:
+https://www.bershka.com/  
 https://www.pullandbear.com/ww/woman-n6417
 https://www.rapsodia.com.ar/
 https://www.zara.com/ar/
