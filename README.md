@@ -1,4 +1,6 @@
-# grupo_4_ecommerce (☁️ https://github.com/catriel10/grupo_4_ecommerce.git)
+# grupo_4_ecommerce 
+
+(☁️ https://github.com/catriel10/grupo_4_ecommerce.git)
 
 🛍️ E-commerce para marca de ropa "brand-you". Plataforma para venta de indumentaria femenina ♀️ adolescente. Los productos son ropa de vestir por temporada. 
 
