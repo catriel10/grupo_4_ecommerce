@@ -7,20 +7,26 @@ Nuestros productos estan destinados a un publico de clase media-alta juvenil, qu
 
 3- Buscar inspiración en referentes del mercado 5 sitios de referencia
 Benchmark:
+
 Sitios de Referencia
 https://www.bershka.com/  
+
 https://www.pullandbear.com/ww/woman-n6417
+
 https://www.rapsodia.com.ar/
+
 https://www.zara.com/ar/
+
 https://www.indiastyle.com.ar/
+
 https://malta.com.ar/
 
 
 Integrantes
 Francisco Puig: 37 años, adm de empresas, trabajo en la industria fintech liderando equipos de negocio y producto. 
+
 Catriel Basile: 43 años, Ing. Industrial, Trabajo en ENEL (Distribucion Electrica), casado y con 2 hijos, fanatico de Independiente :smiling_imp:
-Stefania An: 
-Catriel Basile: 
+
 Stefania An: 22 años, estudiante de la carrera de Relaciones Internacionales. 
 
 
