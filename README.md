@@ -12,11 +12,12 @@ https://www.bershka.com/
 https://www.pullandbear.com/ww/woman-n6417
 https://www.rapsodia.com.ar/
 https://www.zara.com/ar/
+https://www.indiastyle.com.ar/
 
 
 Integrantes
 Francisco Puig: 37 años, adm de empresas, trabajo en la industria fintech liderando equipos de negocio y producto. 
-Catriel Basile: 
+Catriel Basile: 43 años, Ing. Industrial, Trabajo en ENEL (Distribucion Electrica), casado y con 2 hijos, fanatico de Independiente :smiling_imp:
 Stefania An: 
 
 
