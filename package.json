@@ -1,0 +1,23 @@
+{
+  "name": "grupo_4_ecommerce",
+  "version": "1.0.0",
+  "description": "(☁️ https://github.com/catriel10/grupo_4_ecommerce.git)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/catriel10/grupo_4_ecommerce.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/catriel10/grupo_4_ecommerce/issues"
+  },
+  "homepage": "https://github.com/catriel10/grupo_4_ecommerce#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}

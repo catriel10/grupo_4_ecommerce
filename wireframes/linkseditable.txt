@@ -1,5 +1,0 @@
-home: https://wireframe.cc/pro/pp/825201b3a436475
-producto: https://wireframe.cc/pro/pp/e4fdcc121436476
-Descipcion produc: https://wireframe.cc/pro/pp/43712b2c4436478 
-carrito: https://wireframe.cc/pro/pp/17cd87a83436815
-log in: https://wireframe.cc/pro/pp/8ff8c35c6436480
