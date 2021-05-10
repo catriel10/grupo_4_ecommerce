@@ -2,7 +2,7 @@
   "name": "grupo_4_ecommerce",
   "version": "1.0.0",
   "description": "(☁️ https://github.com/catriel10/grupo_4_ecommerce.git)",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
