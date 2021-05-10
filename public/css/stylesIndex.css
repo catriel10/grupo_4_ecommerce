@@ -4,24 +4,26 @@
     padding: 0px;}
    
     header {
-        background-color: black;
+        background-color: rgb(255, 224, 206);
         height: 100px;
         }
     .logo {
-            width: 10%;
-            display: flex;
-            padding: 5px;
-            float: left;
+      display:block;
+      width: 100px;
+      margin: 0px; 
+      padding: 0px;
+      float: left;
     }    
     
     .fa-shopping-cart {
-             color: white;
+             color: black;
              display: flex;
              padding: 5px;
              
     }
     
     body{
+      background-color: antiquewhite;
         flex: 1 1 30%;
         display: block;
         margin: 0 auto;
