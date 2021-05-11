@@ -2,31 +2,15 @@
     box-sizing: border-box;
     margin: 0px; 
     padding: 0px;}
-  
-  @media (min-width: 576px) {
-  
-  }
-  
-  @media (min-width: 768px) {
     
-  }
-  
-  @media (min-width: 992px) {
-  
-  }
-  
-  @media (min-width: 1200px) {
-    
-  }
-  
   header {
-  background-color: #EAC926;
+  background-color: #666666;
   padding: 20px;
   margin: auto;
   }
   
   body {
-    background-color: #EBEBEB;
+    background-color: #fff;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 12px;
@@ -188,4 +172,20 @@
     .descripcion {
       font-size: 16px;
       color: #666;
+    }
+
+    @media (min-width: 576px) {
+  
+    }
+    
+    @media (min-width: 768px) {
+      
+    }
+    
+    @media (min-width: 992px) {
+    
+    }
+    
+    @media (min-width: 1200px) {
+      
     }
