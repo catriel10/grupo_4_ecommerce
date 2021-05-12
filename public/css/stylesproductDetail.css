@@ -1,0 +1,29 @@
+header{
+    background-color:floralwhite;
+    height: 100px;
+}
+
+*{
+    box-sizing: border-box;
+    
+}
+
+main{
+    text-align: center;
+}
+
+
+.ropa{
+    
+    padding: 35px;
+    display: inline-block;
+    border: 2px solid beige;
+    width: 33%;
+    height: 495.33px;
+
+}
+
+footer{
+    background-color:floralwhite;
+    height: 100px;
+}
