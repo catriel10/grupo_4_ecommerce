@@ -10,15 +10,19 @@ console.log ("Mi servidor GRUPO 4 esta funcionando en port 4444")
 });
 
 
-app.get('/', (req, res) => {
+app.get('/login', (req, res) => {
 
     res.sendFile(path.join(__dirname, '/views/src/login.html'));
-    });
+});
 
-    res.sendFile(path.join(__dirname + '/views/src/index.html'));
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/src/index.html'));
+});
+
     
 
 app.get('/productDetail', (req, res) => {
-    res.sendFile(path.join(__dirname + '/views/src/productDetail.html'));
+    res.sendFile(path.join(__dirname, '/views/src/productDetail.html'));
 });
 
