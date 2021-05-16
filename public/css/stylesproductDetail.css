@@ -1,29 +1,97 @@
-header{
-    background-color:floralwhite;
-    height: 100px;
-}
+
 
 *{
-    box-sizing: border-box;
-    
+    box-sizing: border-box; 
 }
 
 main{
     text-align: center;
 }
 
-
-.ropa{
-    
-    padding: 35px;
-    display: inline-block;
-    border: 2px solid beige;
+.diversos-productos{
     width: 33%;
-    height: 495.33px;
+    display: inline-block;
+}
+
+.cuadro-producto,.cuadro-producto .imagen{
+    position:relative
+}
+
+.cuadro-producto {
+    text-align:center;
+    border-radius:5px;
+    border: 2px solid beige;
+    z-index:1;
+    display:inline-block;
+    width: 400px;
+    transition:all 0.7s;
+}
+
+.cuadro-producto:hover{
+    box-shadow:grey;
+}
+
+.cuadro-producto .imagen a{
+    display:inline-block;
+}
+
+.cuadro-producto .imagen img{
+    width:100%;
+    height:100%;
 
 }
 
-footer{
-    background-color:floralwhite;
-    height: 100px;
+
+.cuadro-producto:hover .img1{
+    opacity:0.9
 }
+
+
+.cuadro-producto .producto{
+    padding:30px
+}
+
+.cuadro-producto .titulo{
+    font-size:15px;
+    font-weight:400;
+    text-transform:capitalize;
+    margin:0 0 7px;
+    transition:all 0.7s;
+}
+
+.cuadro-producto .titulo a{
+    color:rgb(7, 4, 4);
+}
+
+.cuadro-producto .titulo a:hover{
+    color:#16a085
+}
+
+.cuadro-producto .precio{
+    color:#040706;
+    font-size 19px;
+    margin:0 2px 15px 0;
+    display:block;
+}
+
+.cuadro-producto .add-carrito{
+    border:1px solid #2c2a2a;
+    display:inline-block;
+    padding:10px 20px;
+    color:rgb(250, 241, 241);
+    font-size:10px;
+    border-radius: 5px;
+    transition:all 0.5s;
+}
+
+.cuadro-producto:hover .add-carrito{
+    border:1px solid transparent;
+    background:#140504;
+    color:rgb(230, 223, 223);
+}
+
+.cuadro-producto .add-carrito:hover{
+    background-color:#505050;
+    box-shadow:0 0 10px rgba(0,0,0,.5)
+}
+
