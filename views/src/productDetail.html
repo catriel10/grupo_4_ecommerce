@@ -7,14 +7,39 @@ Como cliente quiero poder agregar fácilmente el producto a mi carrito para pode
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/stylesproductDetail.css">
-    <title>BrandYou - Producto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/stylesproductDetail.css">    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Una marca vanguardista para mujeres modernas con estilo propio. Brand-You adapta tendencias multiculturales y las fusiona creando un estilo único. Encontrá nuestra Colección en nuestro shop online.">
+    <title>BrandYou - Product Detail</title>
 </head>
-<body>
-    <header>
-        <a href="./"><img src="/img/logo-brand-you.png" alt="Logo Brand-You" class="logo" width="100px"></a> 
-    </header>
+<div class="header">
+    <img src="/img/logo-brand-you.png" alt="Logo">
+    <h1>NEW VIBES.STYLE.TRENDY</h1>
+    <i class="fas fa-search"></i>
+    <a href= "/login"><i class="fas fa-user-circle"></i></a>
+</div>
+
+  <!-- Navigation Bar -->
+  <nav>
+  <ul class="navbar">
+    <li><a href="#" class="active">Home</a></li>
+    <li class="dropdown">
+    <a href="#">Collection</a>
+    <ul class="dropdown-content">
+      <li><a href= "/productDetail">Verano</li></a>
+      <li><a href= "/productDetail">Invierno</li></a>
+      <li><a href= "/productDetail">Temporadas pasadas</li></a> 
+    </ul>	
+    </li>
+    <li><a href="#">Ofertas</a></li>
+    <li><a href= "/productDetail">Nuevos Productos</li></a>
+    <li><a href="#">Contactanos</a></li>
+    
+  </ul>
+  </nav>
 
 
 
@@ -138,5 +163,41 @@ Como cliente quiero poder agregar fácilmente el producto a mi carrito para pode
 </main>
     
 </body>
-<footer></footer>
+<footer class="footer-container">
+    <div class="footer-left">
+    <span class="logo">Brand You</span>
+    <p class="footer-links">
+    <a href="#">Home</a> &nbsp;
+    <a href="#">Blog</a> &nbsp;
+    <a href="#">Online Support</a>	&nbsp;
+    <a href="#">FAQ</a> 
+    </p>
+    <p class="footer-company-name">Brand You &copy; 2021</p>
+    </div>
+    <div class="footer-center">
+    <div>
+    <i class="fa fa-map-marker"></i>
+    <p><span>Abasto Shopping</span> BA, Arg</p>
+    </div>
+    <div>
+    <i class="fa fa-phone"></i>
+    <p>Telefono</p>
+    </div>
+    <div>
+    <i class="fa fa-envelope"></i>
+    <p><a href="mailto:support@company.com">support@Brand-You.com</a></p>
+    </div>
+    </div>
+<div class="footer-right">
+    <p class="footer-company-about">
+    <span>About the company</span>
+    Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+    </p>
+<div class="footer-icons">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    </div>
+</footer>
 </html>
