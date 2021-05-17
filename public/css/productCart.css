@@ -1,0 +1,397 @@
+/* ------------ Header------------------ */
+
+.header {
+	text-align:center;
+	padding: 10px;
+    background: #ffffff;
+    color: #000000;	
+}
+
+.header h1 {
+	font-size:34px;
+    font-family:'arizoniaregular', sans-serif;
+    font-weight:bold;
+    color: black;
+}
+.header p { 
+     font-size:28 px;
+     font-family:'arizoniaregular', sans-serif;
+     letter-spacing:0.8em;
+}
+body {
+    background: #ffffff;
+    font-family: verdana ,Tahoma , sans-serif;
+    margin: 0;
+  }
+
+h2{
+    text-align: center;
+    border-bottom:solid black;
+    width: 100%; 
+    padding: 10px
+ }
+ 
+
+ article{
+    border-bottom: solid 1px grey;
+ }
+ 
+     .cartProduct{
+        display:flex;
+        justify-content:start;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 5px;
+        box-sizing: border-box;
+     }
+ 
+    .cartProduct div{
+        margin: 10px
+    }
+             
+    
+    .imgProd{
+        width: 65px;
+         height: 65px;
+    }
+ 
+    .descripcion{
+        text-align: justify;
+    }
+ 
+    .producto{
+        font-weight: bold;
+    }
+ 
+     .detalleCompra{
+         display:flex;
+         justify-content:start;
+         flex-wrap: wrap;
+         width: 100%;
+         padding: 5px;
+         box-sizing: border-box;
+    }   
+ 
+
+        .detalleCompra div{
+            margin: 10px
+             }    
+         
+        
+             
+        .nombreEtiqueta{
+            font-weight: bold;
+            margin: 0px;
+            text-align: center;
+             }
+ 
+        .icono{
+            text-align: center;
+             }
+ 
+        .icono i{
+            color: #2B3A67;
+                     
+                 }
+ 
+ 
+ 
+ .etiquetaSecciones{
+     border-bottom:solid black;
+     margin: 10px 0px 25px 0px;
+     padding: 10px;
+ }
+ 
+ 
+     .datosEntrega{ 
+         width: 100%;
+     }
+     
+     .textoEntrega{
+         font-style: italic;
+     }
+ 
+
+     .formularioEntrega{
+         margin: 20px;
+         flex-wrap: wrap;
+     }
+ 
+       
+         .contenedorFormEntrega{
+             display: flex;
+             margin: 0px;
+             align-items: center;
+         }
+ 
+        
+             .contenedorFormEntrega label{
+             font-style: italic;
+             font-weight: bold;
+             }
+ 
+       
+             .botonFormularioEntrega{
+                 margin-right: 10px;
+                 margin-left: 10px;
+                 padding: 10px;
+             }
+     
+  
+         .contenedor-opciones{
+             display: block
+         }
+ 
+          
+             .opcion-entrega{
+                 margin-bottom: 10px;
+                 width: 100%;
+             }
+ 
+       
+             .errorValidacion{
+                 display: none;
+             }
+ 
+             .contenedor-opciones p{
+                 font-style: italic;
+             }
+ 
+          
+             .seleccionado{
+             width: 200px;
+             opacity: 0.5;
+             }
+ 
+        
+         .boton{
+          background-color: #2B3A67;   
+          color: white
+             
+     }
+ 
+ 
+
+  
+ .resumen-Compra{
+ 
+     display: block;
+     margin-bottom: 20px;
+     border: none;
+ }
+ 
+ .etiquetaResumenItem{
+ margin: 10px;
+ }
+     
+ .etiquetaResumenTotal{
+ margin: 10px;
+ font-weight: bold;
+ }
+ 
+ .contenedor-final{
+     display: flex;
+     justify-content: space-around;
+ 
+ }
+
+ /* ------------------------------------ Footer -----------------------------*/
+
+.footer-container{
+	background-color: #292c2f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 45px 40px;
+}
+
+.footer-container .footer-left,
+.footer-container .footer-center,
+.footer-container .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* ----------------- Footer caja width ( left center right ) ------------------ */
+
+.footer-container .footer-left{
+	width: 40%;
+}
+
+.footer-container .footer-center{
+	width: 35%;
+}
+
+.footer-container .footer-right{
+	width: 20%;
+}
+
+
+
+/* ------------ footer-left contenido ------------- */
+
+.footer-container h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+
+.footer-container h3 span{
+	color:  #5383d3;
+}
+
+.footer-container .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-container .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-container .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* -------------- Footer Center contentido--------------------- */
+
+
+
+.footer-container .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-container .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-container .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-container .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-container .footer-center p a{
+	color:  #5383d3;
+	text-decoration: none;;
+}
+
+
+/* ----------------------- Footer Right contentido---------------*/
+
+
+
+.footer-container .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-container .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-container .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-container .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+
+/* media queries 700px wide */
+@media screen and (max-width: 700px) {
+.main, .navbar {   
+    flex-direction: column;
+	margin-left: 0;
+}
+
+.slide1, .slide2 {padding:6px;}
+
+
+.main .right-div,
+.main .left-div 
+{margin-left: 0;}
+
+.line1 {font-size:18px;}
+
+.line2 {font-size:12px;}
+
+.line3 {font-size:10px;}
+
+.footer-container{font: bold 14px sans-serif;}
+
+.footer-container .footer-left,
+.footer-container .footer-center,
+.footer-container .footer-right{
+	display: block;
+	width: 100%;
+	margin-bottom: 40px;
+	text-align: center;
+	}
+
+.footer-container .footer-center i{
+	margin-left: 0;
+}
+ .left-div,
+ .right-div {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+  }
+ul.dropdown-content li {
+	font-size:12px;
+}
+
+ul li a {
+  padding: 15px 1px;
+}
+
+}
