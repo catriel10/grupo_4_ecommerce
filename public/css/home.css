@@ -126,7 +126,7 @@ ul.dropdown-content li {
 	
 .left-div {
   display: inline-block;
-  width: 48%;
+  width: 100%;
   padding: 10px;
   background-color: #ddd;
   border-radius: 3px;
@@ -137,7 +137,7 @@ ul.dropdown-content li {
 
 .right-div {
   display: inline-block;
-  width: 48%;
+  width: 100%;
   padding: 10px;
   background-color: #A55A94;
   border-radius: 3px;

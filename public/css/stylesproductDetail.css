@@ -1,22 +1,16 @@
+/* ------------ Header------------------ */
+
 .header {
 	text-align:center;
 	padding: 10px;
-    margin: 0px;
     background: #ffffff;
     color: #000000;	
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
 }
-.header img {
-    max-width: 17vw;
-}
+
 .header h1 {
-	font-size:4vw;
+	font-size:34px;
     font-family:'arizoniaregular', sans-serif;
     font-weight:bold;
-    
 }
 .header p { 
      font-size:28 px;
@@ -26,67 +20,70 @@
 
 
 
+/* ------------ Navegacion slider ------------------ */ 
 ul.navbar {
-  display: flex;
-  background-color:#292c2f;
-}
-
-ul {
-  list-style-type: none;
-  text-decoration:none;
-  margin: 0;
-  padding: 0;
-  text-align:center;
-}
-
-
-ul.navbar li:hover,
-ul.navbar li:active
-  {background-color:#414a4c;}
-
- .navbar .active {
-	background-color:#414a4c;
-    color: #ffffff;	
-}
- 
-ul.navbar li {
-  flex: 1;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  position: relative;
-  border: 2.4px solid #000000;
-  font-family: verdana ,Tahoma , sans-serif;
-  background-color: #292c2f;
-}
-
-ul li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 15px 5px;
-  text-decoration: none;
-}
-
-ul.dropdown-content {
-  position: absolute;
-  display: none;
-  z-index: 1;
-}
-
-ul.dropdown-content li {
-  width: 100%;
-  border: 0px solid black;
-  border-bottom: 2px solid #000000;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-  position: absolute;
-  width:100%;
-}
-
-
+    display: flex;
+    background-color:#292c2f;
+  }
+  
+  ul {
+    list-style-type: none;
+    text-decoration:none;
+    margin: 0;
+    padding: 0;
+    text-align:center;
+  }
+  
+  
+  ul.navbar li:hover,
+  ul.navbar li:active
+    {background-color:#414a4c;}
+  
+   .navbar .active {
+      background-color:#414a4c;
+      color: #ffffff;	
+  }
+   
+  ul.navbar li {
+    flex: 1;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    position: relative;
+    border: 2.4px solid #000000;
+    font-family: verdana ,Tahoma , sans-serif;
+    background-color: #292c2f;
+  }
+  
+  ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 5px;
+    text-decoration: none;
+  }
+  
+  ul.dropdown-content {
+    position: absolute;
+    display: none;
+    z-index: 1;
+  }
+  
+  ul.dropdown-content li {
+    width: 100%;
+    border: 0px solid black;
+    border-bottom: 2px solid #000000;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+    position: absolute;
+    width:100%;
+  }
+  /*------------------------------------------------------------------ */
+  
+  
+  
 
 
 
@@ -188,6 +185,7 @@ main{
 }
 
 
+/* ------------------------------------ Footer -----------------------------*/
 
 .footer-container{
 	background-color: #292c2f;
@@ -206,6 +204,8 @@ main{
 	vertical-align: top;
 }
 
+/* ----------------- Footer caja width ( left center right ) ------------------ */
+
 .footer-container .footer-left{
 	width: 40%;
 }
@@ -219,6 +219,8 @@ main{
 }
 
 
+
+/* ------------ footer-left contenido ------------- */
 
 .footer-container h3{
 	color:  #ffffff;
@@ -249,6 +251,10 @@ main{
 	font-weight: normal;
 	margin: 0;
 }
+
+/* -------------- Footer Center contentido--------------------- */
+
+
 
 .footer-container .footer-center i{
 	background-color:  #33383b;
@@ -288,6 +294,11 @@ main{
 }
 
 
+
+/* ----------------------- Footer Right contentido---------------*/
+
+
+
 .footer-container .footer-company-about{
 	line-height: 20px;
 	color:  #92999f;
@@ -325,54 +336,4 @@ main{
 	margin-bottom: 5px;
 }
 
-@media screen and (max-width: 700px) {
-.main, .navbar {   
-    flex-direction: column;
-	margin-left: 0;
-}
 
-.slide1, .slide2 {padding:6px;}
-
-
-.main .right-div,
-.main .left-div 
-{margin-left: 0;}
-
-.line1 {font-size:18px;}
-
-.line2 {font-size:12px;}
-
-.line3 {font-size:10px;}
-
-.footer-container{font: bold 14px sans-serif;}
-
-.footer-container .footer-left,
-.footer-container .footer-center,
-.footer-container .footer-right{
-	display: block;
-	width: 100%;
-	margin-bottom: 40px;
-	text-align: center;
-	}
-
-.footer-container .footer-center i{
-	margin-left: 0;
-}
- .left-div,
- .right-div {
-    max-width: 100%;
-    width: 100%;
-    display: block;
-  }
-ul.dropdown-content li {
-	font-size:12px;
-}
-
-ul li a {
-  padding: 15px 1px;
-}
-
-}
-
-.logo { font-size:18px;
-	color:#ffffff;}
