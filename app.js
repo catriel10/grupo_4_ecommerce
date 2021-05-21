@@ -3,9 +3,11 @@ const app = express ();
 const path = require ("path");
 const { pathToFileURL } = require("url");
 
+const port = process.env.PORT || 4444;
+
 app.use(express.static("public"))
 
-app.listen (4444, ()=>{
+app.listen (port, ()=>{
 console.log ("Mi servidor GRUPO 4 esta funcionando en port 4444")
 });
 
