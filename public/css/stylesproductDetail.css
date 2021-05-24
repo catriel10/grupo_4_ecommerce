@@ -4,6 +4,9 @@
     -webkit-box-sizing: border-box;
 }
 
+a:link, a:visited, a:active {
+  text-decoration:none;
+}
 /* ------------ Body ------------------ */ 
 body {
 font-family: verdana ,Tahoma , sans-serif;

@@ -19,6 +19,9 @@
      letter-spacing:0.8em;
 }
 
+a:link, a:visited, a:active {
+  text-decoration:none;
+}
 
 html {
     overflow-y: scroll;
@@ -352,10 +355,10 @@ html {
 }
 
 
-/* media queries 700px wide */
-@media screen and (max-width: 700px) {
+/* media queries 768px wide */
+@media screen and (max-width: 768px) {
 .main, .navbar {   
-    flex-direction: column;
+  flex-direction: column;
 	margin-left: 0;
 }
 

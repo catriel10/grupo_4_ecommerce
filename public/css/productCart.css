@@ -1,3 +1,14 @@
+* {
+    box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+  }
+
+
 /* ------------ Header------------------ */
 
 .header {
@@ -14,15 +25,30 @@
     color: black;
 }
 .header p { 
-     font-size:28 px;
+     font-size:3vw;
      font-family:'arizoniaregular', sans-serif;
      letter-spacing:0.8em;
 }
+
+
+/* ------------ Header------------------ */
+
+
+
+/* ------------ Body ------------------ */ 
 body {
-    background: #ffffff;
-    font-family: verdana ,Tahoma , sans-serif;
-    margin: 0;
-  }
+font-family: verdana ,Tahoma , sans-serif;
+margin: 0;
+background-color: #EBEBEB;
+font-family: 'Roboto', sans-serif;
+font-weight: 300;
+font-size: 12px;
+}
+
+main {
+    padding:10vw
+}
+
 
 h2{
     text-align: center;
@@ -395,3 +421,66 @@ ul li a {
 }
 
 }
+/* media queries 360px wide */
+@media (min-width: 360px) {
+    .main, .navbar {   
+        flex-direction: column;
+        margin-left: 0;
+    }
+    
+    .slide1, .slide2 {padding:6px;}
+    
+    
+    .main .right-div,
+    .main .left-div 
+    {margin-left: 0;}
+    
+    .line1 {font-size:18px;}
+    
+    .line2 {font-size:12px;}
+    
+    .line3 {font-size:10px;}
+    
+    .footer-container{font: bold 14px sans-serif;}
+    
+    .footer-container .footer-left,
+    .footer-container .footer-center,
+    .footer-container .footer-right{
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+        }
+    
+    .footer-container .footer-center i{
+        margin-left: 0;
+    }
+     .left-div, .img, .right-div {
+        width: 100vw;
+        /* display: block; */
+        max-width: 94vw;
+      }
+    ul.dropdown-content li {
+        font-size:12px;
+    }
+    
+    ul li a {
+      padding: 15px 1px;
+    }
+        img {
+            width: 80vw;
+        }
+    }
+    
+    /* media queries 700px wide */
+    @media (min-width: 768px) {
+        img {
+            width: 60vw;
+        }
+    
+    .main, .navbar {   
+            flex-direction: row;
+            margin-left: 0;
+    }
+    
+    }
