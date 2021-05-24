@@ -6,10 +6,14 @@
 
 /* ------------ Body ------------------ */ 
 body {
-    font-family: verdana ,Tahoma , sans-serif;
-    margin: 0;
-
+font-family: verdana ,Tahoma , sans-serif;
+margin: 0;
+background-color: #EBEBEB;
+font-family: 'Roboto', sans-serif;
+font-weight: 300;
+font-size: 12px;
 }
+
 
 /* ------------ Header------------------ */
 
@@ -26,7 +30,7 @@ body {
     font-weight:bold;
 }
 .header p { 
-     font-size:28 px;
+     font-size:3vw;
      font-family:'arizoniaregular', sans-serif;
      letter-spacing:0.8em;
 }
@@ -36,6 +40,8 @@ body {
 ul.navbar {
   display: flex;
   background-color:#292c2f;
+  margin: 0;
+  padding: 0;
 }
 
 ul {
@@ -106,6 +112,19 @@ ul.dropdown-content li {
     flex-wrap: wrap;
 	}
 
+main section article i {
+display: block ;
+font-size: 16px ;
+padding: 5px ;
+width: 30px ;
+height: 30px ;
+border: 1px solid #39b54a ;
+background-color: #FFF ;
+border-radius: 50% ;
+position: absolute ;
+right: 20px ;
+top: -15px ;
+}
 /* ------------ cajas ------------- */
 
 .slide1,
@@ -332,9 +351,16 @@ hr {
 	margin-bottom: 5px;
 }
 
+/* -------------------- Logo ------------------  */
+.logo { font-size:18px;
+	color:#ffffff;}
 
-/* media queries 700px wide */
-@media screen and (max-width: 700px) {
+img {
+	width: 90vw;
+}
+
+/* media queries 360px wide */
+@media (min-width: 360px) {
 .main, .navbar {   
     flex-direction: column;
 	margin-left: 0;
@@ -367,11 +393,10 @@ hr {
 .footer-container .footer-center i{
 	margin-left: 0;
 }
- .left-div,
- .right-div {
-    max-width: 100%;
-    width: 100%;
-    display: block;
+ .left-div, .img, .right-div {
+    width: 100vw;
+	/* display: block; */
+	max-width: 94vw;
   }
 ul.dropdown-content li {
 	font-size:12px;
@@ -380,11 +405,20 @@ ul.dropdown-content li {
 ul li a {
   padding: 15px 1px;
 }
-
+	img {
+		width: 80vw;
+	}
 }
 
+/* media queries 700px wide */
+@media (min-width: 700px) {
+	img {
+		width: 60vw;
+	}
 
+.main, .navbar {   
+		flex-direction: row;
+		margin-left: 0;
+}
 
-/* -------------------- Logo ------------------  */
-.logo { font-size:18px;
-	color:#ffffff;}
+}
