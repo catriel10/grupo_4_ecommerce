@@ -2,6 +2,7 @@
     box-sizing: border-box;
 	-moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+
 }
 
 a:link, a:visited, a:active {
@@ -9,12 +10,11 @@ a:link, a:visited, a:active {
   }
 /* ------------ Body ------------------ */ 
 body {
-font-family: verdana ,Tahoma , sans-serif;
+font-family: roboto, verdana ,Tahoma , sans-serif;
 margin: 0;
 background-color: #EBEBEB;
-font-family: 'Roboto', sans-serif;
 font-weight: 300;
-font-size: 12px;
+font-size: 1.5vh;
 }
 
 
@@ -28,13 +28,14 @@ font-size: 12px;
 }
 
 .header h1 {
-	font-size:34px;
-    font-family:'arizoniaregular', sans-serif;
+	font-size:5vh;
+    font-family: roboto, verdana ,Tahoma , sans-serif;
     font-weight:bold;
+	margin: auto;
 }
 .header p { 
-     font-size:3vw;
-     font-family:'arizoniaregular', sans-serif;
+     font-size:1vh;
+     font-family:roboto, verdana ,Tahoma , sans-serif;;
      letter-spacing:0.8em;
 }
 
@@ -72,7 +73,7 @@ ul.navbar li {
   -webkit-box-sizing: border-box;
   position: relative;
   border: 2.4px solid #000000;
-  font-family: verdana ,Tahoma , sans-serif;
+  font-family: roboto, verdana ,Tahoma , sans-serif;;
   background-color: #292c2f;
 }
 
@@ -176,13 +177,13 @@ top: -15px ;
     padding: 2px;
 	font-size:28px; 
 	font-weight:bold;
-    font-family:'font_awesome_5_freesolid', sans-serif;
+    font-family:roboto, verdana ,Tahoma , sans-serif;
 	}
 .line2 { 
     text-align:center;
     font-size:18px; 
     padding: 1px;
-	font-family:'font_awesome_5_freesolid', sans-serif;
+	font-family:roboto, verdana ,Tahoma , sans-serif;
 	margin-top:1px;
 	}
 			  
@@ -199,7 +200,7 @@ hr {
 .line3 {
 	text-decoration:underline;
 	font-size:12px;
-	font-family:'font_awesome_5_freesolid', sans-serif;
+	font-family:roboto, verdana ,Tahoma , sans-serif;
 	font-weight:bold;
 	padding:4px;
 }
@@ -212,7 +213,7 @@ hr {
 	box-sizing: border-box;
 	width: 100%;
 	text-align: left;
-	font: bold 16px sans-serif;
+	font-family: roboto, verdana ,Tahoma , sans-serif;
 	padding: 45px 40px;
 }
 
@@ -243,7 +244,7 @@ hr {
 
 .footer-container h3{
 	color:  #ffffff;
-	font: normal 36px 'Cookie', cursive;
+	font-family: roboto, verdana ,Tahoma , sans-serif;;
 	margin: 0;
 }
 
@@ -286,11 +287,13 @@ hr {
 	line-height: 42px;
 	margin: 10px 15px;
 	vertical-align: middle;
+	
 }
 
 .footer-container .footer-center i.fa-envelope{
 	font-size: 17px;
 	line-height: 38px;
+	
 }
 
 .footer-container .footer-center p{
@@ -298,6 +301,7 @@ hr {
 	color: #ffffff;
 	vertical-align: middle;
 	margin:0;
+	
 }
 
 .footer-container .footer-center p span{
@@ -305,11 +309,12 @@ hr {
 	font-weight: normal;
 	font-size:14px;
 	line-height:2;
+	
 }
 
 .footer-container .footer-center p a{
 	color:  #5383d3;
-	text-decoration: none;;
+	text-decoration: none;
 }
 
 
@@ -344,7 +349,6 @@ hr {
 	cursor: pointer;
 	background-color:  #33383b;
 	border-radius: 2px;
-
 	font-size: 20px;
 	color: #ffffff;
 	text-align: center;
@@ -381,8 +385,6 @@ img {
 .line2 {font-size:12px;}
 
 .line3 {font-size:10px;}
-
-.footer-container{font: bold 14px sans-serif;}
 
 .footer-container .footer-left,
 .footer-container .footer-center,
@@ -437,7 +439,6 @@ ul li a {
 
 .line3 {font-size:10px;}
 
-.footer-container{font: bold 14px sans-serif;}
 
 .footer-container .footer-left,
 .footer-container .footer-center,
