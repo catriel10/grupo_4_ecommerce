@@ -19,85 +19,59 @@
     <p>NEW VIBES.STYLE.TRENDY</p>
 </div>
 <div class="form">
-<h1>Sign Up</h1>
-<form action="login usuario" method="GET" class="login-user"> 
-    <div class="control-usuario">
-        <div class="control-formulario-login">
-            <label for="user"></label>
-            <input type="text" name="usuario" placeholder="User" class="control-login" required>
+        <div class="block-form">
+                  <h1>Sign Up</h1>
+          <form action="login usuario" method="GET" class="login-user"> 
+              <div class="control-usuario">
+                  <div class="control-formulario-login">
+                      <label for="user"></label>
+                      <input type="text" name="usuario" placeholder="User" class="control-login" required>
+                  </div>
+                  <div class="control-formulario-login">
+                      <label for="password"></label>
+                      <input type="password" name="password" placeholder="Password" id="password" required />
+                  </div>
+                  <button type="submit" class="button button-block">LOG IN</button>
+                  </div>
+          </form>
         </div>
-        <div class="control-formulario-login">
-            <label for="password"></label>
-            <input type="password" name="password" placeholder="Password" id="password" required />
+        <div class="block-form">
+          <h1>Register</h1>
+          <form action="alta usuario" method="GET" class="create-user"> 
+            <div class="control-user">
+                <div class="control-formulario">
+                    <label></label>
+                    <input type="text" name="name-lastname" placeholder="Name and Lastname" class="control">
+                </div>
+                <div class="control-formulario">
+                    <label></label>
+                    <input type="text" name="usuario" placeholder="User" class="control">
+                </div>
+                <div class="control-formulario">
+                    <label></label>
+                    <input type="date" name="birth-date" placeholder="date of birth" class="control">
+                </div>
+                <div class="control-formulario">
+                    <label></label>
+                    <input type="text" name="address" placeholder="address" class="control">
+                </div>
+                <div class="control-formulario">
+                    <label for="password"></label>
+                    <input type="password" name="password" placeholder="password" id="password" required />
+                </div>
+                <div class="control-formulario">
+                    <label for="confirm-password"></label>
+                    <input type="password" name="confirm-password" placeholder="confirm-password" id="password" required />
+                </div>
+                <div>
+                    <button type="reset" class="button button-block">RESET</button>
+                    
+                    <button type="submit" class="button button-block">SUBMIT</button>
+                </div>
+            </div>
+          </form>
         </div>
-        <button type="submit" class="boton-formulario-login">LOG IN</button>
-    </div>
-</form>
-<h1>Register</h1>
-<form action="alta usuario" method="GET" class="create-user"> 
-  <div class="control-user">
-      <div class="control-formulario">
-          <label></label>
-          <input type="text" name="name-lastname" placeholder="Name and Lastname" class="control">
-      </div>
-      <div class="control-formulario">
-          <label></label>
-          <input type="text" name="usuario" placeholder="User" class="control">
-      </div>
-      <div class="control-formulario">
-          <label></label>
-          <input type="date" name="birth-date" placeholder="date of birth" class="control">
-      </div>
-      <div class="control-formulario">
-          <label></label>
-          <input type="text" name="address" placeholder="address" class="control">
-      </div>
-      <div class="control-formulario">
-          <label for="password"></label>
-          <input type="password" name="password" placeholder="password" id="password" required />
-      </div>
-      <div class="control-formulario">
-          <label for="confirm-password"></label>
-          <input type="password" name="confirm-password" placeholder="confirm-password" id="password" required />
-      </div>
- 
-      <button type="reset" class="boton-formulario">Clear</button>
-      <br>
-      <button type="submit" class="boton-formulario">Guardar</button>
-  </div>
-</form>
-
-<h1>Welcome!</h1>
-        
-        <form action="/" method="post">
-        
-          <div class="field-wrap">
-          <label>
-            Email<span class="req">*</span>
-          </label>
-          <input type="email"required autocomplete="off"/>
-        </div>
-        
-        <div class="field-wrap">
-          <label>
-            Password<span class="req">*</span>
-          </label>
-          <input type="password"required autocomplete="off"/>
-        </div>
-        
-        <div>
-        <p class="forgot"><a href="#">Forgot Password</a></p>
-        
-        <button class="button button-block"/>Log In</button>
-      </div>
-        </form>
-
-      </div>
-      
-    </div>
     
-</div> 
-
 <footer class="footer-container">
     <div class="footer-left">
     <span class="logo">Brand You</span>
