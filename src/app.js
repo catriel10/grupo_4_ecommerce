@@ -17,9 +17,19 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './views/home.html'));
 });
 
-// Login /Register
+// Login/Register
 app.get('/loginRegister', (req, res) => {
     res.sendFile(path.join(__dirname, './views/loginRegister.html'));
+});
+
+// Register
+app.get('/register', (req, res) => {
+    res.sendFile(path.join(__dirname, './views/register.html'));
+});
+
+// Login
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(__dirname, './views/login.html'));
 });
 
 // products
