@@ -32,7 +32,12 @@ app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, './views/login.html'));
 });
 
+// Product Cart
+app.get('/productCart', (req, res) => {
+    res.sendFile(path.join(__dirname, './views/productCart.html'));
+});
+
 // products
-const productsRoutes = require('./routes/products');
+const productsRoutes = require('./routes/productsRoutes');
 
 app.use('/products', productsRoutes)

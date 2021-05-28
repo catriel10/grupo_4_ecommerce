@@ -1,528 +1,571 @@
 /* ------------ Header------------------ */
 
 .header {
-text-align:center;
-padding: 10px;
-background: #ffffff;
-color: #000000;	
-}
-
-.header h1 {
-font-size:34px;
-font-family: roboto, verdana ,Tahoma , sans-serif;
-font-weight:bold;
-color: black;
-}
-
-.header p { 
-font-size:1vh;
-font-family: roboto, verdana ,Tahoma , sans-serif;
-letter-spacing:0.8em;
-}
-
-a:link, a:visited, a:active {
-text-decoration:none;
-}
-
-html {
-overflow-y: scroll;
-}
-
-body {
-background: #ffffff;
-font-family: roboto, verdana ,Tahoma , sans-serif;
-margin: 0;
-}
-
-a {
-text-decoration: none;
-color: #1ab188;
-transition: .5s ease;
-}
-
-a :hover {
-color: #1ab188, 5%;
-}
-
-.form {
-background: rgba(#13232f, .9);
-padding: 40px;
-max-width: 600px;
-margin: 40px auto;
-border-radius: 4px;
-box-shadow: 0 4px 10px 4px rgba(#13232f, .3);
-}
-
-.block-form{
-  border: 1px solid #c5cbd5;
+  text-align:center;
   padding: 10px;
-  margin: 5px;
-  transition-property: border,color,background-color;
-}
-
-.tab-group {
-list-style: none;
-padding: 0;
-margin: 0 0 40px 0;
-
-}
-
-.tab-group:after {
-content: "";
-display: table;
-clear: both;
-
-}
-
-li a {
-display: block;
-text-decoration: none;
-padding: 15px;
-background: rgba(#a0b3b0, .25);
-color: #a0b3b0;
-font-size: 20px;
-float: left;
-width: 50%;
-text-align: center;
-cursor: pointer;
-transition: .5s ease;
-}
-
-li a :hover {
-background: (#1ab188, 5%);
-color: #ffffff;
-}
-
-.active a {
-background: #1ab188;
-color: #ffffff;
-}
-
-.tab-content > div:last-child {
-display: none;
-}
-
-h1 {
-text-align: center;
-color: black;
-font-weight: 300;
-margin: 0 0 40px;
-}
-
-label {
-position: absolute;
-transform: translateY(6px);
-left: 13px;
-color: rgba(#ffffff, .5);
-transition: all 0.25s ease;
-pointer-events: none;
-font-size: 22px;
-}
-label.req {
-margin: 2px;
-color: #1ab188;
-}
-
-
-label.active {
-transform: translateY(50px);
-left: 2px;
-font-size: 14px;
-}
-label.active .req {
-opacity: 0;
-}
-
-
-label.highlight {
-color: #ffffff;
-}
-
-input,
-textarea {
-font-size: 22px;
-display: block;
-width: 100%;
-height: 100%;
-padding: 5px 10px;
-background: none;
-background-image: none;
-border: 1px solid #1ab188;
-color: #1ab188;
-border-radius: 0;
-transition: border-color .25s ease, box-shadow .25s ease;
-}
-
-input,
-textarea :focus {
-outline: 0;
-border-color: #1ab188;
-}
-
-textarea {
-border: 2px solid #a0b3b0;
-resize: vertical;
-}
-
-.field-wrap {
-position: relative;
-margin-bottom: 40px;
-}
-
-.top-row 
-:after {
-content: "";
-display: table;
-clear: both;
-}
-.top-row div {
-float: left;
-width: 48%;
-margin-right: 4%;
-
-}
-.top-row div:last-child {
-margin: 0;
-}
-
-.button {
-border: 0;
-outline: none;
-border-radius: 4px;
-padding: 15px 0;
-font-size: 1rem;
-font-weight: 500;
-text-transform: uppercase;
-letter-spacing: .1em;
-background: #1ab188;
-color: #ffffff;
-margin: 10px auto;
-transition: all .3s ease-out 0s;
-}
-
-.button:hover,
-:focus {
-background: #1ab188, 5%;
-}
-.button-block {
-display: block;
-width: 100%;
-}
-
-.forgot {
-margin-top: -20px;
-text-align: right;
-}
-
-/* ------------------------------------ Footer -----------------------------*/
-
-.footer-container{
-background-color: #292c2f;
-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-box-sizing: border-box;
-width: 100%;
-text-align: left;
-font-family: roboto, verdana ,Tahoma , sans-serif;
-padding: 45px 40px;
-}
-
-.footer-container .footer-left,
-.footer-container .footer-center,
-.footer-container .footer-right{
-display: inline-block;
-vertical-align: top;
-}
-
-/* ----------------- Footer caja width ( left center right ) ------------------ */
-
-.footer-container .footer-left{
-width: 40%;
-}
-
-.footer-container .footer-center{
-width: 35%;
-}
-
-.footer-container .footer-right{
-width: 20%;
-}
-
-
-
-/* ------------ footer-left contenido ------------- */
-
-.footer-container h3{
-color:  #ffffff;
-font-family: roboto, verdana ,Tahoma , sans-serif;
-margin: 0;
-}
-
-.footer-container h3 span{
-color:  #5383d3;
-}
-
-.footer-container .footer-links{
-color:  #ffffff;
-margin: 20px 0 12px;
-padding: 0;
-}
-
-.footer-container .footer-links a{
-display:inline-block;
-line-height: 1.8;
-text-decoration: none;
-color:  inherit;
-}
-
-.footer-container .footer-company-name{
-color:  #8f9296;
-font-size: 14px;
-font-weight: normal;
-margin: 0;
-}
-
-/* -------------- Footer Center contentido--------------------- */
-
-
-
-.footer-container .footer-center i{
-background-color:  #33383b;
-color: #ffffff;
-font-size: 25px;
-width: 38px;
-height: 38px;
-border-radius: 50%;
-text-align: center;
-line-height: 42px;
-margin: 10px 15px;
-vertical-align: middle;
-}
-
-.footer-container .footer-center i.fa-envelope{
-font-size: 17px;
-line-height: 38px;
-}
-
-.footer-container .footer-center p{
-display: inline-block;
-color: #ffffff;
-vertical-align: middle;
-margin:0;
-}
-
-.footer-container .footer-center p span{
-display:block;
-font-weight: normal;
-font-size:14px;
-line-height:2;
-}
-
-.footer-container .footer-center p a{
-color:  #5383d3;
-text-decoration: none;;
-}
-
-
-/* ----------------------- Footer Right contentido---------------*/
-
-
-
-.footer-container .footer-company-about{
-line-height: 20px;
-color:  #92999f;
-font-size: 13px;
-font-weight: normal;
-margin: 0;
-}
-
-.footer-container .footer-company-about span{
-display: block;
-color:  #ffffff;
-font-size: 14px;
-font-weight: bold;
-margin-bottom: 20px;
-}
-
-.footer-container .footer-icons{
-margin-top: 25px;
-}
-
-.footer-container .footer-icons a{
-display: inline-block;
-width: 35px;
-height: 35px;
-cursor: pointer;
-background-color:  #33383b;
-border-radius: 2px;
-
-font-size: 20px;
-color: #ffffff;
-text-align: center;
-line-height: 35px;
-
-margin-right: 3px;
-margin-bottom: 5px;
-}
-
-/* -------------------- Logo ------------------  */
-.logo { font-size:18px;
-color:#ffffff;}
-
-img {
-width: 90vw;
-}
-
-/* media queries 768px wide */
-@media screen and (max-width: 768px) {
-.main, .navbar {   
-flex-direction: column;
-margin-left: 0;
-}
-
-.slide1, .slide2 {padding:6px;}
-
-
-.main .right-div,
-.main .left-div 
-{margin-left: 0;}
-
-.line1 {font-size:18px;}
-
-.line2 {font-size:12px;}
-
-.line3 {font-size:10px;}
-
-.footer-container .footer-left,
-.footer-container .footer-center,
-.footer-container .footer-right{
-display: block;
-width: 100%;
-margin-bottom: 40px;
-text-align: center;
-}
-
-.footer-container .footer-center i{
-margin-left: 0;
-}
-.left-div,
-.right-div {
-max-width: 100%;
-width: 100%;
-display: block;
-}
-ul.dropdown-content li {
-
-font-size:12px;
-}
-
-ul li a {
-padding: 15px 1px;
-}
-
-}
-
-/* EXTRAS REVISAR */
-
-* {box-sizing: border-box}
-/* Full-width input fields */
-input[type=text], input[type=password] {
-width: 100%;
-padding: 15px;
-margin: 5px 0 22px 0;
-display: inline-block;
-border: none;
-background: #f1f1f1;
-}
-
-/* Add a background color when the inputs get focus */
-input[type=text]:focus, input[type=password]:focus {
-background-color: #ddd;
-outline: none;
-}
-
-/* Set a style for all buttons */
-button {
-background-color: #04AA6D;
-color: white;
-padding: 14px 20px;
-margin: 8px 0;
-border: none;
-cursor: pointer;
-width: 100%;
-opacity: 0.9;
-}
-
-button:hover {
-opacity:1;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-padding: 14px 20px;
-background-color: #f44336;
-}
-
-/* Float cancel and signup buttons and add an equal width */
-.cancelbtn, .signupbtn {
-float: left;
-width: 50%;
-}
-
-/* Add padding to container elements */
-.container {
-padding: 16px;
-}
-
-/* The Modal (background) */
-.modal {
-display: none; /* Hidden by default */
-position: fixed; /* Stay in place */
-z-index: 1; /* Sit on top */
-left: 0;
-top: 0;
-width: 100%; /* Full width */
-height: 100%; /* Full height */
-overflow: auto; /* Enable scroll if needed */
-background-color: #474e5d;
-padding-top: 50px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-background-color: #fefefe;
-margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-border: 1px solid #888;
-width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* Style the horizontal ruler */
-hr {
-border: 1px solid #f1f1f1;
-margin-bottom: 25px;
-}
-
-/* The Close Button (x) */
-.close {
-position: absolute;
-right: 35px;
-top: 15px;
-font-size: 40px;
-font-weight: bold;
-color: #f1f1f1;
-}
-
-.close:hover,
-.close:focus {
-color: #f44336;
-cursor: pointer;
-}
-
-/* Clear floats */
-.clearfix::after {
-content: "";
-clear: both;
-display: table;
-}
+  background: #ffffff;
+  color: #000000;	
+  }
+  
+  .header h1 {
+  font-size:34px;
+  font-family: roboto, verdana ,Tahoma , sans-serif;
+  font-weight:bold;
+  color: black;
+  }
+  
+  .header p { 
+  font-size:1vh;
+  font-family: roboto, verdana ,Tahoma , sans-serif;
+  letter-spacing:0.8em;
+  }
+  
+  a:link, a:visited, a:active {
+  text-decoration:none;
+  }
+  
+  html {
+  overflow-y: scroll;
+  }
+  
+/* ------------ Body ------------------ */ 
+body {
+  font-family: roboto, verdana ,Tahoma , sans-serif;
+  margin: 0;
+  background-color: #ffffff;
+  font-weight: 300;
+  font-size: 1.5vh;
+  }
+  
+  /* ------------ Navegacion slider ------------------ */ 
+  ul.navbar {
+    display: flex;
+    background-color:#292c2f;
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul {
+    list-style-type: none;
+    text-decoration:none;
+    margin: 0;
+    padding: 0;
+    text-align:center;
+  }
+  
+  
+  ul.navbar li:hover,
+  ul.navbar li:active
+    {background-color:#414a4c;}
+  
+   .navbar .active {
+    background-color:#414a4c;
+      color: #ffffff;	
+  }
+   
+  ul.navbar li {
+    flex: 1;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    position: relative;
+    border: 2.4px solid #000000;
+    font-family: roboto, verdana ,Tahoma , sans-serif;;
+    background-color: #292c2f;
+  }
+  
+  ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 5px;
+    text-decoration: none;
+    width:100%;
+    size: 1em;
+  }
+  
+  ul.dropdown-content {
+    position: absolute;
+    display: none;
+    z-index: 1;
+  }
+  
+  ul.dropdown-content li {
+    width: 100%;
+    border: 0px solid black;
+    border-bottom: 2px solid #000000;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+    position: absolute;
+    width:100%;
+  }
+  /*------------------------------------------------------------------ */
+  
+  /*----------------------Form---------------------------------------- */
+  a {
+  text-decoration: none;
+  color: #1ab188;
+  transition: .5s ease;
+  }
+  
+  a :hover {
+  color: #1ab188, 5%;
+  }
+  
+  
+  .form {
+  background: rgba(#13232f, .9);
+  padding: 40px;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px rgba(#13232f, .3);
+  }
+  
+  .block-form{
+    border: 1px solid #c5cbd5;
+    padding: 10px;
+    margin: 5px auto;
+    transition-property: border,color,background-color;
+    max-width: 60vw;
+  }
+  
+  .tab-group {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+  }
+  
+  .tab-group:after {
+  content: "";
+  display: table;
+  clear: both;
+  }
+      
+  h1 {
+  text-align: center;
+  color: black;
+  font-weight: 300;
+  margin: 0 0 40px;
+  }
+  
+  label {
+  position: absolute;
+  transform: translateY(6px);
+  left: 13px;
+  color: rgba(#ffffff, .5);
+  transition: all 0.25s ease;
+  pointer-events: none;
+  font-size: 22px;
+  }
+  label.req {
+  margin: 2px;
+  color: #1ab188;
+  }
+    
+  label.active {
+  transform: translateY(50px);
+  left: 2px;
+  font-size: 14px;
+  }
+  label.active .req {
+  opacity: 0;
+  }
+  
+  
+  label.highlight {
+  color: #ffffff;
+  }
+  
+  input,
+  textarea {
+  font-size: 22px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  background: none;
+  background-image: none;
+  border: 1px solid #1ab188;
+  color: #1ab188;
+  border-radius: 0;
+  transition: border-color .25s ease, box-shadow .25s ease;
+  }
+  
+  input,
+  textarea :focus {
+  outline: 0;
+  border-color: #1ab188;
+  }
+  
+  textarea {
+  border: 2px solid #a0b3b0;
+  resize: vertical;
+  }
+  
+  .field-wrap {
+  position: relative;
+  margin-bottom: 40px;
+  }
+  
+  .top-row 
+  :after {
+  content: "";
+  display: table;
+  clear: both;
+  }
+  .top-row div {
+  float: left;
+  width: 48%;
+  margin-right: 4%;
+  
+  }
+  .top-row div:last-child {
+  margin: 0;
+  }
+  
+  .button {
+  border: 0;
+  outline: none;
+  border-radius: 4px;
+  padding: 15px 0;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  background: #1ab188;
+  color: #ffffff;
+  margin: 10px auto;
+  transition: all .3s ease-out 0s;
+  }
+  
+  .button:hover,
+  :focus {
+  background: #1ab188, 5%;
+  }
+  .button-block {
+  display: block;
+  width: 100%;
+  }
+  
+  .forgot {
+  margin-top: -20px;
+  text-align: right;
+  }
+  
+  /* ------------------------------------ Footer -----------------------------*/
+  
+  .footer-container{
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font-family: roboto, verdana ,Tahoma , sans-serif;
+  padding: 45px 40px;
+  
+  }
+  
+  .footer-container .footer-left,
+  .footer-container .footer-center,
+  .footer-container .footer-right{
+  display: inline-block;
+  vertical-align: top;
+  }
+  
+  /* ----------------- Footer caja width ( left center right ) ------------------ */
+  
+  .footer-container .footer-left{
+  width: 40%;
+  }
+  
+  .footer-container .footer-center{
+  width: 35%;
+  }
+  
+  .footer-container .footer-right{
+  width: 20%;
+  }
+  
+  
+  
+  /* ------------ footer-left contenido ------------- */
+  
+  .footer-container h3{
+  color:  #ffffff;
+  font-family: roboto, verdana ,Tahoma , sans-serif;
+  margin: 0;
+  }
+  
+  .footer-container h3 span{
+  color:  #5383d3;
+  }
+  
+  .footer-container .footer-links{
+  color:  #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+  }
+  
+  .footer-container .footer-links a{
+  display:inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color:  inherit;
+  }
+  
+  .footer-container .footer-company-name{
+  color:  #8f9296;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+  }
+  
+  /* -------------- Footer Center contentido--------------------- */
+  
+  
+  
+  .footer-container .footer-center i{
+  background-color:  #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+  }
+  
+  .footer-container .footer-center i.fa-envelope{
+  font-size: 17px;
+  line-height: 38px;
+  }
+  
+  .footer-container .footer-center p{
+  display: inline-block;
+  color: #ffffff;
+  vertical-align: middle;
+  margin:0;
+  }
+  
+  .footer-container .footer-center p span{
+  display:block;
+  font-weight: normal;
+  font-size:14px;
+  line-height:2;
+  }
+  
+  .footer-container .footer-center p a{
+  color:  #5383d3;
+  text-decoration: none;;
+  }
+  
+  
+  /* ----------------------- Footer Right contentido---------------*/
+  
+  
+  
+  .footer-container .footer-company-about{
+  line-height: 20px;
+  color:  #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+  }
+  
+  .footer-container .footer-company-about span{
+  display: block;
+  color:  #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  }
+  
+  .footer-container .footer-icons{
+  margin-top: 25px;
+  }
+  
+  .footer-container .footer-icons a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color:  #33383b;
+  border-radius: 2px;
+  
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  
+  margin-right: 3px;
+  margin-bottom: 5px;
+  }
+  
+  /* -------------------- Logo ------------------  */
+  .logo { font-size:18px;
+  color:#ffffff;}
+  
+  img {
+  width: 90vw;
+  }
+  
+  /* media queries 768px wide */
+  @media screen and (max-width: 768px) {
+  .main, .navbar {   
+  flex-direction: column;
+  margin-left: 0;
+  }
+  
+  .slide1, .slide2 {padding:6px;}
+  
+  
+  .main .right-div,
+  .main .left-div 
+  {margin-left: 0;}
+  
+  .line1 {font-size:18px;}
+  
+  .line2 {font-size:12px;}
+  
+  .line3 {font-size:10px;}
+  
+  .footer-container .footer-left,
+  .footer-container .footer-center,
+  .footer-container .footer-right{
+  display: block;
+  width: 100%;
+  margin-bottom: 40px;
+  text-align: center;
+  }
+  
+  .footer-container .footer-center i{
+  margin-left: 0;
+  }
+  .left-div,
+  .right-div {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  }
+  ul.dropdown-content li {
+  
+  font-size:12px;
+  }
+  
+  ul li a {
+  padding: 15px 1px;
+  }
+  
+  }
+  
+  /* EXTRAS REVISAR */
+  
+  * {box-sizing: border-box}
+  /* Full-width input fields */
+  input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  }
+  
+  /* Add a background color when the inputs get focus */
+  input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  }
+  
+  button:hover {
+  opacity:1;
+  }
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+  }
+  
+  /* Float cancel and signup buttons and add an equal width */
+  .cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+  }
+  
+  /* Add padding to container elements */
+  .container {
+  padding: 16px;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #474e5d;
+  padding-top: 50px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* Style the horizontal ruler */
+  hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+  }
+  
+  /* The Close Button (x) */
+  .close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+  }
+  
+  .close:hover,
+  .close:focus {
+  color: #f44336;
+  cursor: pointer;
+  }
+  
+  /* Clear floats */
+  .clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+  }
+  
 
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
