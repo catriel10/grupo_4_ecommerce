@@ -37,6 +37,11 @@ app.get('/productCart', (req, res) => {
     res.sendFile(path.join(__dirname, './views/productCart.html'));
 });
 
+// Product Detail
+app.get('/productDetail', (req, res) => {
+    res.sendFile(path.join(__dirname, './views/productDetail.html'));
+});
+
 // products
 const productsRoutes = require('./routes/productsRoutes');
 

@@ -369,107 +369,150 @@ img {
 	width: 90vw;
 }
 
-/* media queries 360px wide */
-@media (min-width: 360px) {
-.main, .navbar {   
-    flex-direction: column;
+
+  /* media queries 768px wide */
+  @media screen and (max-width: 768px) {
+	.main, .navbar {   
+	flex-direction: column;
 	margin-left: 0;
-}
-
-.slide1, .slide2 {padding:6px;}
-
-
-.main .right-div,
-.main .left-div 
-{margin-left: 0;}
-
-.line1 {font-size:18px;}
-
-.line2 {font-size:12px;}
-
-.line3 {font-size:10px;}
-
-.footer-container .footer-left,
-.footer-container .footer-center,
-.footer-container .footer-right{
-	display: block;
-	width: 100%;
-	margin-bottom: 40px;
-	text-align: center;
 	}
-
-.footer-container .footer-center i{
-	margin-left: 0;
-}
- .left-div, .img, .right-div {
-    width: 100vw;
-	/* display: block; */
-	max-width: 94vw;
-  }
-ul.dropdown-content li {
-	font-size:12px;
-}
-
-ul li a {
-  padding: 15px 1px;
-}
-	img {
-		width: 80vw;
-	}
-}
-
-/* media queries 768px wide */
-@media (min-width: 768px) {
 	img {
 		width: 60vw;
 	}
 
-.main, .navbar {   
-		flex-direction: row;
-		margin-left: 0;
-}
-
-.slide1, .slide2 {padding:6px;}
-
-
-.main .right-div,
-.main .left-div 
-{margin-left: 0;}
-
-.line1 {font-size:18px;}
-
-.line2 {font-size:12px;}
-
-.line3 {font-size:10px;}
-
-
-.footer-container .footer-left,
-.footer-container .footer-center,
-.footer-container .footer-right{
+	.slide1, .slide2 {padding:6px;}
+	
+	
+	.main .right-div,
+	.main .left-div 
+	{margin-left: 0;}
+	
+	.line1 {font-size:18px;}
+	
+	.line2 {font-size:12px;}
+	
+	.line3 {font-size:10px;}
+	
+	.footer-container .footer-left,
+	.footer-container .footer-center,
+	.footer-container .footer-right{
 	display: block;
 	width: 100%;
 	margin-bottom: 40px;
 	text-align: center;
 	}
-
-.footer-container .footer-center i{
+	
+	.footer-container .footer-center i{
 	margin-left: 0;
-}
- .left-div,
- .right-div {
-    max-width: 100%;
-    width: 100%;
-    display: block;
-  }
-ul.dropdown-content li {
+	}
+	.left-div,
+	.right-div {
+	max-width: 100%;
+	width: 100%;
+	display: block;
+	}
+	ul.dropdown-content li {
+	
 	font-size:12px;
-}
-
-ul li a {
-  padding: 15px 1px;
-}
-
-
-
-
-}
+	}
+	
+	ul li a {
+	padding: 15px 1px;
+	}
+	
+	}
+	
+	.block-form{
+	  border: 1px solid #c5cbd5;
+	  padding: 10px;
+	  margin: 5px auto;
+	  transition-property: border,color,background-color;
+	  max-width: 50vw;
+	}
+	/* EXTRAS REVISAR */
+	
+	* {box-sizing: border-box}
+	/* Full-width input fields */
+	input[type=text], input[type=password] {
+	width: 100%;
+	padding: 15px;
+	margin: 5px 0 22px 0;
+	display: inline-block;
+	border: none;
+	background: #f1f1f1;
+	}
+	
+	/* Add a background color when the inputs get focus */
+	input[type=text]:focus, input[type=password]:focus {
+	background-color: #ddd;
+	outline: none;
+	}
+	
+	/* Set a style for all buttons */
+	button {
+	background-color: #04AA6D;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	opacity: 0.9;
+	}
+	
+	button:hover {
+	opacity:1;
+	}
+	
+	/* Extra styles for the cancel button */
+	.cancelbtn {
+	padding: 14px 14px;
+	background-color: #f44336;
+	}
+	
+	/* Float cancel and signup buttons and add an equal width */
+	.cancelbtn, .signupbtn {
+	width: 20vw;
+	}
+	
+	/* Add padding to container elements */
+	.container {
+	padding: 5vw;
+	}
+	  
+	/* Style the horizontal ruler */
+	hr {
+	border: 1px solid #f1f1f1;
+	margin-bottom: 25px;
+	}
+	
+	/* The Close Button (x) */
+	.close {
+	position: absolute;
+	right: 35px;
+	top: 15px;
+	font-size: 40px;
+	font-weight: bold;
+	color: #f1f1f1;
+	}
+	
+	.close:hover,
+	.close:focus {
+	color: #f44336;
+	cursor: pointer;
+	}
+	
+	/* Clear floats */
+	.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+	}
+	
+  
+  /* Change styles for cancel button and signup button on extra small screens */
+  @media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+  width: 100%;
+  }
+  }

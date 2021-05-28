@@ -41,21 +41,31 @@
 <div class="body">
         <div class="block-form">
                   <h1>Log in</h1>
-          <form action="login usuario" method="GET" class="login-user"> 
-              <div class="control-usuario">
-                  <div class="control-formulario-login">
+          <form action="login-user" method="GET" class="login-user">
+              <div class="imgcontainer">
+                  <img src="/img/img_avatar2.png" alt="Avatar" class="avatar">
+              </div> 
+              <div class="control-user">
+                  <div class="control-form-login">
                       <label for="user"></label>
                       <input type="text" name="usuario" placeholder="User" class="control-login" required>
                   </div>
-                  <div class="control-formulario-login">
+                  <div class="control-form-login">
                       <label for="password"></label>
                       <input type="password" name="password" placeholder="Password" id="password" required />
                   </div>
+                  <label for="category"></label>
+                    <ul class="intereses">
+                      <li type="none"><input type="checkbox" name="remember" id="remember" value="remember" required />  Remember me</li>
+
                   <button type="submit" class="button button-block">SIGN IN</button>
+                  </div>
+                  <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
                   </div>
           </form>
 </div>
-
   <!-- Footer -->
 <footer class="footer-container">
   <div class="footer-left">

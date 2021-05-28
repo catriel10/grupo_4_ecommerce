@@ -8,7 +8,6 @@ a:link, a:visited, a:active {
 text-decoration:none;
 }
 
-
 /* ------------ Header------------------ */
 
 .header {
@@ -19,19 +18,84 @@ color: #000000;
 }
 
 .header h1 {
-font-size:34px;
-font-family:'arizoniaregular', sans-serif;
+font-size:5vh;
+font-family: roboto, verdana ,Tahoma , sans-serif;
 font-weight:bold;
+margin: auto;
 color: black;
 }
 .header p { 
-font-size:3vw;
-font-family:'arizoniaregular', sans-serif;
+font-size:1em;
+font-family:roboto, verdana ,Tahoma , sans-serif;;
 letter-spacing:0.8em;
 }
 
 
-/* ------------ Header------------------ */
+/* ------------ Navegacion slider ------------------ */ 
+ul.navbar {
+display: flex;
+background-color:#292c2f;
+margin: 0;
+padding: 0;
+}
+
+ul {
+list-style-type: none;
+text-decoration:none;
+margin: 0;
+padding: 0;
+text-align:center;
+}
+
+
+ul.navbar li:hover,
+ul.navbar li:active
+{background-color:#414a4c;}
+
+.navbar .active {
+background-color:#414a4c;
+color: #ffffff;	
+}
+
+ul.navbar li {
+flex: 1;
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+position: relative;
+border: 2.4px solid #000000;
+font-family: roboto, verdana ,Tahoma , sans-serif;;
+background-color: #292c2f;
+}
+
+ul li a {
+display: block;
+color: white;
+text-align: center;
+padding: 15px 5px;
+text-decoration: none;
+size: 1em;
+}
+
+ul.dropdown-content {
+position: absolute;
+display: none;
+z-index: 1;
+background-color: #292c2f;
+}
+
+ul.dropdown-content li {
+width: 100%;
+border: 0px solid black;
+border-bottom: 2px solid #000000;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+position: absolute;
+width:100%;
+}
+/*------------------------------------------------------------------ */
 
 
 
@@ -45,6 +109,7 @@ font-family: 'Roboto', sans-serif;
 font-weight: 300;
 font-size: 12px;
 }
+
 
 
 /* Style the search field */
@@ -110,11 +175,11 @@ box-sizing: border-box;
 .cartProduct div{
 margin: 10px
 }
-        
+
 
 .imgProd{
 width: 65px;
-    height: 65px;
+height: 65px;
 }
 
 .descripcion{
@@ -126,35 +191,35 @@ font-weight: bold;
 }
 
 .detalleCompra{
-    display:flex;
-    justify-content:start;
-    flex-wrap: wrap;
-    width: 100%;
-    padding: 5px;
-    box-sizing: border-box;
+display:flex;
+justify-content:start;
+flex-wrap: wrap;
+width: 100%;
+padding: 5px;
+box-sizing: border-box;
 }   
 
 
 .detalleCompra div{
-    margin: 10px
-        }    
-    
+margin: 10px
+}    
 
-        
+
+
 .nombreEtiqueta{
-    font-weight: bold;
-    margin: 0px;
-    text-align: center;
-        }
+font-weight: bold;
+margin: 0px;
+text-align: center;
+}
 
 .icono{
-    text-align: center;
-        }
+text-align: center;
+}
 
 .icono i{
-    color: #2B3A67;
-                
-            }
+color: #2B3A67;
+
+}
 
 
 
@@ -166,70 +231,70 @@ padding: 10px;
 
 
 .datosEntrega{ 
-    width: 100%;
+width: 100%;
 }
 
 .textoEntrega{
-    font-style: italic;
+font-style: italic;
 }
 
 
 .formularioEntrega{
-    margin: 20px;
-    flex-wrap: wrap;
+margin: 20px;
+flex-wrap: wrap;
 }
 
 
-    .contenedorFormEntrega{
-        display: flex;
-        margin: 0px;
-        align-items: center;
-    }
+.contenedorFormEntrega{
+display: flex;
+margin: 0px;
+align-items: center;
+}
 
 
-        .contenedorFormEntrega label{
-        font-style: italic;
-        font-weight: bold;
-        }
+.contenedorFormEntrega label{
+font-style: italic;
+font-weight: bold;
+}
 
 
-        .botonFormularioEntrega{
-            margin-right: 10px;
-            margin-left: 10px;
-            padding: 10px;
-        }
+.botonFormularioEntrega{
+margin-right: 10px;
+margin-left: 10px;
+padding: 10px;
+}
 
 
-    .contenedor-opciones{
-        display: block
-    }
-
-    
-        .opcion-entrega{
-            margin-bottom: 10px;
-            width: 100%;
-        }
+.contenedor-opciones{
+display: block
+}
 
 
-        .errorValidacion{
-            display: none;
-        }
-
-        .contenedor-opciones p{
-            font-style: italic;
-        }
-
-    
-        .seleccionado{
-        width: 200px;
-        opacity: 0.5;
-        }
+.opcion-entrega{
+margin-bottom: 10px;
+width: 100%;
+}
 
 
-    .boton{
-    background-color: #2B3A67;   
-    color: white
-        
+.errorValidacion{
+display: none;
+}
+
+.contenedor-opciones p{
+font-style: italic;
+}
+
+
+.seleccionado{
+width: 200px;
+opacity: 0.5;
+}
+
+
+.boton{
+background-color: #2B3A67;   
+color: white
+
 }
 
 
@@ -257,6 +322,158 @@ justify-content: space-around;
 
 }
 
+/*----------------------Form---------------------------------------- */
+a {
+text-decoration: none;
+color: #1ab188;
+transition: .5s ease;
+}
+
+a :hover {
+color: #1ab188, 5%;
+}
+
+
+.form {
+background: rgba(#13232f, .9);
+padding: 40px;
+max-width: 600px;
+margin: 40px auto;
+border-radius: 4px;
+box-shadow: 0 4px 10px 4px rgba(#13232f, .3);
+}
+
+.block-form{
+border: 1px solid #c5cbd5;
+padding: 10px;
+margin: 5px auto;
+transition-property: border,color,background-color;
+max-width: 60vw;
+}
+
+.tab-group {
+list-style: none;
+padding: 0;
+margin: 0 0 40px 0;
+}
+
+.tab-group:after {
+content: "";
+display: table;
+clear: both;
+}
+
+h1 {
+text-align: center;
+color: black;
+font-weight: 300;
+margin: 0 0 40px;
+}
+
+label {
+position: absolute;
+transform: translateY(6px);
+left: 13px;
+color: rgba(#ffffff, .5);
+transition: all 0.25s ease;
+pointer-events: none;
+font-size: 22px;
+}
+label.req {
+margin: 2px;
+color: #1ab188;
+}
+
+label.active {
+transform: translateY(50px);
+left: 2px;
+font-size: 14px;
+}
+label.active .req {
+opacity: 0;
+}
+
+
+label.highlight {
+color: #ffffff;
+}
+
+input,
+textarea {
+font-size: 22px;
+display: block;
+width: 100%;
+height: 100%;
+padding: 5px 10px;
+background: none;
+background-image: none;
+border: 1px solid #1ab188;
+color: #1ab188;
+border-radius: 0;
+transition: border-color .25s ease, box-shadow .25s ease;
+}
+
+input,
+textarea :focus {
+outline: 0;
+border-color: #1ab188;
+}
+
+textarea {
+border: 2px solid #a0b3b0;
+resize: vertical;
+}
+
+.field-wrap {
+position: relative;
+margin-bottom: 40px;
+}
+
+.top-row 
+:after {
+content: "";
+display: table;
+clear: both;
+}
+.top-row div {
+float: left;
+width: 48%;
+margin-right: 4%;
+
+}
+.top-row div:last-child {
+margin: 0;
+}
+
+.button {
+border: 0;
+outline: none;
+border-radius: 4px;
+padding: 15px 0;
+font-size: 1rem;
+font-weight: 500;
+text-transform: uppercase;
+letter-spacing: .1em;
+background: #1ab188;
+color: #ffffff;
+margin: 10px auto;
+transition: all .3s ease-out 0s;
+}
+
+.button:hover,
+:focus {
+background: #1ab188, 5%;
+}
+.button-block {
+display: block;
+width: 100%;
+}
+
+.forgot {
+margin-top: -20px;
+text-align: right;
+}
+
 /* ------------------------------------ Footer -----------------------------*/
 
 .footer-container{
@@ -265,8 +482,9 @@ box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 box-sizing: border-box;
 width: 100%;
 text-align: left;
-font: bold 16px sans-serif;
+font-family: roboto, verdana ,Tahoma , sans-serif;
 padding: 45px 40px;
+
 }
 
 .footer-container .footer-left,
@@ -296,7 +514,7 @@ width: 20%;
 
 .footer-container h3{
 color:  #ffffff;
-font: normal 36px 'Cookie', cursive;
+font-family: roboto, verdana ,Tahoma , sans-serif;
 margin: 0;
 }
 
@@ -407,9 +625,16 @@ margin-right: 3px;
 margin-bottom: 5px;
 }
 
+/* -------------------- Logo ------------------  */
+.logo { font-size:18px;
+color:#ffffff;}
 
-/* media queries 700px wide */
-@media screen and (max-width: 700px) {
+img {
+width: 90vw;
+}
+
+/* media queries 768px wide */
+@media screen and (max-width: 768px) {
 .main, .navbar {   
 flex-direction: column;
 margin-left: 0;
@@ -427,8 +652,6 @@ margin-left: 0;
 .line2 {font-size:12px;}
 
 .line3 {font-size:10px;}
-
-.footer-container{font: bold 14px sans-serif;}
 
 .footer-container .footer-left,
 .footer-container .footer-center,
@@ -449,6 +672,7 @@ width: 100%;
 display: block;
 }
 ul.dropdown-content li {
+
 font-size:12px;
 }
 
@@ -457,66 +681,114 @@ padding: 15px 1px;
 }
 
 }
-/* media queries 360px wide */
-@media (min-width: 360px) {
-.main, .navbar {   
-flex-direction: column;
-margin-left: 0;
-}
 
-.slide1, .slide2 {padding:6px;}
+/* EXTRAS REVISAR */
 
-
-.main .right-div,
-.main .left-div 
-{margin-left: 0;}
-
-.line1 {font-size:18px;}
-
-.line2 {font-size:12px;}
-
-.line3 {font-size:10px;}
-
-.footer-container{font: bold 14px sans-serif;}
-
-.footer-container .footer-left,
-.footer-container .footer-center,
-.footer-container .footer-right{
-display: block;
+* {box-sizing: border-box}
+/* Full-width input fields */
+input[type=text], input[type=password] {
 width: 100%;
-margin-bottom: 40px;
-text-align: center;
+padding: 15px;
+margin: 5px 0 22px 0;
+display: inline-block;
+border: none;
+background: #f1f1f1;
 }
 
-.footer-container .footer-center i{
-margin-left: 0;
-}
-.left-div, .img, .right-div {
-width: 100vw;
-/* display: block; */
-max-width: 94vw;
-}
-ul.dropdown-content li {
-font-size:12px;
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+background-color: #ddd;
+outline: none;
 }
 
-ul li a {
-padding: 15px 1px;
-}
-img {
-    width: 80vw;
-}
-}
-
-/* media queries 700px wide */
-@media (min-width: 768px) {
-img {
-    width: 60vw;
+/* Set a style for all buttons */
+button {
+background-color: #04AA6D;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 100%;
+opacity: 0.9;
 }
 
-.main, .navbar {   
-    flex-direction: row;
-    margin-left: 0;
+button:hover {
+opacity:1;
 }
 
+/* Extra styles for the cancel button */
+.cancelbtn {
+padding: 14px 20px;
+background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+float: left;
+width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: #474e5d;
+padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+background-color: #fefefe;
+margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+border: 1px solid #888;
+width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+border: 1px solid #f1f1f1;
+margin-bottom: 25px;
+}
+
+/* The Close Button (x) */
+.close {
+position: absolute;
+right: 35px;
+top: 15px;
+font-size: 40px;
+font-weight: bold;
+color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+color: #f44336;
+cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+content: "";
+clear: both;
+display: table;
+}
+
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+.cancelbtn, .signupbtn {
+width: 100%;
+}
 }
