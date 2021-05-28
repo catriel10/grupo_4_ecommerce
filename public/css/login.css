@@ -186,6 +186,13 @@ body {
   color: #1ab188, 5%;
   }
   
+  .block-form{
+    border: 1px solid #c5cbd5;
+    padding: 10px;
+    margin: 5px auto;
+    transition-property: border,color,background-color;
+    max-width: vw;
+  }
   
   .form {
   background: rgba(#13232f, .9);
@@ -545,7 +552,7 @@ img {
     padding: 10px;
     margin: 5px auto;
     transition-property: border,color,background-color;
-    max-width: 50vw;
+    max-width: 75vw;
   }
   /* EXTRAS REVISAR */
   
@@ -593,7 +600,8 @@ img {
   
   /* Float cancel and signup buttons and add an equal width */
   .cancelbtn, .signupbtn {
-  width: 20vw;
+  width: 22vw;
+  max-width: 800px;
   }
   
   /* Add padding to container elements */
@@ -629,7 +637,7 @@ img {
   clear: both;
   display: table;
   }
-  
+ 
 
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
