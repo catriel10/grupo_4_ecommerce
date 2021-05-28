@@ -1,43 +1,49 @@
 * {
-    box-sizing: border-box;
-	-moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-
-}
-
-a:link, a:visited, a:active {
-	text-decoration:none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   }
+  
+  a:link, a:visited, a:active {
+  text-decoration:none;
+  }
+  /* ------------ Header------------------ */
+  
+  .header {
+  text-align:center;
+  padding: 10px;
+  background: #ffffff;
+  color: #000000;	
+  }
+  
+  .header h1 {
+  font-size:4rem;
+  font-family: roboto, verdana ,Tahoma , sans-serif;
+  font-weight:bold;
+  color: black;
+  }
+  
+  .header p { 
+  font-size:1.5em;
+  font-family: roboto, verdana ,Tahoma , sans-serif;
+  letter-spacing:0.8em;
+  }
+  
+  a:link, a:visited, a:active {
+  text-decoration:none;
+  }
+  
+  html {
+  overflow-y: scroll;
+  }
+  
 /* ------------ Body ------------------ */ 
 body {
 font-family: roboto, verdana ,Tahoma , sans-serif;
 margin: 0;
 background-color: #EBEBEB;
 font-weight: 300;
-font-size: 1.5vh;
-}
-
-
-/* ------------ Header------------------ */
-
-.header {
-	text-align:center;
-	padding: 10px;
-    background: #ffffff;
-    color: #000000;	
-}
-
-.header h1 {
-	font-size:5vw;
-    font-family: roboto, verdana ,Tahoma , sans-serif;
-    font-weight:bold;
-	margin: auto;
-	color: black;
-}
-.header p { 
-     font-size:1.5em;
-     font-family:roboto, verdana ,Tahoma , sans-serif;;
-     letter-spacing:0.8em;
+font-size: 1vh;
 }
 
 
@@ -84,7 +90,7 @@ ul li a {
   text-align: center;
   padding: 15px 5px;
   text-decoration: none;
-  font-size: 2em
+  font-size: 1rem
 }
 
 ul.dropdown-content {
@@ -115,9 +121,14 @@ ul.dropdown-content li {
 
 /* --------------------- Main ------------------ */
 .main {  
-    display: flex;
-    flex-wrap: wrap;
-	}
+display: flex;
+flex-wrap: wrap;
+}
+
+.main, .navbar {   
+flex-direction: column;
+margin-left: 0;
+}
 
 main section article i {
 display: block ;
@@ -207,160 +218,155 @@ hr {
 	font-weight:bold;
 	padding:4px;
 }
-	
+
+
+
 /* ------------------------------------ Footer -----------------------------*/
 
 .footer-container{
-	background-color: #292c2f;
-	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-	box-sizing: border-box;
-	width: 100%;
-	text-align: left;
-	font-family: roboto, verdana ,Tahoma , sans-serif;
-	padding: 45px 40px;
-}
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font-family: roboto, verdana ,Tahoma , sans-serif;
+  padding: 45px 40px;
+  }
+  
+  .footer-container .footer-left,
+  .footer-container .footer-center,
+  .footer-container .footer-right{
+  display: inline-block;
+  vertical-align: top;
+  }
+  
+  /* ----------------- Footer caja width ( left center right ) ------------------ */
+  
+  .footer-container .footer-left{
+  width: 40%;
+  }
+  
+  .footer-container .footer-center{
+  width: 35%;
+  }
+  
+  .footer-container .footer-right{
+  width: 20%;
+  }
+  
+  /* ------------ footer-left contenido ------------- */
+  
+  .footer-container h3{
+  color:  #ffffff;
+  font-family: roboto, verdana ,Tahoma , sans-serif;;
+  margin: 0;
+  }
+  
+  .footer-container h3 span{
+  color:  #5383d3;
+  }
+  
+  .footer-container .footer-links{
+  color:  #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+  }
+  
+  .footer-container .footer-links a{
+  display:inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color:  inherit;
+  font-size: 1em;
+  }
+  
+  .footer-container .footer-company-name{
+  color:  #8f9296;
+  font-size: 1em;
+  font-weight: normal;
+  margin: 0;
+  }
+  
+  /* -------------- Footer Center contentido--------------------- */
+  
+  .footer-container .footer-center i{
+  background-color:  #33383b;
+  color: #ffffff;
+  font-size: 2em;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+  }
+  
+  .footer-container .footer-center i.fa-envelope{
+  font-size: 2em;
+  line-height: 38px;
+  }
+  
+  .footer-container .footer-center p{
+  display: inline-block;
+  color: #ffffff;
+  vertical-align: middle;
+  margin:0;
+  font-size: 1em
+  }
+  
+  .footer-container .footer-center p span{
+  display:block;
+  font-weight: normal;
+  font-size: 1em;
+  line-height:2;
+  }
+  
+  .footer-container .footer-center p a{
+  color:  #5383d3;
+  text-decoration: none;
+  }
+  
+  
+  /* ----------------------- Footer Right contentido---------------*/
+  
+  
+  
+  .footer-container .footer-company-about{
+  line-height: 20px;
+  color:  #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+  }
+  
+  .footer-container .footer-company-about span{
+  display: block;
+  color:  #ffffff;
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  }
+  
+  .footer-container .footer-icons{
+  margin-top: 25px;
+  }
+  
+  .footer-container .footer-icons a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color:  #33383b;
+  border-radius: 2px;
+  font-size: 2em;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+  }
 
-.footer-container .footer-left,
-.footer-container .footer-center,
-.footer-container .footer-right{
-	display: inline-block;
-	vertical-align: top;
-}
-
-/* ----------------- Footer caja width ( left center right ) ------------------ */
-
-.footer-container .footer-left{
-	width: 40%;
-}
-
-.footer-container .footer-center{
-	width: 35%;
-}
-
-.footer-container .footer-right{
-	width: 20%;
-}
-
-
-
-/* ------------ footer-left contenido ------------- */
-
-.footer-container h3{
-	color:  #ffffff;
-	font-family: roboto, verdana ,Tahoma , sans-serif;;
-	margin: 0;
-}
-
-.footer-container h3 span{
-	color:  #5383d3;
-}
-
-.footer-container .footer-links{
-	color:  #ffffff;
-	margin: 20px 0 12px;
-	padding: 0;
-}
-
-.footer-container .footer-links a{
-	display:inline-block;
-	line-height: 1.8;
-	text-decoration: none;
-	color:  inherit;
-	font-size: 2em;
-}
-
-.footer-container .footer-company-name{
-	color:  #8f9296;
-	font-size: 14px;
-	font-weight: normal;
-	margin: 0;
-}
-
-/* -------------- Footer Center contentido--------------------- */
-
-
-
-.footer-container .footer-center i{
-	background-color:  #33383b;
-	color: #ffffff;
-	font-size: 25px;
-	width: 38px;
-	height: 38px;
-	border-radius: 50%;
-	text-align: center;
-	line-height: 42px;
-	margin: 10px 15px;
-	vertical-align: middle;
-	
-}
-
-.footer-container .footer-center i.fa-envelope{
-	font-size: 2em;
-	line-height: 38px;
-	
-}
-
-.footer-container .footer-center p{
-	display: inline-block;
-	color: #ffffff;
-	vertical-align: middle;
-	margin:0;
-	font-size: 2em
-	
-}
-
-.footer-container .footer-center p span{
-	display:block;
-	font-weight: normal;
-	font-size: 1em;
-	line-height:2;
-	
-}
-
-.footer-container .footer-center p a{
-	color:  #5383d3;
-	text-decoration: none;
-}
-
-
-/* ----------------------- Footer Right contentido---------------*/
-
-
-
-.footer-container .footer-company-about{
-	line-height: 20px;
-	color:  #92999f;
-	font-size: 13px;
-	font-weight: normal;
-	margin: 0;
-}
-
-.footer-container .footer-company-about span{
-	display: block;
-	color:  #ffffff;
-	font-size: 1em;
-	font-weight: bold;
-	margin-bottom: 20px;
-}
-
-.footer-container .footer-icons{
-	margin-top: 25px;
-}
-
-.footer-container .footer-icons a{
-	display: inline-block;
-	width: 35px;
-	height: 35px;
-	cursor: pointer;
-	background-color:  #33383b;
-	border-radius: 2px;
-	font-size: 2em;
-	color: #ffffff;
-	text-align: center;
-	line-height: 35px;
-	margin-right: 3px;
-	margin-bottom: 5px;
-}
 
 /* -------------------- Logo ------------------  */
 .logo { font-size:18px;
@@ -371,150 +377,188 @@ img {
 }
 
 
-  /* media queries 768px wide */
-  @media screen and (max-width: 768px) {
-	.main, .navbar {   
-	flex-direction: column;
-	margin-left: 0;
-	}
-	img {
-		width: 60vw;
-	}
+/* media queries 360px wide */
+@media screen and (min-width: 360px) {
+  .main, .navbar {   
+  flex-direction: column;
+  margin-left: 0;
+  }
 
-	.slide1, .slide2 {padding:6px;}
-	
-	
-	.main .right-div,
-	.main .left-div 
-	{margin-left: 0;}
-	
-	.line1 {font-size:18px;}
-	
-	.line2 {font-size:12px;}
-	
-	.line3 {font-size:10px;}
-	
-	.footer-container .footer-left,
-	.footer-container .footer-center,
-	.footer-container .footer-right{
-	display: block;
-	width: 100%;
-	margin-bottom: 40px;
-	text-align: center;
-	}
-	
-	.footer-container .footer-center i{
-	margin-left: 0;
-	}
-	.left-div,
-	.right-div {
-	max-width: 100%;
-	width: 100%;
-	display: block;
-	}
-	ul.dropdown-content li {
-	
-	font-size:12px;
-	}
-	
-	ul li a {
-	padding: 15px 1px;
-	font-size: 2em
-	}
-	
-	}
-	
-	.block-form{
-	  border: 1px solid #c5cbd5;
-	  padding: 10px;
-	  margin: 5px auto;
-	  transition-property: border,color,background-color;
-	  max-width: 50vw;
-	}
-	/* EXTRAS REVISAR */
-	
-	* {box-sizing: border-box}
-	/* Full-width input fields */
-	input[type=text], input[type=password] {
-	width: 100%;
-	padding: 15px;
-	margin: 5px 0 22px 0;
-	display: inline-block;
-	border: none;
-	background: #f1f1f1;
-	}
-	
-	/* Add a background color when the inputs get focus */
-	input[type=text]:focus, input[type=password]:focus {
-	background-color: #ddd;
-	outline: none;
-	}
-	
-	/* Set a style for all buttons */
-	button {
-	background-color: #04AA6D;
-	color: white;
-	padding: 14px 20px;
-	margin: 8px 0;
-	border: none;
-	cursor: pointer;
-	width: 100%;
-	opacity: 0.9;
-	}
-	
-	button:hover {
-	opacity:1;
-	}
-	
-	/* Extra styles for the cancel button */
-	.cancelbtn {
-	padding: 14px 14px;
-	background-color: #f44336;
-	}
-	
-	/* Float cancel and signup buttons and add an equal width */
-	.cancelbtn, .signupbtn {
-	width: 20vw;
-	}
-	
-	/* Add padding to container elements */
-	.container {
-	padding: 5vw;
-	}
-	  
-	/* Style the horizontal ruler */
-	hr {
-	border: 1px solid #f1f1f1;
-	margin-bottom: 25px;
-	}
-	
-	/* The Close Button (x) */
-	.close {
-	position: absolute;
-	right: 35px;
-	top: 15px;
-	font-size: 40px;
-	font-weight: bold;
-	color: #f1f1f1;
-	}
-	
-	.close:hover,
-	.close:focus {
-	color: #f44336;
-	cursor: pointer;
-	}
-	
-	/* Clear floats */
-	.clearfix::after {
-	content: "";
-	clear: both;
-	display: table;
-	}
-	
+
+  .slide1, .slide2 {padding:6px;}
+
+
+  .main .right-div,
+  .main .left-div 
+  {margin-left: 0;}
   
-  /* Change styles for cancel button and signup button on extra small screens */
-  @media screen and (max-width: 300px) {
-  .cancelbtn, .signupbtn {
+  .line1 {font-size:18px;}
+  
+  .line2 {font-size:12px;}
+  
+  .line3 {font-size:10px;}
+  
+  .footer-container .footer-left,
+  .footer-container .footer-center,
+  .footer-container .footer-right{
+  display: block;
   width: 100%;
+  margin-bottom: 40px;
+  text-align: center;
   }
+  
+  .footer-container .footer-center i{
+  margin-left: 0;
   }
+  .left-div,
+  .right-div {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  }
+  ul.dropdown-content li {
+  
+  font-size:12px;
+  }
+  
+  ul li a {
+  padding: 15px 1px;
+  font-size: 1rem
+  }
+  
+  }
+
+
+
+.lv {
+width: 20%;
+flex-wrap: nowrap;
+}
+
+.img-cat {
+width: 17vw;
+}
+
+
+  /* media queries 768px wide */
+@media (min-width: 768px) {
+.main, .navbar {   
+flex-direction: row;
+margin-left: 0;
+}
+img {
+width: 60vw;
+}
+
+.slide1, .slide2 {padding:6px;}
+
+.main .right-div,
+.main .left-div 
+{margin-left: 0;}
+
+.line1 {font-size:18px;}
+
+.line2 {font-size:12px;}
+
+.line3 {font-size:10px;}
+
+
+ul.dropdown-content li {
+
+font-size:12px;
+}
+
+ul li a {
+padding: 15px 1px;
+font-size: 1rem
+}
+
+}
+
+.block-form{
+border: 1px solid #c5cbd5;
+padding: 10px;
+margin: 5px auto;
+transition-property: border,color,background-color;
+max-width: 50vw;
+}
+/* EXTRAS REVISAR */
+
+* {box-sizing: border-box}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+width: 100%;
+padding: 15px;
+margin: 5px 0 22px 0;
+display: inline-block;
+border: none;
+background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+background-color: #ddd;
+outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+background-color: #04AA6D;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 100%;
+opacity: 0.9;
+}
+
+button:hover {
+opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+padding: 14px 14px;
+background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+width: 20vw;
+}
+
+/* Add padding to container elements */
+.container {
+padding: 5vw;
+}
+
+/* Style the horizontal ruler */
+hr {
+border: 1px solid #f1f1f1;
+margin-bottom: 25px;
+}
+
+/* The Close Button (x) */
+.close {
+position: absolute;
+right: 35px;
+top: 15px;
+font-size: 40px;
+font-weight: bold;
+color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+color: #f44336;
+cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+content: "";
+clear: both;
+display: table;
+}
+
