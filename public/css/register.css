@@ -1,3 +1,12 @@
+* {
+  box-sizing: border-box;
+-moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+a:link, a:visited, a:active {
+text-decoration:none;
+}
 /* ------------ Header------------------ */
 
 .header {
@@ -8,14 +17,14 @@
   }
   
   .header h1 {
-  font-size:34px;
+  font-size:5vw;
   font-family: roboto, verdana ,Tahoma , sans-serif;
   font-weight:bold;
   color: black;
   }
   
   .header p { 
-  font-size:1vh;
+  font-size:1.5em;
   font-family: roboto, verdana ,Tahoma , sans-serif;
   letter-spacing:0.8em;
   }
@@ -81,7 +90,7 @@ body {
     padding: 15px 5px;
     text-decoration: none;
     width:100%;
-    size: 1em;
+    font-size: 2em
   }
   
   ul.dropdown-content {
@@ -104,6 +113,10 @@ body {
   /*------------------------------------------------------------------ */
   
   /*----------------------Form---------------------------------------- */
+  .control{
+    font-size: 2em
+  }
+
   a {
   text-decoration: none;
   color: #1ab188;
@@ -151,6 +164,14 @@ body {
   margin: 0 0 40px;
   }
   
+  h2 {
+    text-align: center;
+    color: black;
+    font-weight: 300;
+    margin: 0 0 40px;
+    font-size: 5em
+    }
+
   label {
   position: absolute;
   transform: translateY(6px);
@@ -181,7 +202,7 @@ body {
   
   input,
   textarea {
-  font-size: 22px;
+  font-size: 2em;
   display: block;
   width: 100%;
   height: 100%;
@@ -198,6 +219,7 @@ body {
   textarea :focus {
   outline: 0;
   border-color: #1ab188;
+  font-size: 2em
   }
   
   textarea {
@@ -255,164 +277,168 @@ body {
   text-align: right;
   }
   
-  /* ------------------------------------ Footer -----------------------------*/
-  
-  .footer-container{
-  background-color: #292c2f;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
-  width: 100%;
-  text-align: left;
-  font-family: roboto, verdana ,Tahoma , sans-serif;
-  padding: 45px 40px;
-  
-  }
-  
-  .footer-container .footer-left,
-  .footer-container .footer-center,
-  .footer-container .footer-right{
-  display: inline-block;
-  vertical-align: top;
-  }
-  
-  /* ----------------- Footer caja width ( left center right ) ------------------ */
-  
-  .footer-container .footer-left{
-  width: 40%;
-  }
-  
-  .footer-container .footer-center{
-  width: 35%;
-  }
-  
-  .footer-container .footer-right{
-  width: 20%;
-  }
-  
-  
-  
-  /* ------------ footer-left contenido ------------- */
-  
-  .footer-container h3{
-  color:  #ffffff;
-  font-family: roboto, verdana ,Tahoma , sans-serif;
-  margin: 0;
-  }
-  
-  .footer-container h3 span{
-  color:  #5383d3;
-  }
-  
-  .footer-container .footer-links{
-  color:  #ffffff;
-  margin: 20px 0 12px;
-  padding: 0;
-  }
-  
-  .footer-container .footer-links a{
-  display:inline-block;
-  line-height: 1.8;
-  text-decoration: none;
-  color:  inherit;
-  }
-  
-  .footer-container .footer-company-name{
-  color:  #8f9296;
-  font-size: 14px;
-  font-weight: normal;
-  margin: 0;
-  }
-  
-  /* -------------- Footer Center contentido--------------------- */
-  
-  
-  
-  .footer-container .footer-center i{
-  background-color:  #33383b;
-  color: #ffffff;
-  font-size: 25px;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 42px;
-  margin: 10px 15px;
-  vertical-align: middle;
-  }
-  
-  .footer-container .footer-center i.fa-envelope{
-  font-size: 17px;
-  line-height: 38px;
-  }
-  
-  .footer-container .footer-center p{
-  display: inline-block;
-  color: #ffffff;
-  vertical-align: middle;
-  margin:0;
-  }
-  
-  .footer-container .footer-center p span{
-  display:block;
-  font-weight: normal;
-  font-size:14px;
-  line-height:2;
-  }
-  
-  .footer-container .footer-center p a{
-  color:  #5383d3;
-  text-decoration: none;;
-  }
-  
-  
-  /* ----------------------- Footer Right contentido---------------*/
-  
-  
-  
-  .footer-container .footer-company-about{
-  line-height: 20px;
-  color:  #92999f;
-  font-size: 13px;
-  font-weight: normal;
-  margin: 0;
-  }
-  
-  .footer-container .footer-company-about span{
-  display: block;
-  color:  #ffffff;
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  }
-  
-  .footer-container .footer-icons{
-  margin-top: 25px;
-  }
-  
-  .footer-container .footer-icons a{
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
-  background-color:  #33383b;
-  border-radius: 2px;
-  
-  font-size: 20px;
-  color: #ffffff;
-  text-align: center;
-  line-height: 35px;
-  
-  margin-right: 3px;
-  margin-bottom: 5px;
-  }
-  
-  /* -------------------- Logo ------------------  */
-  .logo { font-size:18px;
-  color:#ffffff;}
-  
-  img {
-  width: 90vw;
-  }
+/* ------------------------------------ Footer -----------------------------*/
+
+.footer-container{
+	background-color: #292c2f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font-family: roboto, verdana ,Tahoma , sans-serif;
+	padding: 45px 40px;
+}
+
+.footer-container .footer-left,
+.footer-container .footer-center,
+.footer-container .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* ----------------- Footer caja width ( left center right ) ------------------ */
+
+.footer-container .footer-left{
+	width: 40%;
+}
+
+.footer-container .footer-center{
+	width: 35%;
+}
+
+.footer-container .footer-right{
+	width: 20%;
+}
+
+
+
+/* ------------ footer-left contenido ------------- */
+
+.footer-container h3{
+	color:  #ffffff;
+	font-family: roboto, verdana ,Tahoma , sans-serif;;
+	margin: 0;
+}
+
+.footer-container h3 span{
+	color:  #5383d3;
+}
+
+.footer-container .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-container .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+	font-size: 2em;
+}
+
+.footer-container .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* -------------- Footer Center contentido--------------------- */
+
+
+
+.footer-container .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+	
+}
+
+.footer-container .footer-center i.fa-envelope{
+	font-size: 2em;
+	line-height: 38px;
+	
+}
+
+.footer-container .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+	font-size: 2em
+	
+}
+
+.footer-container .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size: 1em;
+	line-height:2;
+	
+}
+
+.footer-container .footer-center p a{
+	color:  #5383d3;
+	text-decoration: none;
+}
+
+
+/* ----------------------- Footer Right contentido---------------*/
+
+
+
+.footer-container .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-container .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 1em;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-container .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-container .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+	font-size: 2em;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* -------------------- Logo ------------------  */
+.logo { font-size:18px;
+	color:#ffffff;}
+
+img {
+	width: 90vw;
+}
+
  
   /* media queries 768px wide */
   @media screen and (max-width: 768px) {
@@ -459,6 +485,7 @@ body {
     
     ul li a {
     padding: 15px 1px;
+    font-size: 2em
     }
     
     }
@@ -481,12 +508,14 @@ body {
     display: inline-block;
     border: none;
     background: #f1f1f1;
+    font-size: 2em
     }
-    
+        
     /* Add a background color when the inputs get focus */
     input[type=text]:focus, input[type=password]:focus {
     background-color: #ddd;
     outline: none;
+    font-size: 2em
     }
     
     /* Set a style for all buttons */

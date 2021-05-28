@@ -19,14 +19,14 @@ text-decoration:none;
   }
   
   .header h1 {
-  font-size:34px;
+  font-size:5vw;
   font-family: roboto, verdana ,Tahoma , sans-serif;
   font-weight:bold;
   color: black;
   }
   
   .header p { 
-  font-size:1vh;
+  font-size:1.5em;
   font-family: roboto, verdana ,Tahoma , sans-serif;
   letter-spacing:0.8em;
   }
@@ -94,7 +94,7 @@ body {
     padding: 15px 5px;
     text-decoration: none;
     width:100%;
-    size: 1em;
+    font-size: 2em
   }
   
   ul.dropdown-content {
@@ -115,7 +115,10 @@ body {
     width:100%;
   }
   /*------------------------------------------------------------------ */
-  
+  .control{
+    font-size: 2em
+  }
+
   input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
@@ -139,6 +142,10 @@ body {
     opacity: 0.8;
   }
   
+  .check {
+    font-size: 2em 
+  }
+
   .cancelbtn {
     width: 10vw;
     padding: 10px 18px;
@@ -163,6 +170,7 @@ body {
   span.psw {
     float: right;
     padding-top: 16px;
+    font-size: 2em
   }
 
 
@@ -209,6 +217,14 @@ body {
   margin: 0 0 40px;
   }
   
+  h2 {
+    text-align: center;
+    color: black;
+    font-weight: 300;
+    margin: 0 0 40px;
+    font-size: 5em
+    }
+
   label {
   position: absolute;
   transform: translateY(6px);
@@ -239,7 +255,7 @@ body {
   
   input,
   textarea {
-  font-size: 22px;
+  font-size: 2em;
   display: initial;
   padding: 5px 10px;
   background: none;
@@ -311,7 +327,7 @@ body {
   text-align: right;
   }
   
- /* ------------------------------------ Footer -----------------------------*/
+/* ------------------------------------ Footer -----------------------------*/
 
 .footer-container{
 	background-color: #292c2f;
@@ -369,6 +385,7 @@ body {
 	line-height: 1.8;
 	text-decoration: none;
 	color:  inherit;
+	font-size: 2em;
 }
 
 .footer-container .footer-company-name{
@@ -397,7 +414,7 @@ body {
 }
 
 .footer-container .footer-center i.fa-envelope{
-	font-size: 17px;
+	font-size: 2em;
 	line-height: 38px;
 	
 }
@@ -407,13 +424,14 @@ body {
 	color: #ffffff;
 	vertical-align: middle;
 	margin:0;
+	font-size: 2em
 	
 }
 
 .footer-container .footer-center p span{
 	display:block;
 	font-weight: normal;
-	font-size:14px;
+	font-size: 1em;
 	line-height:2;
 	
 }
@@ -439,7 +457,7 @@ body {
 .footer-container .footer-company-about span{
 	display: block;
 	color:  #ffffff;
-	font-size: 14px;
+	font-size: 1em;
 	font-weight: bold;
 	margin-bottom: 20px;
 }
@@ -455,22 +473,22 @@ body {
 	cursor: pointer;
 	background-color:  #33383b;
 	border-radius: 2px;
-	font-size: 20px;
+	font-size: 2em;
 	color: #ffffff;
 	text-align: center;
 	line-height: 35px;
-
 	margin-right: 3px;
 	margin-bottom: 5px;
 }
 
-  /* -------------------- Logo ------------------  */
-  .logo { font-size:18px;
-  color:#ffffff;}
-  
-  img {
-  width: 90vw;
-  }
+/* -------------------- Logo ------------------  */
+.logo { font-size:18px;
+	color:#ffffff;}
+
+img {
+	width: 90vw;
+}
+
   
   /* media queries 768px wide */
   @media screen and (max-width: 768px) {
@@ -517,6 +535,7 @@ body {
   
   ul li a {
   padding: 15px 1px;
+  font-size: 2em
   }
   
   }
@@ -539,12 +558,14 @@ body {
   display: inline-block;
   border: none;
   background: #f1f1f1;
+  font-size: 2em
   }
   
   /* Add a background color when the inputs get focus */
   input[type=text]:focus, input[type=password]:focus {
   background-color: #ddd;
   outline: none;
+  font-size: 2em
   }
   
   /* Set a style for all buttons */
@@ -554,9 +575,9 @@ body {
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
-  cursor: pointer;
-  width: 100%;
+  cursor: pointer;  width: 100%;
   opacity: 0.9;
+
   }
   
   button:hover {
@@ -567,6 +588,7 @@ body {
   .cancelbtn {
   padding: 14px 14px;
   background-color: #f44336;
+  font-size: 2em
   }
   
   /* Float cancel and signup buttons and add an equal width */

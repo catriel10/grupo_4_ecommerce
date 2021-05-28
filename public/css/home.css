@@ -28,14 +28,14 @@ font-size: 1.5vh;
 }
 
 .header h1 {
-	font-size:5vh;
+	font-size:5vw;
     font-family: roboto, verdana ,Tahoma , sans-serif;
     font-weight:bold;
 	margin: auto;
 	color: black;
 }
 .header p { 
-     font-size:1em;
+     font-size:1.5em;
      font-family:roboto, verdana ,Tahoma , sans-serif;;
      letter-spacing:0.8em;
 }
@@ -84,7 +84,7 @@ ul li a {
   text-align: center;
   padding: 15px 5px;
   text-decoration: none;
-  size: 1em;
+  font-size: 2em
 }
 
 ul.dropdown-content {
@@ -266,6 +266,7 @@ hr {
 	line-height: 1.8;
 	text-decoration: none;
 	color:  inherit;
+	font-size: 2em;
 }
 
 .footer-container .footer-company-name{
@@ -294,7 +295,7 @@ hr {
 }
 
 .footer-container .footer-center i.fa-envelope{
-	font-size: 17px;
+	font-size: 2em;
 	line-height: 38px;
 	
 }
@@ -304,13 +305,14 @@ hr {
 	color: #ffffff;
 	vertical-align: middle;
 	margin:0;
+	font-size: 2em
 	
 }
 
 .footer-container .footer-center p span{
 	display:block;
 	font-weight: normal;
-	font-size:14px;
+	font-size: 1em;
 	line-height:2;
 	
 }
@@ -336,7 +338,7 @@ hr {
 .footer-container .footer-company-about span{
 	display: block;
 	color:  #ffffff;
-	font-size: 14px;
+	font-size: 1em;
 	font-weight: bold;
 	margin-bottom: 20px;
 }
@@ -352,11 +354,10 @@ hr {
 	cursor: pointer;
 	background-color:  #33383b;
 	border-radius: 2px;
-	font-size: 20px;
+	font-size: 2em;
 	color: #ffffff;
 	text-align: center;
 	line-height: 35px;
-
 	margin-right: 3px;
 	margin-bottom: 5px;
 }
@@ -418,6 +419,7 @@ img {
 	
 	ul li a {
 	padding: 15px 1px;
+	font-size: 2em
 	}
 	
 	}
