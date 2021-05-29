@@ -1,114 +1,118 @@
 * {
-box-sizing: border-box;
--moz-box-sizing: border-box;
--webkit-box-sizing: border-box;
-}
-
-a:link, a:visited, a:active {
-text-decoration:none;
-}
-
-/* ------------ Header------------------ */
-
-.header {
-text-align:center;
-padding: 10px;
-background: #ffffff;
-color: #000000;	
-}
-
-.header h1 {
-font-size:5vh;
-font-family: roboto, verdana ,Tahoma , sans-serif;
-font-weight:bold;
-margin: auto;
-color: black;
-}
-.header p { 
-font-size:1em;
-font-family:roboto, verdana ,Tahoma , sans-serif;;
-letter-spacing:0.8em;
-}
-
-
-/* ------------ Navegacion slider ------------------ */ 
-ul.navbar {
-display: flex;
-background-color:#292c2f;
-margin: 0;
-padding: 0;
-}
-
-ul {
-list-style-type: none;
-text-decoration:none;
-margin: 0;
-padding: 0;
-text-align:center;
-}
-
-
-ul.navbar li:hover,
-ul.navbar li:active
-{background-color:#414a4c;}
-
-.navbar .active {
-background-color:#414a4c;
-color: #ffffff;	
-}
-
-ul.navbar li {
-flex: 1;
-box-sizing: border-box;
--moz-box-sizing: border-box;
--webkit-box-sizing: border-box;
-position: relative;
-border: 2.4px solid #000000;
-font-family: roboto, verdana ,Tahoma , sans-serif;;
-background-color: #292c2f;
-}
-
-ul li a {
-display: block;
-color: white;
-text-align: center;
-padding: 15px 5px;
-text-decoration: none;
-size: 1em;
-}
-
-ul.dropdown-content {
-position: absolute;
-display: none;
-z-index: 1;
-background-color: #292c2f;
-}
-
-ul.dropdown-content li {
-width: 100%;
-border: 0px solid black;
-border-bottom: 2px solid #000000;
-}
-
-.dropdown:hover .dropdown-content {
-display: block;
-position: absolute;
-width:100%;
-}
-/*------------------------------------------------------------------ */
-
-
-
-/* ------------ Body ------------------ */ 
-
-body {
-font-family: verdana ,Tahoma , sans-serif;
-margin: 0;
-background-color: #EBEBEB;
-font-family: 'Roboto', sans-serif;
-font-weight: 300;
-font-size: 12px;
-}
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    }
+    
+    a:link, a:visited, a:active {
+    text-decoration:none;
+    }
+    /* ------------ Header------------------ */
+    
+    .header {
+    text-align:center;
+    padding: 10px;
+    background: #ffffff;
+    color: #000000;	
+    }
+    
+    .header h1 {
+    font-size:4rem;
+    font-family: roboto, verdana ,Tahoma , sans-serif;
+    font-weight:bold;
+    color: black;
+    }
+    
+    .header p { 
+    font-size:1.5em;
+    font-family: roboto, verdana ,Tahoma , sans-serif;
+    letter-spacing:0.8em;
+    }
+    
+    a:link, a:visited, a:active {
+    text-decoration:none;
+    }
+    
+    html {
+    overflow-y: scroll;
+    }
+    
+    /* ------------ Body ------------------ */ 
+    body {
+    font-family: roboto, verdana ,Tahoma , sans-serif;
+    margin: 0;
+    background-color: #ffffff;
+    font-weight: 300;
+    font-size: 1vh;
+    }
+    
+    /* ------------ Navegacion slider ------------------ */ 
+    
+    ul.navbar {
+    display: flex;
+    background-color:#292c2f;
+    margin: 0;
+    padding: 0;
+    }
+    
+    ul {
+    list-style-type: none;
+    text-decoration:none;
+    margin: 0;
+    padding: 0;
+    text-align:center;
+    }
+    
+    
+    ul.navbar li:hover,
+    ul.navbar li:active
+    {background-color:#414a4c;}
+    
+    .navbar .active {
+    background-color:#414a4c;
+    color: #ffffff;	
+    }
+    
+    ul.navbar li {
+    flex: 1;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    position: relative;
+    border: 2.4px solid #000000;
+    font-family: roboto, verdana ,Tahoma , sans-serif;;
+    background-color: #292c2f;
+    }
+    
+    ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 5px;
+    text-decoration: none;
+    width:100%;
+    font-size: 1rem
+    }
+    
+    ul.dropdown-content {
+    position: absolute;
+    display: none;
+    z-index: 1;
+    }
+    
+    ul.dropdown-content li {
+    width: 100%;
+    border: 0px solid black;
+    border-bottom: 2px solid #000000;
+    }
+    
+    .dropdown:hover .dropdown-content {
+    display: block;
+    position: absolute;
+    width:100%;
+    }
+    
+    /*------------------------------------------------------------------ */
 
 
 

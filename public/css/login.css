@@ -47,6 +47,7 @@ font-size: 1vh;
 }
 
 /* ------------ Navegacion slider ------------------ */ 
+
 ul.navbar {
 display: flex;
 background-color:#292c2f;
@@ -112,6 +113,7 @@ width:100%;
 }
 
 /*------------------------------------------------------------------ */
+
 .control{
 font-size: 2em
 }
@@ -170,8 +172,6 @@ padding-top: 16px;
 font-size: 2em
 }
 
-
-
 /*----------------------Form---------------------------------------- */
 a {
 text-decoration: none;
@@ -199,8 +199,6 @@ margin: 40px auto;
 border-radius: 4px;
 box-shadow: 0 4px 10px 4px rgba(#13232f, .3);
 }
-
-
 
 .tab-group {
 list-style: none;

@@ -160,7 +160,7 @@ padding:0;
 .lv {
 border-top: 1px solid #ebebeb;
 border-radius: 0%;
-margin: 5px;
+margin: 20px;
 background-color: #fff;
 padding: 15px 15px;
 /* max-width:45%;*/
@@ -430,40 +430,7 @@ img {
 width: 90vw;
 }
 
-/* media queries 360px wide 
-
-.price, .discount {
-font-size: 4em;
-}
-
-.price {
-text-align: left;
-}
-
-.discount {
-text-align: center;
-}
-
-.lv {
-width: 50%;
-flex-wrap: nowrap;
-}
-
-.lv2 {
-font-size: 0.25em;
-}
-
-.articulos1 {
-justify-content: space-between;
-margin: auto;
-}
-
-.articulos2 {
-justify-content: space-between;
-margin: auto;
-}
-
-*/
+/* media queries 360px wide */
 @media screen and (min-width: 360px) {
 .main, .navbar {   
 flex-direction: column;

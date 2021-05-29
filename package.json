@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node src/app.js",
+    "start": "node src/app.js",
     "dev": "nodemon src/app.js"
   },
   "repository": {
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/catriel10/grupo_4_ecommerce#readme",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.1",
     "nodemon": "^2.0.7"
   },

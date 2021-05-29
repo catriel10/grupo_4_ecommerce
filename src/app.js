@@ -8,6 +8,9 @@ const port = process.env.PORT || 4444;
 // definimos la carpeta que devuelve archivos estáticos
 app.use(express.static(path.join(__dirname, '../public')))
 
+app.set("view engine", "ejs")
+app.set("views", "./views")
+
 app.listen (port, ()=>{
 console.log ("Mi servidor GRUPO 4 esta funcionando en port 4444")
 });
@@ -31,7 +34,7 @@ app.get('/register', (req, res) => {
 app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, './views/login.html'));
 });
-
+/*
 // Product Cart
 app.get('/productCart', (req, res) => {
     res.sendFile(path.join(__dirname, './views/productCart.html'));
@@ -40,7 +43,7 @@ app.get('/productCart', (req, res) => {
 // Product Detail
 app.get('/productDetail', (req, res) => {
     res.sendFile(path.join(__dirname, './views/productDetail.html'));
-});
+});*/
 
 // products
 const productsRoutes = require('./routes/productsRoutes');
