@@ -47,19 +47,19 @@
                         <img class="imgProd" src="RUTA CARPETA FOTOS PRODUCTO">
                     </div>
                     <div> 
-                        <div class="producto"> 
+                        <div class="product"> 
                             <span>PRODUCT NAME</span>
                         </div>    
-                        <div class="descripcion"> 
-                            <span>REMERA CON LOGO PARA SALIR.</span>
+                        <div class="description"> 
+                            <span>T-SHIRT WITH LOGO TO GO OUT</span>
                         </div>
                     </div>    
                 </div>
-                <div class="detalleCompra"> 
+                <div class="detailPurchase"> 
                         <div> 
-                            <H6 class="nombreEtiqueta">CANT</H6> 
+                            <H6 class="nameLabel">QTY</H6> 
                             <span>
-                                <select name="cantidad" class="cantidad">
+                                <select name="quantity" class="quantity">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -68,17 +68,17 @@
                         </div>
 
                         <div> 
-                            <H6 class="nombreEtiqueta">PRECIO</H6>
+                            <H6 class="nameLabel">PRICE</H6>
                             <span>$100</span>
                         </div>
                         
                         <div> 
-                            <H6 class="nombreEtiqueta">TOTAL</H6>
+                            <H6 class="nameLabel">TOTAL</H6>
                             <span>$100</span>
                         </div>
 
-                        <div class="icono" > 
-                            <H6 class="nombreEtiqueta">ELIMINAR</H6>
+                        <div class="icon" > 
+                            <H6 class="nameLabel">DELETE</H6>
                             <i class="far fa-trash-alt"></i>
                         </div>
                         
@@ -94,20 +94,20 @@
                     </div>
 
                     <div> 
-                        <div class="producto"> 
-                            <span>PANTALON LARGO</span>
+                        <div class="product"> 
+                            <span>LONGS PANTS</span>
                         </div>    
 
-                        <div class="descripcion"> 
-                            <span>PANTALON LARGO CON BOLSILLOS</span>
+                        <div class="description"> 
+                            <span>LONG PANTS WITH POCKETS</span>
                         </div>
                     </div>    
 
                 </div>
                 
-                    <div class="detalleCompra"> 
+                    <div class="detailPurchase"> 
                         <div> 
-                            <H6 class="nombreEtiqueta">CANT</H6> 
+                            <H6 class="nameLabel">CANT</H6> 
                             <span>
                                 <select name="cantidad" class="cantidad">
                                     <option value="1">1</option>
@@ -118,17 +118,17 @@
                         </div>
 
                         <div> 
-                            <H6 class="nombreEtiqueta">PRECIO</H6>
+                            <H6 class="nameLabel">PRICE</H6>
                             <span>$200</span>
                         </div>
                         
                         <div> 
-                            <H6 class="nombreEtiqueta">TOTAL</H6>
+                            <H6 class="nameLabel">TOTAL</H6>
                             <span>$200</span>
                         </div>
                         
-                        <div class="icono" >
-                                <H6 class="nombreEtiqueta">ELIMINAR</H6>
+                        <div class="icon" >
+                                <H6 class="nameLabel">DELETE</H6>
                                 <i class="far fa-trash-alt"></i>
                         </div>
                         
@@ -140,43 +140,43 @@
         </section>     
 
 
-        <section class="datosEntrega">    
+        <section class="dataDelivery">    
                           
-                <H3 class="etiquetaSecciones">ENTREGA</H3>
-                <div class="textoEntrega">Selecciona tu opción de retiro o entrega tu producto: </div>
+                <H3 class="labelSections">DELIVERY</H3>
+                <div class="textDelivery">Select your withdrawal option or deliver your product: </div>
                  
                 
-                <form action="/" method="GET" class= formularioEntrega>
-                    <div class="contenedorFormEntrega">
-                        <input class="botonFormularioEntrega" type="radio" name="metodo-entrega" value="envio">
-                        <label for="envio">ENVIO</label>
-                        <input class="botonFormularioEntrega" type="radio" name="metodo-entrega" value="sucursal">
-                        <label for="sucursal">SUCURSAL </label>
+                <form action="/" method="GET" class= "deliveryform">
+                    <div class="containerFormDelivery">
+                        <input class="buttonFormDelivery" type="radio" name="delivery-method" value="shipping">
+                        <label for="shipping">SHIPPING</label>
+                        <input class="buttonFormDelivery" type="radio" name="delivery-method" value="branch">
+                        <label for="branch">BRANCH</label>
                     </div>
 
                     
                 </form>
  
             
-                <form action="/" method="GET" class= "formularioEntregaDetalle">
+                <form action="/" method="GET" class= "formDeliveryDetail">
 
-                    <div class="contenedor-opciones">
-                        <div class="opcion-entrega">
-                            <p>Ingresa tu código postal:</p>
-                            <input type="text" name="CP" class="seleccionado">
-                            <span class= "errorValidacion">Debe ingresar un valor</span>
+                    <div class="container-options">
+                        <div class="delivery-option">
+                            <p>Enter your zip code:</p>
+                            <input type="text" name="ZC" class="selected">
+                            <span class= "errorValidation">You must enter a value</span>
                         </div>
 
-                        <div class="opcion-entrega">
-                            <p>Selecciona la sucursal donde retirarás tu compra:</p>
-                            <select class="seleccionado" name="sucursal">
+                        <div class="delivery-option">
+                            <p>Select the branch where you will collect your purchase:</p>
+                            <select class="selected" name="branch">
                                 <option value="OLIVOS">OLIVOS</option>
                                 <option value="LOMAS DE ZAMORA">LOMAS DE ZAMORA</option>
                             </select>
                         </div>
                     
                         <div>
-                            <button type="submit" class="boton">CALCULAR</button>
+                            <button type="submit" class="button">CALCULATE</button>
                         </div> 
                         
                     </div>
@@ -189,24 +189,24 @@
 
         </section>
 
-        <section class="resumenDeCompra">   
+        <section class="summaryOfPurchase">   
             
-            <H3 class="etiquetaSecciones">RESUMEN DE COMPRA</H3>
+            <H3 class="labelSections">PURCHASE SUMMARY</H3>
            
 
-                    <article class= "resumen-Compra">
+                    <article class= "Summary-Purchase">
 
-                    <div  class="etiquetaResumenItem"> 
+                    <div  class="labelSummaryItem"> 
                         <span>SUBTOTAL:</span>
                         <span>$300</span>
                     </div>
 
-                    <div  class="etiquetaResumenItem"> 
-                        <span>COSTO DE ENVIO</span>
+                    <div  class="labelSummaryItem"> 
+                        <span>COST OF SHIPPING</span>
                         <span>$0</span>
                     </div>
 
-                    <div  class="etiquetaResumenTotal"> 
+                    <div  class="labelSummaryTotal"> 
                         <span>TOTAL</span>
                         <span>$300</span>
                     </div>
@@ -214,16 +214,16 @@
                    
         
 
-                <form action="/" method="GET" class= "formulariofinalizacionCompra">
+                <form action="/" method="GET" class= "formCompletionPurchase">
 
-                    <div class="contenedor-final">
+                    <div class="final-container">
                                           
                         <div>
-                            <button type="submit" class="boton">FINALIZAR COMPRA</button>
+                            <button type="submit" class="button">FINISH PURCHASE</button>
                         </div> 
 
                         <div>
-                            <button type="submit" class="boton">AGREGAR MAS PRODUCTOS</button>
+                            <button type="submit" class="button">ADD MORE PRODUCTS</button>
                         </div> 
                         
                     </div>   
@@ -252,7 +252,7 @@
     <div class="footer-center">
     <div>
     <i class="fa fa-map-marker"></i>
-    <p><span>Direccion</span> BA, Arg</p>
+    <p><span>Direction</span> BA, Arg</p>
     </div>
     <div>
     <i class="fa fa-phone"></i>

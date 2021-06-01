@@ -186,15 +186,15 @@ width: 65px;
 height: 65px;
 }
 
-.descripcion{
+.description{
 text-align: justify;
 }
 
-.producto{
+.product{
 font-weight: bold;
 }
 
-.detalleCompra{
+.detailPurchase{
 display:flex;
 justify-content:start;
 flex-wrap: wrap;
@@ -204,123 +204,115 @@ box-sizing: border-box;
 }   
 
 
-.detalleCompra div{
+.detailPurchase div{
 margin: 10px
 }    
 
-
-
-.nombreEtiqueta{
+.nameLabel{
 font-weight: bold;
 margin: 0px;
 text-align: center;
 }
 
-.icono{
+.icon{
 text-align: center;
 }
 
-.icono i{
+.icon i{
 color: #2B3A67;
 
 }
 
 
-
-.etiquetaSecciones{
+.labelSections{
 border-bottom:solid black;
 margin: 10px 0px 25px 0px;
 padding: 10px;
 }
 
 
-.datosEntrega{ 
+.textDelivery{ 
 width: 100%;
 }
 
-.textoEntrega{
+.textDelivery{
 font-style: italic;
 }
 
 
-.formularioEntrega{
+.deliveryform{
 margin: 20px;
 flex-wrap: wrap;
 }
 
 
-.contenedorFormEntrega{
+.containerFormDelivery{
 display: flex;
 margin: 0px;
 align-items: center;
 }
 
 
-.contenedorFormEntrega label{
+.containerFormDelivery label{
 font-style: italic;
 font-weight: bold;
 }
 
 
-.botonFormularioEntrega{
+.buttonFormDelivery{
 margin-right: 10px;
 margin-left: 10px;
 padding: 10px;
 }
 
 
-.contenedor-opciones{
+.container-options{
 display: block
 }
 
 
-.opcion-entrega{
+.delivery-option{
 margin-bottom: 10px;
 width: 100%;
 }
 
 
-.errorValidacion{
+.errorValidation{
 display: none;
 }
 
-.contenedor-opciones p{
+.container-options p{
 font-style: italic;
 }
 
 
-.seleccionado{
+.selected{
 width: 200px;
 opacity: 0.5;
 }
 
 
-.boton{
+.button{
 background-color: #2B3A67;   
 color: white
-
 }
 
-
-
-
-.resumen-Compra{
-
+.Summary-Purchase{
 display: block;
 margin-bottom: 20px;
 border: none;
 }
 
-.etiquetaResumenItem{
+.labelSummaryItem{
 margin: 10px;
 }
 
-.etiquetaResumenTotal{
+.labelSummaryTotal{
 margin: 10px;
 font-weight: bold;
 }
 
-.contenedor-final{
+.final-container{
 display: flex;
 justify-content: space-around;
 
@@ -790,9 +782,3 @@ display: table;
 }
 
 
-/* Change styles for cancel button and signup button on extra small screens */
-@media screen and (max-width: 300px) {
-.cancelbtn, .signupbtn {
-width: 100%;
-}
-}
