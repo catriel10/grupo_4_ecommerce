@@ -378,7 +378,7 @@ img {
 
 
 /* media queries 360px wide */
-@media screen and (min-width: 360px) {
+@media screen and (max-width: 360px) {
   .main, .navbar {   
   flex-direction: column;
   margin-left: 0;
@@ -562,3 +562,21 @@ clear: both;
 display: table;
 }
 
+.footer-container .footer-left,
+.footer-container .footer-center,
+.footer-container .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.footer-container .footer-left{
+	width: 40%;
+}
+
+.footer-container .footer-center{
+	width: 35%;
+}
+
+.footer-container .footer-right{
+	width: 20%;
+}

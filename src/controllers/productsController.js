@@ -1,10 +1,13 @@
 const path = require ("path")
 const productsController = {
     showDetail: (req, res) => {
-        res.sendFile(path.resolve(__dirname, '../views/productDetail.html'))
+        res.render('products/productDetail');
     },
     showCart: (req, res) => {
-        res.sendFile(path.resolve(__dirname, '../views/productCart.html'))
+        res.render('products/productCart');
+    },
+    showCatalogue: (req, res) => {
+        res.render('products/catalogue');
     },
 }
 

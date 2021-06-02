@@ -7,9 +7,13 @@ const port = process.env.PORT || 4444;
 
 // definimos la carpeta que devuelve archivos estáticos
 app.use(express.static(path.join(__dirname, '../public')))
-
+/*
 app.set("view engine", "ejs")
 app.set("views", "./views")
+*/
+// definimos las vistas para ejs
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
 app.listen (port, ()=>{
 console.log ("Mi servidor GRUPO 4 esta funcionando en port 4444")
@@ -17,40 +21,44 @@ console.log ("Mi servidor GRUPO 4 esta funcionando en port 4444")
 
 // Home
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/home.html'));
-});
-
-// Login/Register
-app.get('/loginRegister', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/loginRegister.html'));
+    res.render('home')
 });
 
 // Register
 app.get('/register', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/register.html'));
+    res.render('register')
 });
 
 // Login
 app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/login.html'));
-});
-
-//detalle producto//
-
-app.get('/detalleProducto', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/detalleProducto.html'));
+    res.render('login')
 });
 
 /*
-// Product Cart
-app.get('/productCart', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/productCart.html'));
+//detalle producto//
+app.get('/productDetail', (req, res) => {
+    res.render('productDetail');
 });
 
-// Product Detail
+/*
+//Product Cart
+app.get('/productCart', (req, res) => {
+    res.render('productCart');
+});
+
+/*
+//detalle producto//
 app.get('/productDetail', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/productDetail.html'));
-});*/
+    res.render('productDetail');
+});
+/*
+
+/*
+//detalle catalogo//
+app.get('/catalogue', (req, res) => {
+    res.render('catalogue');
+});
+*/
 
 // products
 const productsRoutes = require('./routes/productsRoutes');
