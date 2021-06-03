@@ -11,49 +11,56 @@
   
   <!-- Barra Navegacion -->
 <%- include("../partials/nav") %> 
-  <main>
-    <div class = "product-display">
-      <div class = "display">
-        <div class = "product-images">
-          <div class = "image-display">
-            <div class = "image">
-              <img src = "/images/chaleco-tejido.JPEG" alt = "chaleco tejido">
+    <main>
+      <section class="articulos1">
+        <article class="lv">
+            <div> 
+                <img class="img-cat"src="/img/chaleco-cuadrille.JPEG" alt="Chaleco cuadrillé">
             </div>
-          </div>
-        </div>
-        <div class = "product">
-          <h2 class = "title">Chaleco tejido</h2>
-          <div class = "product-detail">
-            <h2>Descripción: </h2>
-            <p>Tela: Tejido</p>
-            <p>Talle: Único</p>
-            <ul>
-              <li>EN STOCK</li>
-            </ul>
-          </div>
-          <div class = "product-price">
-              <p>Price: <span>$1500</span></p>
+            <div class="lv1">
+                <i class="fas fa-truck"></i>
+                    <div class="lv2">
+                        <span class="price">$6.770</span>
+                        <span class="discount">40% off</span>
+                    </div>
+                <h2 class="description">Chaleco cuadrillé</h2>
             </div>
-          <div class = "container">
-            <div class = "input-container">
-              <label for ="colour">Colores:</label>
-              <select name="colour" id="colour">
-                <option value="opcion-1">Negro</option>
-                <option value="opcion-2">Blanco</option>
-                <option value="opcion-3">Rojo</option>
-                <option value="opcion-4">Amarillo</option>
-              </select>
-            </div>
-            <div class = "input-container">
-              <label for ="quantity">Cantidad:</label>
-              <input type = "number" min = "0" value = "1">
-            </div>
-            <div class = "input-container">
-              <button type = "button" class = "button">
-              Add to Cart <i class = "fas fa-shopping-cart"></i>
-            </button>
-            </div>
-          </div>
+            <div class="lv3">
+              <p class = "title">Chaleco tejido</p>
+                <div class = "product-detail">
+                  <h3>Description: </h3>
+                  <p>Cloth: Tissue</p>
+                  <p>Size: Unique</p>
+                  <p>Price: <span>$1500</span></p>
+                  <ul>
+                    <li>IN STOCK</li>
+                  </ul>
+                </div>
+                <div class = "product-price">
+                    
+                </div>
+                <div class = "container">
+                  <div class = "input-container">
+                    <label for ="colour">Colors:</label>
+                    <select name="colour" id="colour">
+                      <option value="option-1">Black</option>
+                      <option value="option-2">White</option>
+                      <option value="option-3">Red</option>
+                      <option value="option-4">Yellow</option>
+                    </select>
+                  </div>
+                  <div class = "input-container">
+                    <label for ="quantity">Quantity:</label>
+                    <input type = "number" min = "0" value = "1">
+                  </div>
+                  <div class = "input-container">
+                    <button type = "button" class = "button">
+                    Add to Cart <i class = "fas fa-shopping-cart"></i>
+                    </button>
+                  </div>
+                </div>
+        </article>
+      </section> 
     </main>
  <!-- Footer -->
  <%- include ("../partials/footer") %>

@@ -134,7 +134,7 @@ padding: 14px 20px;
 margin: 8px 0;
 border: none;
 cursor: pointer;
-width: 100%;
+
 }
 
 button:hover {
@@ -304,7 +304,7 @@ margin: 0;
 border: 0;
 outline: none;
 border-radius: 4px;
-padding: 15px 0;
+padding: 15px;
 font-size: 1rem;
 font-weight: 500;
 text-transform: uppercase;
@@ -579,7 +579,7 @@ padding: 14px 20px;
 margin: 8px 0;
 border: none;
 cursor: pointer;
-width: 100%;
+
 opacity: 0.9;
 }
 

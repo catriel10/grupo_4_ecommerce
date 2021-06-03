@@ -247,18 +247,33 @@ margin-right: 4%;
 margin: 0;
 }
 
-.button {
+.button-submit {
 border: 0;
 outline: none;
 border-radius: 4px;
-padding: 15px 0;
+padding: 15px;
 font-size: 1rem;
 font-weight: 500;
 text-transform: uppercase;
 letter-spacing: .1em;
 background: #1ab188;
 color: #ffffff;
-margin: 10px auto;
+margin: 10px;
+transition: all .3s ease-out 0s;
+}
+
+.button-reset {
+border-radius: 4px;
+border: 0;
+outline: none;
+padding: 15px;
+font-size: 1rem;
+font-weight: 500;
+text-transform: uppercase;
+letter-spacing: .1em;
+background-color: #f44336;
+color: #ffffff;
+margin: 10px;
 transition: all .3s ease-out 0s;
 }
 
@@ -268,7 +283,7 @@ background: #1ab188, 5%;
 }
 .button-block {
 display: block;
-width: 100%;
+
 }
 
 .forgot {
@@ -514,9 +529,10 @@ padding: 14px 20px;
 margin: 8px 0;
 border: none;
 cursor: pointer;
-width: 100%;
+
 opacity: 0.9;
 }
+
 
 button:hover {
 opacity:1;
