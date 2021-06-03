@@ -1,0 +1,413 @@
+* {
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+}
+
+a:link, a:visited, a:active {
+text-decoration:none;
+}
+/* ------------ Header------------------ */
+
+.header {
+text-align:center;
+padding: 10px;
+background: #ffffff;
+color: #000000;	
+}
+
+.header h1 {
+font-size:4rem;
+font-family: roboto, verdana ,Tahoma , sans-serif;
+font-weight:bold;
+color: black;
+}
+
+.header p { 
+font-size:1.5em;
+font-family: roboto, verdana ,Tahoma , sans-serif;
+letter-spacing:0.8em;
+}
+
+a:link, a:visited, a:active {
+text-decoration:none;
+}
+
+html {
+overflow-y: scroll;
+}
+
+/* ------------ Body ------------------ */ 
+body {
+font-family: roboto, verdana ,Tahoma , sans-serif;
+margin: 0;
+background-color: #ffffff;
+font-weight: 300;
+font-size: 1vh;
+}
+
+/* ------------ Navegacion slider ------------------ */ 
+ul.navbar {
+display: flex;
+background-color:#292c2f;
+margin: 0;
+padding: 0;
+}
+
+ul {
+list-style-type: none;
+text-decoration:none;
+margin: 0;
+padding: 0;
+text-align:center;
+}
+
+
+ul.navbar li:hover,
+ul.navbar li:active
+{background-color:#414a4c;}
+
+.navbar .active {
+background-color:#414a4c;
+color: #ffffff;	
+}
+
+ul.navbar li {
+flex: 1;
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+position: relative;
+border: 2.4px solid #000000;
+font-family: roboto, verdana ,Tahoma , sans-serif;;
+background-color: #292c2f;
+}
+
+ul li a {
+display: block;
+color: white;
+text-align: center;
+padding: 15px 5px;
+text-decoration: none;
+width:100%;
+font-size: 1rem
+}
+
+ul.dropdown-content {
+position: absolute;
+display: none;
+z-index: 1;
+}
+
+ul.dropdown-content li {
+width: 100%;
+border: 0px solid black;
+border-bottom: 2px solid #000000;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+position: absolute;
+width:100%;
+}
+
+
+/* ------------------------------------ Footer -----------------------------*/
+
+.footer-container{
+background-color: #292c2f;
+box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+box-sizing: border-box;
+width: 100%;
+text-align: left;
+font-family: roboto, verdana ,Tahoma , sans-serif;
+padding: 45px 40px;
+}
+
+.footer-container .footer-left,
+.footer-container .footer-center,
+.footer-container .footer-right{
+display: inline-block;
+vertical-align: top;
+}
+
+/* ----------------- Footer caja width ( left center right ) ------------------ */
+
+.footer-container .footer-left{
+width: 40%;
+}
+
+.footer-container .footer-center{
+width: 35%;
+}
+
+.footer-container .footer-right{
+width: 20%;
+}
+
+/* ------------ footer-left contenido ------------- */
+
+.footer-container h3{
+color:  #ffffff;
+font-family: roboto, verdana ,Tahoma , sans-serif;;
+margin: 0;
+}
+
+.footer-container h3 span{
+color:  #5383d3;
+}
+
+.footer-container .footer-links{
+color:  #ffffff;
+margin: 20px 0 12px;
+padding: 0;
+}
+
+.footer-container .footer-links a{
+display:inline-block;
+line-height: 1.8;
+text-decoration: none;
+color:  inherit;
+font-size: 2em;
+}
+
+.footer-container .footer-company-name{
+color:  #8f9296;
+font-size: 14px;
+font-weight: normal;
+margin: 0;
+}
+
+/* -------------- Footer Center contentido--------------------- */
+
+.footer-container .footer-center i{
+background-color:  #33383b;
+color: #ffffff;
+font-size: 25px;
+width: 38px;
+height: 38px;
+border-radius: 50%;
+text-align: center;
+line-height: 42px;
+margin: 10px 15px;
+vertical-align: middle;
+}
+
+.footer-container .footer-center i.fa-envelope{
+font-size: 2em;
+line-height: 38px;
+
+}
+
+.footer-container .footer-center p{
+display: inline-block;
+color: #ffffff;
+vertical-align: middle;
+margin:0;
+font-size: 2em
+}
+
+.footer-container .footer-center p span{
+display:block;
+font-weight: normal;
+font-size: 1em;
+line-height:2;
+}
+
+.footer-container .footer-center p a{
+color:  #5383d3;
+text-decoration: none;
+}
+
+
+/* ----------------------- Footer Right contentido---------------*/
+.footer-container .footer-company-about{
+line-height: 20px;
+color:  #92999f;
+font-size: 13px;
+font-weight: normal;
+margin: 0;
+}
+
+.footer-container .footer-company-about span{
+display: block;
+color:  #ffffff;
+font-size: 1em;
+font-weight: bold;
+margin-bottom: 20px;
+}
+
+.footer-container .footer-icons{
+margin-top: 25px;
+}
+
+.footer-container .footer-icons a{
+display: inline-block;
+width: 35px;
+height: 35px;
+cursor: pointer;
+background-color:  #33383b;
+border-radius: 2px;
+font-size: 2em;
+color: #ffffff;
+text-align: center;
+line-height: 35px;
+margin-right: 3px;
+margin-bottom: 5px;
+}
+
+/* -------------------- Logo ------------------  */
+.logo { font-size:18px;
+color:#ffffff;}
+
+img {
+width: 90vw;
+}
+
+/* media queries 360px wide */
+@media screen and (min-width: 360px) {
+.main, .navbar {   
+flex-direction: column;
+margin-left: 0;
+}
+
+.slide1, .slide2 {padding:6px;}
+
+
+.main .right-div,
+.main .left-div 
+{margin-left: 0;}
+
+.line1 {font-size:18px;}
+
+.line2 {font-size:12px;}
+
+.line3 {font-size:10px;}
+
+.footer-container .footer-left,
+.footer-container .footer-center,
+.footer-container .footer-right{
+display: block;
+width: 100%;
+margin-bottom: 40px;
+text-align: center;
+}
+
+.footer-container .footer-center i{
+margin-left: 0;
+}
+.left-div,
+.right-div {
+max-width: 100%;
+width: 100%;
+display: block;
+}
+ul.dropdown-content li {
+
+font-size:12px;
+}
+
+ul li a {
+padding: 15px 1px;
+font-size: 1rem
+}
+
+}
+
+.block-form{
+border: 1px solid #c5cbd5;
+padding: 10px;
+margin: 5px auto;
+transition-property: border,color,background-color;
+max-width: 60vw;
+}
+/* EXTRAS REVISAR */
+
+* {box-sizing: border-box}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+width: 100%;
+padding: 15px;
+margin: 5px 0 22px 0;
+display: inline-block;
+border: none;
+background: #f1f1f1;
+font-size: 2em
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+background-color: #ddd;
+outline: none;
+font-size: 2em
+}
+
+/* Set a style for all buttons */
+button {
+background-color: #04AA6D;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+
+opacity: 0.9;
+}
+
+
+button:hover {
+opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+padding: 14px 14px;
+background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+width: 20vw;
+}
+
+/* Add padding to container elements */
+.container {
+padding: 5vw;
+}
+
+/* Style the horizontal ruler */
+hr {
+border: 1px solid #f1f1f1;
+margin-bottom: 25px;
+}
+
+/* The Close Button (x) */
+.close {
+position: absolute;
+right: 35px;
+top: 15px;
+font-size: 40px;
+font-weight: bold;
+color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+color: #f44336;
+cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+content: "";
+clear: both;
+display: table;
+}
+
+
+@media (min-width: 768px) {
+  .main, .navbar {   
+  flex-direction: row;
+  margin-left: 0;
+  }
+}

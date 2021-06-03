@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+ <!-- Head -->
+<%- include ("../partials/head") %> 
+
+<link rel="stylesheet" href="/css/productEdit.css">
+<link rel="stylesheet" href="/css/styles.css">
+
+<body>
+<!-- Header -->
+<%- include ("../partials/header") %> 
+  
+  <!-- Barra Navegacion -->
+<%- include("../partials/nav") %> 
+
+    <main>
+        <form action="alta usuario" method="GET" class="create-user"> 
+                <div class="control-user">
+                    <div class="control-formulario">
+                        <label>Product Name</label>
+                        <input type="text" name="Product Name" class="control">
+                    </div>
+                    <div class="control-formulario">
+                        <label>Description</label>
+                        <input type="text" name="Description" class="control">
+                    </div>
+                    <div class="control-formulario">
+                        <label>Price</label>
+                        <input type="text" name="Price" class="control">
+                    </div>
+                    <div class="control-formulario">
+                        <label>Choose colour</label>
+                        <li type="none"><input type="checkbox" name="category" id="category" value="White" required /> White</li>
+                        <li type="none"><input type="checkbox" name="category" id="category" value="Black" required /> Black</li>
+                        <li type="none"><input type="checkbox" name="category" id="category" value="Pink" required /> Pink</li>
+                        <li type="none"><input type="checkbox" name="category" id="category" value="Green" required /> Green</li>
+                        <li type="none"><input type="checkbox" name="category" id="category" value="Red" required /> Red</li>
+                        <li type="none"><input type="checkbox" name="category" id="category" value="Yellow" required /> Yellow</li>
+                        <li type="none"><input type="checkbox" name="category" id="category" value="Orange" required /> Orange</li>
+                        <li type="none"><input type="checkbox" name="category" id="category" value="Grey" required /> Grey</li>
+                        <li type="none"><input type="checkbox" name="category" id="category" value="Light Blue" required /> Light Blue</li>
+                        <li type="none"><input type="checkbox" name="category" id="category" value="Blue" required /> Blue</li>
+                        <li type="none"><input type="checkbox" name="category" id="category" value="Beige" required /> Beige</li>
+                        <li type="none"><input type="checkbox" name="category" id="category" value="Violet" required /> Violet</li>
+                    </div>
+                    <div class="control-formulario">
+                        <label for="category">Category</label>
+                            <li type="none"><input type="checkbox" name="category" id="category" value="T-shirt" required /> T-shirt</li>
+                            <li type="none"><input type="checkbox" name="category" id="category" value="Skirt" required /> Skirt</li>
+                            <li type="none"><input type="checkbox" name="category" id="category" value="Shorts" required /> Shorts</li>
+                            <li type="none"><input type="checkbox" name="category" id="category" value="Sweater" required /> Sweater</li>
+                            <li type="none"><input type="checkbox" name="category" id="category" value="Hoodie" required /> Hoodie</li>
+                            <li type="none"><input type="checkbox" name="category" id="category" value="Jacket" required /> Jacket</li>
+                    </div>
+                    <div class="control-formulario">
+                        <label>Foto product</label>
+                        <input type="file" name="foto" accept=".jpg" multiple class="control">
+                    </div>
+              
+                    <button type="reset" class="boton-formulario">Reset</button>
+                    <button type="submit" class="boton-formulario">Save</button>
+                </div>
+        </form>
+    </main>
+
+ <!-- Footer -->
+ <%- include ("../partials/footer") %>
+</body> 
+</html>
+

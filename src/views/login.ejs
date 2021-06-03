@@ -4,7 +4,7 @@
 <%- include ("partials/head") %> 
 
 <link rel="stylesheet" href="/css/login.css">
-<link rel="stylesheet" href="/css/normalize.css">
+
 <body>
 <!-- Header -->
 <%- include ("partials/header") %> 
@@ -16,7 +16,7 @@
                   <h2>Log in</h2>
           <form action="login-user" method="GET" class="login-user">
               <div class="imgcontainer">
-                  <img src="/img/img_avatar2.png" alt="Avatar" class="avatar">
+                <a href="/products/edit"><img src="/img/img_avatar2.png" alt="Avatar" class="avatar" ></a>
               </div> 
               <div class="control-user">
                   <div class="control-form-login">
@@ -32,6 +32,9 @@
                       <li type="none" class="check"><input type="checkbox" name="remember" id="remember" value="remember" required />  Remember me</li>
 
                   <button type="submit" class="button">SIGN IN</button>
+
+                  <button type="submit" class="button" href="/products/productEdit">LOG AS ADMIN</button>
+
                   </div>
                   <div class="container" style="background-color:#f1f1f1">
                     <button type="button" class="cancelbtn">Cancel</button>

@@ -9,6 +9,9 @@ const productsController = {
     showCatalogue: (req, res) => {
         res.render('products/catalogue');
     },
+    showEdit: (req, res) => {
+        res.render('products/productEdit');
+    },
 }
 
 module.exports = productsController
