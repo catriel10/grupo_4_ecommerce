@@ -4,7 +4,6 @@
 <%- include ("../partials/head") %> 
 
 <link rel="stylesheet" href="/css/productEdit.css">
-<link rel="stylesheet" href="/css/styles.css">
 
 <body>
 <!-- Header -->
@@ -15,6 +14,7 @@
 
     <main>
         <form action="alta usuario" method="GET" class="create-user"> 
+            <article class="lv">
                 <div class="control-user">
                     <div class="control-formulario">
                         <label>Product Name</label>
@@ -53,13 +53,20 @@
                             <li type="none"><input type="checkbox" name="category" id="category" value="Jacket" required /> Jacket</li>
                     </div>
                     <div class="control-formulario">
-                        <label>Foto product</label>
+                        <label>Foto</label>
                         <input type="file" name="foto" accept=".jpg" multiple class="control">
                     </div>
-              
-                    <button type="reset" class="boton-formulario">Reset</button>
-                    <button type="submit" class="boton-formulario">Save</button>
-                </div>
+                    <div class="control-formulario">
+                        <button type="reset" class="button-reset">Reset</button>
+                        <button type="submit" class="button-submit">Save</button>
+                    </div>
+                </article>
+                <article class="lv">
+                    <div>
+                        <img class="fotoadmin" src="/img/img_avatar2.png" alt="girl fashion pic">
+                    </div>
+                </article>    
+            </div>
         </form>
     </main>
 
