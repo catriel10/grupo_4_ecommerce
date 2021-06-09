@@ -19,8 +19,12 @@
   },
   "homepage": "https://github.com/catriel10/grupo_4_ecommerce#readme",
   "dependencies": {
+    "cookie-parser": "^1.4.5",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "logger": "0.0.1",
+    "method-override": "^3.0.0",
+    "morgan": "^1.10.0",
     "nodemon": "^2.0.7",
     "sequelize": "^6.6.2"
   },

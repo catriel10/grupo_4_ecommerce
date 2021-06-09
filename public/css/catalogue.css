@@ -18,14 +18,15 @@ color: #000000;
 }
 
 .header h1 {
-font-size:4rem;
+display: inherit;
+font-size: 4rem;
 font-family: roboto, verdana ,Tahoma , sans-serif;
-font-weight:bold;
+font-weight: bold;
 color: black;
 }
 
 .header p { 
-font-size:1.5em;
+font-size:1.4em;
 font-family: roboto, verdana ,Tahoma , sans-serif;
 letter-spacing:0.8em;
 }
@@ -69,7 +70,7 @@ ul.navbar li:active
 {background-color:#414a4c;}
 
 .navbar .active {
-background-color:#414a4c;
+background-color:black;
 color: #ffffff;	
 }
 
@@ -81,7 +82,7 @@ box-sizing: border-box;
 position: relative;
 border: 2.4px solid #000000;
 font-family: roboto, verdana ,Tahoma , sans-serif;;
-background-color: #292c2f;
+background-color: black;
 }
 
 ul li a {
@@ -138,9 +139,20 @@ top: -15px ;
 
 h3 {
 font-family: 'Roboto', sans-serif;
-color: grey;
+color: black;
 font-weight: 400;
 font-size: 24px;
+font-weight: bold;
+text-align: center;
+margin-left: 10px;
+margin-top: 10px;
+}
+
+h4 {
+font-family: 'Roboto', sans-serif;
+color: #39b54a;
+font-weight: 400;
+font-size: 14px;
 font-weight: bold;
 text-align: left;
 margin-left: 10px;
@@ -268,16 +280,17 @@ width: 60vw;
 /* ------------ cajas ------------- */
 
 
+
 /* ------------------------------------ Footer -----------------------------*/
 
 .footer-container{
-background-color: #292c2f;
+background-color: black;
 box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 box-sizing: border-box;
 width: 100%;
-text-align: left;
+text-align: center;
 font-family: roboto, verdana ,Tahoma , sans-serif;
-padding: 45px 40px;
+padding: 1vw;
 }
 
 .footer-container .footer-left,
@@ -286,21 +299,6 @@ padding: 45px 40px;
 display: inline-block;
 vertical-align: top;
 }
-
-/* ----------------- Footer caja width ( left center right ) ------------------ */
-
-.footer-container .footer-left{
-width: 40%;
-}
-
-.footer-container .footer-center{
-width: 35%;
-}
-
-.footer-container .footer-right{
-width: 20%;
-}
-
 
 
 /* ------------ footer-left contenido ------------- */
@@ -338,8 +336,6 @@ margin: 0;
 
 /* -------------- Footer Center contentido--------------------- */
 
-
-
 .footer-container .footer-center i{
 background-color:  #33383b;
 color: #ffffff;
@@ -357,7 +353,6 @@ vertical-align: middle;
 .footer-container .footer-center i.fa-envelope{
 font-size: 2em;
 line-height: 38px;
-
 }
 
 .footer-container .footer-center p{
@@ -366,7 +361,6 @@ color: #ffffff;
 vertical-align: middle;
 margin:0;
 font-size: 2em
-
 }
 
 .footer-container .footer-center p span{
@@ -374,7 +368,6 @@ display:block;
 font-weight: normal;
 font-size: 1em;
 line-height:2;
-
 }
 
 .footer-container .footer-center p a{
@@ -384,9 +377,6 @@ text-decoration: none;
 
 
 /* ----------------------- Footer Right contentido---------------*/
-
-
-
 .footer-container .footer-company-about{
 line-height: 20px;
 color:  #92999f;
@@ -423,7 +413,8 @@ margin-bottom: 5px;
 }
 
 /* -------------------- Logo ------------------  */
-.logo { font-size:18px;
+.logo { 
+font-size: 3rem;;
 color:#ffffff;}
 
 img {
@@ -441,40 +432,40 @@ margin-left: 0;
 img {
 width: 75vw;
 }
-
-.footer-container .footer-left,
-.footer-container .footer-center,
-.footer-container .footer-right{
-display: block;
-width: 100%;
-margin-bottom: 40px;
-text-align: center;
 }
 
-.footer-container .footer-center i{
-margin-left: 0;
-}
-
-/* media queries 768px wide */
 @media (min-width: 768px) {
-
-.lv {
-width: 40%;
-flex-wrap: nowrap;
-}
-
-.lv2 {
-font-size: 0.25em;
-}
-
-.img-cat {
-width:36vw
-}  
-
 .main, .navbar {   
 flex-direction: row;
 margin-left: 0;
 }
+
+.footer-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* align-items: baseline; */
+    margin: 0;
+    padding: 0;
+    }
+    
+    .footer-container .footer-left, .footer-container .footer-center, .footer-container .footer-right {
+    margin: 5px;
+    background-color: black;
+    padding: 5px 5px;
+    max-width: 30vw;
+    position: relative;
+    justify-content: space-between;
+    display: inline-block;
+    align-content: center;
+    left: 0px;
+    color: #1259c3;
+    font-size: 0.75em;
+    margin-bottom: 10px;
+    transition: 1s;
+    }
+    
+
 }
 
 /* media queries 1024px wide */
@@ -489,12 +480,11 @@ width:17vw
 }
 
 .articulos1 {
-	justify-content: space-between;
-  }
-  
-  .articulos2 {
-	justify-content: space-between;
-  }
-
+justify-content: space-between;
 }
+
+.articulos2 {
+justify-content: space-between;
+}
+
 }

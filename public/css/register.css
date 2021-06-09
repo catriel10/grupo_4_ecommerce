@@ -17,17 +17,18 @@ color: #000000;
 }
 
 .header h1 {
-font-size:4rem;
-font-family: roboto, verdana ,Tahoma , sans-serif;
-font-weight:bold;
-color: black;
+  display: inherit;
+  font-size: 4rem;
+  font-family: roboto, verdana ,Tahoma , sans-serif;
+  font-weight: bold;
+  color: black;
 }
 
 .header p { 
-font-size:2.5em;
-font-family: roboto, verdana ,Tahoma , sans-serif;
-letter-spacing:0.8em;
-}
+  font-size:1.4em;
+  font-family: roboto, verdana ,Tahoma , sans-serif;
+  letter-spacing:0.8em;
+  }
 
 a:link, a:visited, a:active {
 text-decoration:none;
@@ -80,20 +81,20 @@ ul.navbar li:active
 {background-color:#414a4c;}
 
 .navbar .active {
-background-color:#414a4c;
-color: #ffffff;	
-}
+  background-color:black;
+  color: #ffffff;	
+  }
 
-ul.navbar li {
-flex: 1;
-box-sizing: border-box;
--moz-box-sizing: border-box;
--webkit-box-sizing: border-box;
-position: relative;
-border: 2.4px solid #000000;
-font-family: roboto, verdana ,Tahoma , sans-serif;;
-background-color: #292c2f;
-}
+  ul.navbar li {
+    flex: 1;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    position: relative;
+    border: 2.4px solid #000000;
+    font-family: roboto, verdana ,Tahoma , sans-serif;;
+    background-color: black;
+    }
 
 ul li a {
 display: block;

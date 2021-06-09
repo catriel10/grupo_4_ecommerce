@@ -16,34 +16,96 @@
 <main>
   <div class="main">
     <section class="slide1">
-          <article class="left-div">
-              <div>
-              <img src="/img/00_Home.jpg" alt="Foto Fashion temporada">
-              </div>
+          <article class="top-div">
+            <div>  
+              <img src="/img/home/00_Home.jpg" alt="Foto Fashion temporada">
+            </div>
           </article>
-          <article class="right-div">
-            <p class="line1"> SUMMER </p>
-            <P class="line2">Beat the Summer with Style</p>
-            <hr>
-            <p class="line3"><a href="/productDetail"> SHOP GIRL </a></p>
+          <article class="top-div">
+            <video autoplay muted loop id="myVideo">
+              <source src="/video/Woman Picking Out Clothes.mp4" type="video/mp4">
+            </video>
           </article>
     </section>
-
     <section class="slide2">
-      <article class="rigth-div">
-          <div>
-          <img src="/img/pexels-rfstudio-3811981.jpg" alt="Foto Fashion temporada">
-          </div>
+      <article class="bottom-div">
+        <!-- texto 
+                <p class="line1"> SUMMER </p>
+                <P class="line2">Beat the Summer with Style</p>
+        -->
+        <div class="container2">
+          <ul class="slider2">
+            <li id="slide6">
+              <video autoplay muted loop id="myVideo">
+                <source src="/video/pexels-mikhail-nilov-7625648.mp4" type="video/mp4">
+              </video>
+            </li>
+            <li id="slide7">
+              <video autoplay muted loop id="myVideo">
+                <source src="/video/production ID_4517768.mp4" type="video/mp4">
+              </video>
+            </li>
+            <li id="slide8">
+              <video autoplay muted loop id="myVideo">
+                <source src="/video/production ID_3753696.mp4" type="video/mp4">
+              </video>
+            </li>
+          </ul>
+          <ul class="menu2">
+            <li>
+              <a href="#slide6"></a>
+            </li>
+            <li>
+              <a href="#slide7"></a>
+            </li>
+              <li>
+              <a href="#slide8"></a>
+            </li>
+          </ul>
+        </div>
       </article>
-      <article class="left-div">
-        <p class="line1"> CLASSICS </p>
-        <P class="line2"> Old School Vibe </p>
-        <hr>
-        <p class="line3"><a href="/productDetail"> SHOP GIRL </a></p>
+      <article class="bottom-div">
+<!-- texto 
+        <p class="line1"> SUMMER </p>
+        <P class="line2">Beat the Summer with Style</p>
+-->
+          <div class="container1">
+          <ul class="slider1">
+            <li id="slide1">
+              <img src="/img/home/pexels-melvin-buezo-2529172.jpg"/>
+            </li>
+            <li id="slide2">
+              <img src="/img/home/pexels-anna-shvets-4672561.jpg"/>
+            </li>
+            <li id="slide3">
+              <img src="/img/home/pexels-anna-shvets-5034412.jpg"/>
+            </li>
+            <li id="slide4">
+              <img src="/img/home/vecteezy_two-women-holding-shopping-bags_2090103.jpg"/>
+            </li>
+          </ul>
+          <ul class="menu1">
+            <li>
+              <a href="#slide1"></a>
+            </li>
+            <li>
+              <a href="#slide2"></a>
+            </li>
+             <li>
+              <a href="#slide3"></a>
+            </li>
+            <li>
+              <a href="#slide4"></a>
+            </li>
+          </ul>
+        </div>
       </article>
     </section>
 </main>
-
+<div class="box">
+  <h1 class="title"></h1>
+  <button class="anim">follow us!</button>
+</div>
  <!-- Footer -->
  <%- include ("partials/footer") %>
 </body> 

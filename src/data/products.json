@@ -1,0 +1,87 @@
+[
+  {
+    "id": 1,
+    "foto": "../img/chaleco-cuadriculado.jpeg",
+    "name": "chaleco-cuadriculado",
+    "description": "Esta prenda es de excelente calidad",
+    "price": "$ 1500",
+    "colour": "red",
+    "category": "T-Shirt",
+    "stock": "yes"
+  },
+  {
+    "id": 2,
+    "foto": "../img/chaleco-cuadriculado.jpeg",
+    "name": "chaleco-cuadriculado",
+    "description": "Esta prenda es de excelente calidad",
+    "price": "$ 1500",
+    "colour": "red",
+    "category": "T-Shirt",
+    "stock": "yes"
+  },
+  {
+    "id": 3,
+    "foto": "../img/chaleco-cuadriculado.jpeg",
+    "name": "chaleco-cuadriculado",
+    "description": "Esta prenda es de excelente calidad",
+    "price": "$ 1500",
+    "colour": "red",
+    "category": "T-Shirt",
+    "stock": "yes"
+  },
+  {
+    "id": 4,
+    "foto": "../img/chaleco-cuadriculado.jpeg",
+    "name": "chaleco-cuadriculado",
+    "description": "Esta prenda es de excelente calidad",
+    "price": "$ 1500",
+    "colour": "red",
+    "category": "T-Shirt",
+    "stock": "yes",
+    "size": "Unique"
+  },
+  {
+    "id": 5,
+    "foto": "../img/chaleco-cuadriculado.jpeg",
+    "name": "chaleco-cuadriculado",
+    "description": "Esta prenda es de excelente calidad",
+    "price": "$ 1500",
+    "colour": "red",
+    "category": "T-Shirt",
+    "stock": "yes",
+    "size": "Unique"
+  },
+  {
+    "id": 6,
+    "foto": "../img/chaleco-cuadriculado.jpeg",
+    "name": "chaleco-cuadriculado",
+    "description": "Esta prenda es de excelente calidad",
+    "price": "$ 1500",
+    "colour": "red",
+    "category": "T-Shirt",
+    "stock": "yes",
+    "size": "Unique"
+  },
+  {
+    "id": 7,
+    "foto": "../img/chaleco-cuadriculado.jpeg",
+    "name": "chaleco-cuadriculado",
+    "description": "Esta prenda es de excelente calidad",
+    "price": "$ 1500",
+    "colour": "red",
+    "category": "T-Shirt",
+    "stock": "yes",
+    "size": "Unique"
+  },
+  {
+    "id": 8,
+    "foto": "../img/chaleco-cuadriculado.jpeg",
+    "name": "chaleco-cuadriculado",
+    "description": "Esta prenda es de excelente calidad",
+    "price": "$ 1500",
+    "colour": "red",
+    "category": "T-Shirt",
+    "stock": "yes",
+    "size": "Unique"
+  }
+]
