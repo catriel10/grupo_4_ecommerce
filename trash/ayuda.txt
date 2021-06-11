@@ -1,1 +1,2 @@
 <marquee>ENVIO GRATIS A PARTIR DE $3000 - En todos tus pedidos a domicilio y puntos de recogida</marquee>
+fs.unlinkSync(path)

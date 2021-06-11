@@ -21,7 +21,7 @@ const productsController = {
         const productList = productsModel.findAll()
 
         // aca leo el json y se lo paso al template
-        // res.render('planets/list', { planetList: planetList })
+        // res.render('products/list', { productList: productList })
         res.render('products/catalogue', { productList })
     },
 
@@ -37,9 +37,15 @@ const productsController = {
         // Crear el objeto product
         const { id, foto, name, description, price, colour, category, stock, size} = req.body;
 
+         // dentro de req.file va a venir la información del archivo
+         const { file } = req
+        
+         // nuestra ruta al archivo
+         const image = file.filename
+
         const product = {
             id: id,
-            foto: foto,
+            foto: '/img/' + image,
             name: name,
             description: description,
             price: price,
@@ -48,6 +54,7 @@ const productsController = {
             stock: stock,
             size: size,
         }
+
         const productCreated = productsModel.create(product);
 
         res.redirect('/products/detail/' + productCreated.id);
@@ -63,6 +70,25 @@ const productsController = {
         const data = req.body;
         const { id } = req.params;
 
+        // el product original
+        const productOriginal = productsModel.findByPk(id)
+        // la imagen original: productOriginal.image
+
+        // dentro de req.file va a venir la información del archivo
+        const { file } = req
+        
+        /* Si viene una imagen nueva, cargar la imagen nueva
+        sino poner la original */
+        let image
+
+        if (file) {
+            image = '/images/' + file.filename
+        } else {
+            image = productOriginal.image
+        }
+
+        data.image = image
+        
         productsModel.update(data, id);
 
         res.redirect('/products/detail/' + id);
