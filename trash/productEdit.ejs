@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+ <!-- Head -->
+<%- include ("../partials/head") %> 
+
+<link rel="stylesheet" href="/css/productEdit.css">
+
+<body>
+<!-- Header -->
+<%- include ("../partials/header") %> 
+  
+  <!-- Barra Navegacion -->
+<%- include("../partials/nav") %> 
+
+    <main>
+        <form action="/products<%= product.id %>?_method=PUT" method="POST" class="create-user" enctype="multipart/form-data" > 
+                <!-- 
+                    action: la ruta donde vamos a mandar nuestros campos 
+                -->
+            <article class="lv">
+                <div class="control-user">
+                    <div class="control-formulario">
+                        <label>Product Name</label>
+                        <input type="text" name="name" class="control" required value="<%= product.name %>">
+                    </div>
+                    <div class="control-formulario">
+                        <label>Description</label>
+                        <input type="text" name="description" class="control" required value="<%= product.description %>">
+                    </div>
+                    <div class="control-formulario">
+                        <label>Price</label>
+                        <input type="text" name="price" class="control" required value="<%= product.price %>">
+                    </div>
+                    <div class="control-formulario">
+                        <label>Choose colour</label>
+                        <li type="none"><input type="checkbox" name="colour" id="colour" value="White" required <%= product.colour == 'yes' ? 'checked' : '' %>/> White</li>
+                        <li type="none"><input type="checkbox" name="colour" id="colour" value="Black" required <%= product.colour == 'yes' ? 'checked' : '' %>/> Black</li>
+                        <li type="none"><input type="checkbox" name="colour" id="colour" value="Pink" required <%= product.colour == 'yes' ? 'checked' : '' %>/> Pink</li>
+                        <li type="none"><input type="checkbox" name="colour" id="colour" value="Green" required <%= product.colour == 'yes' ? 'checked' : '' %>/> Green</li>
+                        <li type="none"><input type="checkbox" name="colour" id="colour" value="Red" required <%= product.colour == 'yes' ? 'checked' : '' %>/> Red</li>
+                        <li type="none"><input type="checkbox" name="colour" id="colour" value="Yellow" required <%= product.colour == 'yes' ? 'checked' : '' %> /> Yellow</li>
+                        <li type="none"><input type="checkbox" name="colour" id="colour" value="Orange" required <%= product.colour == 'yes' ? 'checked' : '' %>/> Orange</li>
+                        <li type="none"><input type="checkbox" name="colour" id="colour" value="Grey" required <%= product.colour == 'yes' ? 'checked' : '' %>/> Grey</li>
+                        <li type="none"><input type="checkbox" name="colour" id="colour" value="Light Blue" required <%= product.colour == 'yes' ? 'checked' : '' %>/> Light Blue</li>
+                        <li type="none"><input type="checkbox" name="colour" id="colour" value="Blue" required <%= product.colour == 'yes' ? 'checked' : '' %>/> Blue</li>
+                        <li type="none"><input type="checkbox" name="colour" id="colour" value="Beige" required <%= product.colour == 'yes' ? 'checked' : '' %>/> Beige</li>
+                        <li type="none"><input type="checkbox" name="colour" id="colour" value="Violet" required <%= product.colour == 'yes' ? 'checked' : '' %>/> Violet</li>
+                    </div>
+                    <div class="input-container">
+                        <label for="rings">¿Su planeta tiene anillos?</label>
+                        <input type="radio" name="rings" id="rings" value="yes" <%= planet.rings == 'yes' ? 'checked' : '' %>  /> Si
+                        <input type="radio" name="rings" id="rings" value="no" <%= planet.rings == 'no' ? 'checked' : '' %> /> No
+                    </div>
+                    <div class="control-formulario">
+                        <label for="category">Category</label>
+                            <li type="none"><input type="radio" name="category" id="category" value="T-shirt" required  <%= product.category == 'yes' ? 'checked' : '' %> /> T-shirt</li>
+                            <li type="none"><input type="radio" name="category" id="category" value="Skirt" required <%= product.category == 'yes' ? 'checked' : '' %> /> Skirt</li>
+                            <li type="none"><input type="radio" name="category" id="category" value="Shorts" required <%= product.category == 'yes' ? 'checked' : '' %> /> Shorts</li>
+                            <li type="none"><input type="radio" name="category" id="category" value="Sweater" required <%= product.category == 'yes' ? 'checked' : '' %> /> Sweater</li>
+                            <li type="none"><input type="radio" name="category" id="category" value="Hoodie" required <%= product.category == 'yes' ? 'checked' : '' %> /> Hoodie</li>
+                            <li type="none"><input type="radio" name="category" id="category" value="Jacket" required <%= product.category == 'yes' ? 'checked' : '' %> /> Jacket</li>
+                    </div>
+                    <div class="control-formulario">
+                        <label>Foto</label>
+                         <input type="file" name="image" id="image" accept=".jpg" multiple class="control">
+                    </div>
+
+                    <div class="control-formulario">
+                        <button type="reset" class="button-reset">Reset</button>
+                        <button type="submit" class="button-submit">Save</button>
+                    </div>
+                </article>
+                <article class="lv">
+                    <div class="admin">
+                        <img class="fotoadmin" src="<%= product.image %>" alt="girl fashion pic">
+                    </div>
+                </article>    
+            </div>
+        </form>
+    </main>
+
+ <!-- Footer -->
+ <%- include ("../partials/footer") %>
+</body> 
+</html>
+

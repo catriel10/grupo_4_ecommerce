@@ -13,20 +13,20 @@
 <%- include("../partials/nav") %> 
     <main>
       <section class="articulos1">
+        <% productList.forEach((product) => { %>
         <article class="lv">
             <div> 
-                <img class="img-cat"src="/img/article/chaleco-cuadrille.JPEG" alt="Chaleco cuadrillé">
+                <img class="img-cat"src="<%= product.image %>" alt="<%= product.name %>">
             </div>
             <div class="lv1">
                 <i class="fas fa-truck"></i>
                     <div class="lv2">
-                        <span class="price">$6.770</span>
-                        <span class="discount">40% off</span>
-                    </div>
-                <h2 class="description">Chaleco cuadrillé</h2>
+                      <span class="price"><%= product.price %></span>
+                      <span class="discount"><%= product.discount %></span>                    </div>
+                <h2 class="description"><%= product.description %></h2>
             </div>
             <div class="lv3">
-              <p class = "title">Chaleco tejido</p>
+              <p class = "title"><%= product.name %></p>
                 <div class = "product-detail">
                   <h3>Description: </h3>
                   <p>Cloth: Tissue</p>
@@ -55,11 +55,12 @@
                   </div>
                   <div class = "input-container">
                     <button type = "button" class = "button">
-                    Add to Cart <i class = "fas fa-shopping-cart"></i>
+                    Add to Cart
                     </button>
                   </div>
                 </div>
         </article>
+        <% }) %>
       </section> 
     </main>
  <!-- Footer -->

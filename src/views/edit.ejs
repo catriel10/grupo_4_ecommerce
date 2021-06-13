@@ -11,6 +11,7 @@
   
   <!-- Barra Navegacion -->
 <%- include("partials/nav") %> 
+
 <div class="body">
         <div class="block-form">
                   <h2>Log in</h2>
@@ -20,25 +21,31 @@
               </div> 
               <div class="control-user">
                   <div class="control-form-login">
-                      <label for="user"></label>
+                      <label for="user"><%= username.user %></label>
                       <input type="text" name="usuario" placeholder="User" class="control-login" required>
                   </div>
                   <div class="control-form-login">
-                      <label for="password"></label>
+                      <label for="password"><%= password.user %></label>
                       <input type="password" name="password" placeholder="Password" id="password" required />
                   </div>
-                  <label for="category"></label>
-                    <ul class="intereses">
-                      <li type="none" class="check"><input type="checkbox" name="remember" id="remember" value="remember" required />  Remember me</li>
-
-                  <button type="submit" class="button">SIGN IN</button>
-
-                  <button type="submit" class="button" href="/products/productEdit">LOG AS ADMIN</button>
-
+                  <div class="control-form-login">
+                    <label for="email"><%= email.user %></label>
+                    <input type="email" name="email" placeholder="email" id="email" required />
+                  </div>
+                  <div class="control-form-login">
+                    <label for="address"><%= address.user %></label>
+                    <input type="address" name="address" placeholder="street" id="address" required />
+                    <input type="address" name="address" placeholder="city" id="address" required />
+                    <input type="address" name="address" placeholder="zipcode" id="address" required />
+                  </div>
+                  <div class="control-form-login">
+                    <label for="phone"><%= phone.user %></label>
+                    <input type="phone" name="phone" placeholder="phone" id="phone" required />
+                  </div>
                   </div>
                   <div class="container" style="background-color:#f1f1f1">
                     <button type="button" class="cancelbtn">Cancel</button>
-                    <span class="psw">Forgot <a href="#">password?</a></span>
+                    <button type="submit" class="button">Save</button>
                   </div>
           </form>
 </div>

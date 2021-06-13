@@ -1,87 +1,232 @@
 [
   {
     "id": 1,
-    "foto": "../img/chaleco-cuadriculado.jpeg",
+    "image": "../img/article/chaleco-cuadriculado.jpeg",
     "name": "chaleco-cuadriculado",
-    "description": "Esta prenda es de excelente calidad",
-    "price": "$1500",
-    "colour": "red",
-    "category": "T-Shirt",
-    "stock": "yes"
+    "description": "chaleco-cuadriculado",
+    "price": 1500,
+    "discount": 0.1,
+    "colour": {
+      "white": "yes",
+      "black": "yes",
+      "pink": "yes",
+      "green": "yes",
+      "red": "yes",
+      "yellow": "yes",
+      "orange": "yes",
+      "grey": "yes",
+      "light-blue": "yes",
+      "blue": "yes",
+      "beige": "yes",
+      "violet": "yes"
+    },
+    "category": {
+      "t-shirt": "yes",
+      "skirt": "yes",
+      "shorts": "yes",
+      "sweater": "yes",
+      "hoodie": "yes",
+      "jacket": "yes"
+    },
+    "quantity": "10"
   },
   {
     "id": 2,
-    "foto": "../img/chaleco-cuadriculado.jpeg",
-    "name": "chaleco-cuadriculado",
-    "description": "Esta prenda es de excelente calidad",
+    "name": "chaleco-cuadrille",
+    "description": "chaleco-cuadrille",
     "price": "$1500",
-    "colour": "red",
-    "category": "T-Shirt",
-    "stock": "yes"
+    "colour": [
+      "black",
+      "pink",
+      "green"
+    ],
+    "category": "sweater",
+    "image": "/img/article/chaleco-cuadrille.jpeg"
   },
   {
     "id": 3,
-    "foto": "../img/chaleco-cuadriculado.jpeg",
-    "name": "chaleco-cuadriculado",
-    "description": "Esta prenda es de excelente calidad",
+    "image": "../img/article/chaleco-tejido.jpeg",
+    "name": "chaleco-tejido",
+    "description": "chaleco-tejido",
     "price": "$1500",
-    "colour": "red",
-    "category": "T-Shirt",
-    "stock": "yes"
+    "discount": "10%",
+    "colour": {
+      "white": "yes",
+      "black": "yes",
+      "pink": "yes",
+      "green": "yes",
+      "red": "yes",
+      "yellow": "yes",
+      "orange": "yes",
+      "grey": "yes",
+      "light-blue": "yes",
+      "blue": "yes",
+      "beige": "yes",
+      "violet": "yes"
+    },
+    "category": {
+      "t-shirt": "yes",
+      "skirt": "yes",
+      "shorts": "yes",
+      "sweater": "yes",
+      "hoodie": "yes",
+      "jacket": "yes"
+    },
+    "quantity": "10"
   },
   {
     "id": 4,
-    "foto": "../img/chaleco-cuadriculado.jpeg",
-    "name": "chaleco-cuadriculado",
-    "description": "Esta prenda es de excelente calidad",
+    "image": "../img/article/chaleco-trenza.jpeg",
+    "name": "chaleco-trenza",
+    "description": "chaleco-trenza",
     "price": "$1500",
-    "colour": "red",
-    "category": "T-Shirt",
-    "stock": "yes",
-    "size": "Unique"
+    "discount": "10%",
+    "colour": {
+      "white": "yes",
+      "black": "yes",
+      "pink": "yes",
+      "green": "yes",
+      "red": "yes",
+      "yellow": "yes",
+      "orange": "yes",
+      "grey": "yes",
+      "light-blue": "yes",
+      "blue": "yes",
+      "beige": "yes",
+      "violet": "yes"
+    },
+    "category": {
+      "t-shirt": "yes",
+      "skirt": "yes",
+      "shorts": "yes",
+      "sweater": "yes",
+      "hoodie": "yes",
+      "jacket": "yes"
+    },
+    "quantity": "10"
   },
   {
     "id": 5,
-    "foto": "../img/chaleco-cuadriculado.jpeg",
-    "name": "chaleco-cuadriculado",
-    "description": "Esta prenda es de excelente calidad",
+    "image": "../img/article/chomba-gris.jpeg",
+    "name": "chomba-gris",
+    "description": "chomba-gris",
     "price": "$1500",
-    "colour": "red",
-    "category": "T-Shirt",
-    "stock": "yes",
-    "size": "Unique"
+    "discount": "10%",
+    "colour": {
+      "white": "yes",
+      "black": "yes",
+      "pink": "yes",
+      "green": "yes",
+      "red": "yes",
+      "yellow": "yes",
+      "orange": "yes",
+      "grey": "yes",
+      "light-blue": "yes",
+      "blue": "yes",
+      "beige": "yes",
+      "violet": "yes"
+    },
+    "category": {
+      "t-shirt": "yes",
+      "skirt": "yes",
+      "shorts": "yes",
+      "sweater": "yes",
+      "hoodie": "yes",
+      "jacket": "yes"
+    },
+    "quantity": "10"
   },
   {
     "id": 6,
-    "foto": "../img/chaleco-cuadriculado.jpeg",
-    "name": "chaleco-cuadriculado",
-    "description": "Esta prenda es de excelente calidad",
+    "image": "../img/article/jumper-cuadrille.jpeg",
+    "name": "jumper-cuadrille",
+    "description": "jumper-cuadrille",
     "price": "$1500",
-    "colour": "red",
-    "category": "T-Shirt",
-    "stock": "yes",
-    "size": "Unique"
+    "discount": "10%",
+    "colour": {
+      "white": "yes",
+      "black": "yes",
+      "pink": "yes",
+      "green": "yes",
+      "red": "yes",
+      "yellow": "yes",
+      "orange": "yes",
+      "grey": "yes",
+      "light-blue": "yes",
+      "blue": "yes",
+      "beige": "yes",
+      "violet": "yes"
+    },
+    "category": {
+      "t-shirt": "yes",
+      "skirt": "yes",
+      "shorts": "yes",
+      "sweater": "yes",
+      "hoodie": "yes",
+      "jacket": "yes"
+    },
+    "quantity": "10"
   },
   {
     "id": 7,
-    "foto": "../img/chaleco-cuadriculado.jpeg",
-    "name": "chaleco-cuadriculado",
-    "description": "Esta prenda es de excelente calidad",
+    "image": "../img/article/jumper-negro.jpeg",
+    "name": "jumper-negro",
+    "description": "jumper-negro",
     "price": "$1500",
-    "colour": "red",
-    "category": "T-Shirt",
-    "stock": "yes",
-    "size": "Unique"
+    "discount": "10%",
+    "colour": {
+      "white": "yes",
+      "black": "yes",
+      "pink": "yes",
+      "green": "yes",
+      "red": "yes",
+      "yellow": "yes",
+      "orange": "yes",
+      "grey": "yes",
+      "light-blue": "yes",
+      "blue": "yes",
+      "beige": "yes",
+      "violet": "yes"
+    },
+    "category": {
+      "t-shirt": "yes",
+      "skirt": "yes",
+      "shorts": "yes",
+      "sweater": "yes",
+      "hoodie": "yes",
+      "jacket": "yes"
+    },
+    "quantity": "10"
   },
   {
     "id": 8,
-    "foto": "../img/chaleco-cuadriculado.jpeg",
-    "name": "chaleco-cuadriculado",
-    "description": "Esta prenda es de excelente calidad",
+    "image": "../img/article/manguita-gris.jpeg",
+    "name": "manguita-gris",
+    "description": "manguita-gris",
     "price": "$1500",
-    "colour": "red",
-    "category": "T-Shirt",
-    "stock": "yes",
-    "size": "Unique"
+    "discount": "10%",
+    "colour": {
+      "white": "yes",
+      "black": "yes",
+      "pink": "yes",
+      "green": "yes",
+      "red": "yes",
+      "yellow": "yes",
+      "orange": "yes",
+      "grey": "yes",
+      "light-blue": "yes",
+      "blue": "yes",
+      "beige": "yes",
+      "violet": "yes"
+    },
+    "category": {
+      "t-shirt": "yes",
+      "skirt": "yes",
+      "shorts": "yes",
+      "sweater": "yes",
+      "hoodie": "yes",
+      "jacket": "yes"
+    },
+    "quantity": "10"
   }
 ]

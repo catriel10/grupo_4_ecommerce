@@ -2,6 +2,9 @@ const path = require ("path")
 const productsModel = require('../models/productsModel')
 
 const productsController = {
+
+ // primera version de los controladores    
+
     showDetail: (req, res) => {
         // levantamos el id desde la url (parámetro)
         
@@ -62,7 +65,7 @@ const productsController = {
     edit: (req, res) => {
         const product = productsModel.findByPk(req.params.id);
 
-        res.render('products/edit', {
+        res.render('products/productEdit', {
             product
         });
     },

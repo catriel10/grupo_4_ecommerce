@@ -11,9 +11,14 @@
   
   .header {
   text-align:center;
-  padding: 10px;
+  padding: 2.5vh;
   background: #ffffff;
-  color: #000000;	
+  color: #000000;
+  z-index:100;
+  max-width: 100vw;
+  width: 100%;
+  position: fixed;
+  top:0
   }
   
   .header h1 {
@@ -91,7 +96,7 @@ h1{
 /* ------------ Body ------------------ */ 
 body {
 font-family: roboto, verdana ,Tahoma , sans-serif;
-margin: 0;
+margin: 0 ;
 background-color: white;
 font-weight: 300;
 font-size: 1vh;
@@ -99,6 +104,14 @@ font-size: 1vh;
 
 
 /* ------------ Navegacion slider ------------------ */ 
+.respmenu{
+  z-index: 100;
+  max-width: 100vw;
+  width: 100%;
+  position: fixed;
+  margin-top: -7vh;
+}
+
 ul.navbar {
   display: flex;
   background-color: black;
@@ -301,6 +314,7 @@ ul.slider2 li:target {
 .main {  
 display: flex;
 flex-wrap: wrap;
+margin-top: 20vh;
 }
 
 .main, .navbar {   
@@ -633,9 +647,6 @@ hr {
     color: grey;
     font-weight: 700;
   }
-
-
-
 
 /* media queries 360px wide */
 @media (min-width: 360px) {

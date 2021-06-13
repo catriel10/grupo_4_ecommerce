@@ -11,11 +11,16 @@ text-decoration:none;
 /* ------------ Header------------------ */
 
 .header {
-text-align:center;
-padding: 10px;
-background: #ffffff;
-color: #000000;	
-}
+  text-align:center;
+  padding: 2.5vh;
+  background: #ffffff;
+  color: #000000;
+  z-index:100;
+  max-width: 100vw;
+  width: 100%;
+  position: fixed;
+  top:0
+  }
 
 .header h1 {
     display: inherit;
@@ -49,6 +54,14 @@ font-size: 1vh;
 }
 
 /* ------------ Navegacion slider ------------------ */ 
+.respmenu{
+  z-index: 100;
+  max-width: 100vw;
+  width: 100%;
+  position: fixed;
+  margin-top: -6vh;
+}
+
 ul.navbar {
 display: flex;
 background-color:#292c2f;
@@ -117,6 +130,7 @@ width:100%;
 .main {  
 display: flex;
 flex-wrap: wrap;
+margin-top: 13vh;
 }
 
 main section article i{
@@ -161,7 +175,7 @@ border-radius: 0%;
 margin: 20px;
 background-color: #fff;
 padding: 15px 15px;
-/* max-width: 45%; */
+max-width: 35%;
 /* position: relative; */
 justify-content: space-between;
 display: inline-block;
@@ -215,7 +229,6 @@ opacity: 1;
 display:flex;
 }
 
-
 .discount {
 display: block;
 font-size: 16px;
@@ -253,7 +266,7 @@ transition: 1s;
 }
 
 .img-cat {
-width: 60vw;
+width: 30vw;
 }
 
 /* ------------ cajas ------------- */
@@ -263,7 +276,6 @@ line-height: 1.5;
 }
 
 .lv3 {
-width: 90vw;
 margin: 30px auto;
 border: 1px solid #c5cbd5;
 }
@@ -613,10 +625,16 @@ display: table;
   .logo { 
   font-size: 3rem;;
   color:#ffffff;}
-  
+
+
+  .data span, .data a {
+    text-transform: uppercase;
+    color: grey;
+    font-weight: 700;
+  }
 
 /* media queries 360px wide */
-@media screen and (min-width: 360px) {
+@media (min-width: 360px) {
 .main, .navbar {   
 flex-direction: column;
 margin-left: 0;
@@ -624,7 +642,7 @@ margin-left: 0;
 
 
 img {
-width: 75vw;
+width: 50vw;
 }
 
 }
@@ -635,9 +653,12 @@ width: 75vw;
 flex-direction: row;
 margin-left: 0;
 }
+
+img {
+  width: 30vw;
+  }
+  
 }
-
-
 
 @media screen and (min-width: 992px){
 .display{

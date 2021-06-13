@@ -1,2 +1,5 @@
 <marquee>ENVIO GRATIS A PARTIR DE $3000 - En todos tus pedidos a domicilio y puntos de recogida</marquee>
 fs.unlinkSync(path)
+
+                        <li type="none"><input type="checkbox" name="colour" id="colour" value="White" required <%= product.colour.indexOf('White') == -1 ? "" : "checked"%>/> White</li>
+                        <li type="none"><input type="checkbox" name="colour" id="colour" value="Black" required <%= product.colour.some("White") ? 'checked' : '' %>/> Black</li>

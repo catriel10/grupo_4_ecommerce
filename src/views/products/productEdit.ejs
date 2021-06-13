@@ -13,59 +13,58 @@
 <%- include("../partials/nav") %> 
 
     <main>
-        <form action="alta usuario" method="GET" class="create-user"> 
+        <form action="/products/<%= product.id %>?_method=PUT" method="POST" class="create-user" enctype="multipart/form-data" > 
+                <!-- 
+                    action: la ruta donde vamos a mandar nuestros campos 
+                -->
             <article class="lv">
                 <div class="control-user">
                     <div class="control-formulario">
                         <label>Product Name</label>
-                        <input type="text" name="Product Name" class="control">
+                        <input type="text" name="name" class="control" required value="<%= product.name %>">
                     </div>
                     <div class="control-formulario">
                         <label>Description</label>
-                        <input type="text" name="Description" class="control">
+                        <input type="text" name="description" class="control" required value="<%= product.description %>">
                     </div>
                     <div class="control-formulario">
                         <label>Price</label>
-                        <input type="text" name="Price" class="control">
+                        <input type="text" name="price" class="control" required value="<%= product.price %>">
                     </div>
                     <div class="control-formulario">
                         <label>Choose colour</label>
-                        <li type="none"><input type="checkbox" name="category" id="category" value="White" required /> White</li>
-                        <li type="none"><input type="checkbox" name="category" id="category" value="Black" required /> Black</li>
-                        <li type="none"><input type="checkbox" name="category" id="category" value="Pink" required /> Pink</li>
-                        <li type="none"><input type="checkbox" name="category" id="category" value="Green" required /> Green</li>
-                        <li type="none"><input type="checkbox" name="category" id="category" value="Red" required /> Red</li>
-                        <li type="none"><input type="checkbox" name="category" id="category" value="Yellow" required /> Yellow</li>
-                        <li type="none"><input type="checkbox" name="category" id="category" value="Orange" required /> Orange</li>
-                        <li type="none"><input type="checkbox" name="category" id="category" value="Grey" required /> Grey</li>
-                        <li type="none"><input type="checkbox" name="category" id="category" value="Light Blue" required /> Light Blue</li>
-                        <li type="none"><input type="checkbox" name="category" id="category" value="Blue" required /> Blue</li>
-                        <li type="none"><input type="checkbox" name="category" id="category" value="Beige" required /> Beige</li>
-                        <li type="none"><input type="checkbox" name="category" id="category" value="Violet" required /> Violet</li>
+                        <li type="none"><input type="checkbox" name="colour" id="colour" value="white" <%= product.colour.indexOf('White') == -1 ? "" : "checked"%>/> White</li>
+                        <li type="none"><input type="checkbox" name="colour" id="colour" value="black" <%= product.colour.indexOf('black') == -1 ? "" : "checked"%>/> Black</li>
+                        <li type="none"><input type="checkbox" name="colour" id="colour" value="pink" <%= product.colour.indexOf('pink') == -1 ? "" : "checked"%>/> Pink</li>
+                        <li type="none"><input type="checkbox" name="colour" id="colour" value="green" <%= product.colour.indexOf('green') == -1 ? "" : "checked"%>/> Green</li>
+                        <li type="none"><input type="checkbox" name="colour" id="colour" value="red" <%= product.colour.indexOf('red') == -1 ? "" : "checked"%>/> Red</li>
+                        <li type="none"><input type="checkbox" name="colour" id="colour" value="yellow" <%= product.colour.indexOf('yellow') == -1 ? "" : "checked"%> /> Yellow</li>
+                        <li type="none"><input type="checkbox" name="colour" id="colour" value="orange" <%= product.colour.indexOf('orange') == -1 ? "" : "checked"%>/> Orange</li>
+                        <li type="none"><input type="checkbox" name="colour" id="colour" value="grey" <%= product.colour.indexOf('grey') == -1 ? "" : "checked"%>/> Grey</li>
+                        <li type="none"><input type="checkbox" name="colour" id="colour" value="light-Blue" <%= product.colour.indexOf('light-Blue') == -1 ? "" : "checked"%>/> Light Blue</li>
+                        <li type="none"><input type="checkbox" name="colour" id="colour" value="blue" <%= product.colour.indexOf('blue') == -1 ? "" : "checked"%>/> Blue</li>
+                        <li type="none"><input type="checkbox" name="colour" id="colour" value="beige" <%= product.colour.indexOf('beige') == -1 ? "" : "checked"%>/> Beige</li>
+                        <li type="none"><input type="checkbox" name="colour" id="colour" value="violet" <%= product.colour.indexOf('violet') == -1 ? "" : "checked"%>/> Violet</li>
                     </div>
                     <div class="control-formulario">
                         <label for="category">Category</label>
-                            <li type="none"><input type="checkbox" name="category" id="category" value="T-shirt" required /> T-shirt</li>
-                            <li type="none"><input type="checkbox" name="category" id="category" value="Skirt" required /> Skirt</li>
-                            <li type="none"><input type="checkbox" name="category" id="category" value="Shorts" required /> Shorts</li>
-                            <li type="none"><input type="checkbox" name="category" id="category" value="Sweater" required /> Sweater</li>
-                            <li type="none"><input type="checkbox" name="category" id="category" value="Hoodie" required /> Hoodie</li>
-                            <li type="none"><input type="checkbox" name="category" id="category" value="Jacket" required /> Jacket</li>
+                            <li type="none"><input type="radio" name="category" id="category" value="t-shirt" required  <%= product.category.indexOf('t-shirt') == -1 ? "" : "checked"%> /> T-shirt</li>
+                            <li type="none"><input type="radio" name="category" id="category" value="skirt" required <%= product.category.indexOf('skirt') == -1 ? "" : "checked"%> /> Skirt</li>
+                            <li type="none"><input type="radio" name="category" id="category" value="shorts" required <%= product.category.indexOf('shorts') == -1 ? "" : "checked"%> /> Shorts</li>
+                            <li type="none"><input type="radio" name="category" id="category" value="sweater" required <%= product.category.indexOf('sweater') == -1 ? "" : "checked"%> /> Sweater</li>
+                            <li type="none"><input type="radio" name="category" id="category" value="hoodie" required <%= product.category.indexOf('hoodie') == -1 ? "" : "checked"%> /> Hoodie</li>
+                            <li type="none"><input type="radio" name="category" id="category" value="jacket" required <%= product.category.indexOf('jacket') == -1 ? "" : "checked"%> /> Jacket</li>
                     </div>
                     <div class="control-formulario">
-                        <label>Foto</label>
-                        <input type="file" name="foto" accept=".jpg" multiple class="control">
+                            <label>Foto</label>
+                            <img src="<%= product.image %>" width="10vw" />
+                            <input type="file" name="image" id="image" accept=".jpg" multiple class="control">
                     </div>
                     <div class="control-formulario">
                         <button type="reset" class="button-reset">Reset</button>
                         <button type="submit" class="button-submit">Save</button>
                     </div>
                 </article>
-                <article class="lv">
-                    <div class="admin">
-                        <img class="fotoadmin" src="/img/img_avatar2.png" alt="girl fashion pic">
-                    </div>
-                </article>    
             </div>
         </form>
     </main>

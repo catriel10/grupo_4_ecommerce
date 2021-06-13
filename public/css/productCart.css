@@ -11,11 +11,16 @@ text-decoration:none;
 /* ------------ Header------------------ */
 
 .header {
-text-align:center;
-padding: 10px;
-background: #ffffff;
-color: #000000;	
-}
+  text-align:center;
+  padding: 2.5vh;
+  background: #ffffff;
+  color: #000000;
+  z-index:100;
+  max-width: 100vw;
+  width: 100%;
+  position: fixed;
+  top:0
+  }
 
 .header h1 {
 font-size:4rem;
@@ -48,6 +53,14 @@ font-size: 1vh;
 }
 
 /* ------------ Navegacion slider ------------------ */ 
+.respmenu{
+  z-index: 100;
+  max-width: 100vw;
+  width: 100%;
+  position: fixed;
+  margin-top: -6vh;
+}
+
 ul.navbar {
 display: flex;
 background-color:#292c2f;
@@ -114,6 +127,171 @@ width:100%;
 
 /*------------------------------------------------------------------ */
 
+/* --------------------- Main ------------------ */
+.main {  
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 13vh;
+  }
+  
+  main section article i {
+  display: block ;
+  font-size: 16px ;
+  padding: 5px ;
+  width: 30px ;
+  height: 30px ;
+  border: 1px solid #39b54a ;
+  background-color: #FFF ;
+  border-radius: 50% ;
+  position: absolute ;
+  right: 20px ;
+  top: -15px ;
+  }
+  
+  
+  h3 {
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  font-weight: 400;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-left: 10px;
+  margin-top: 10px;
+  }
+  
+  h4 {
+  font-family: 'Roboto', sans-serif;
+  color: #39b54a;
+  font-weight: 400;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 10px;
+  margin-top: 10px;
+  }
+  
+  .articulos1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  margin: 0;
+  padding:0;
+  }
+  
+  
+  .lv {
+  border-top: 1px solid #ebebeb;
+  border-radius: 0%;
+  margin: 20px;
+  background-color: #fff;
+  padding: 15px 15px;
+  /* max-width:45%;*/
+  position: relative;
+  justify-content: space-between;
+  display: inline-block;
+  align-content: center;
+  /* left: 20px;*/
+  
+  }
+  
+  .lv1 {
+  border-top: 1px solid #ebebeb ;
+  border-radius: 0%;
+  margin:0px 0px;
+  padding: 10px 0px;
+  background-color: #fff;
+  /* max-width: 0px;*/
+  position: relative;
+  justify-content: space-between;
+  transition: all 450ms;
+  }
+  
+  .lv2{
+  display:flex;
+  }
+  
+  .lv:hover .description {
+  display: block;
+  box-shadow: ​0px​ ​0px​ ​10px​ ​rgb​(​100​, ​100​, ​100​);
+  }
+  
+  .lv:hover .fa-truck{
+  transform: rotate(360deg);
+  animation-name: trans;
+  animation-duration: 3s;
+  }
+  
+  .lv:hover {
+  box-shadow: 0px 0px 10px rgba(100, 100, 100, 0.90);
+  }
+  
+  .lv:hover {
+  display: block;
+  box-shadow: ​rgba​(​100​, ​100​, ​100, 0.5​);
+  transition: all 0.5ms
+  }
+  
+  .lv:hover div h3{
+  opacity: 1;
+  }
+  
+  .lv2{
+  display:flex;
+  }
+  
+  .price {
+  display: block;
+  font-size: 18px;
+  width: 30%;
+  margin-top: 5px;
+  text-align: left
+  }
+  
+  .discount {
+  display: block;
+  font-size: 16px;
+  color: #39b54a;
+  width: 70%;
+  margin-top: 5px;
+  text-align: center
+  }
+  
+  .description {
+  display: none;
+  font-size: 16px;
+  margin: 0px;
+  padding: 0px;
+  left: 0;
+  width: 100%;
+  transition: width 10s;
+  }
+  
+  .description:hover {
+  display: block;
+  font-size: 0.75em
+  }
+  
+  .fa-truck {
+  padding: 5px 5px;
+  color: #39b54a;
+  border-style: #39b54a;
+  border: solid;
+  border-width: 1px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  transition: 1s;
+  }
+  
+  .img-cat {
+  width: 60vw;
+  }
+  
+  /* ------------ cajas ------------- */
+  
+  
 
 
 /* Style the search field */
@@ -152,7 +330,7 @@ display: table;
 
 
 main {
-padding:10vw
+padding:1vw
 }
 
 
@@ -249,7 +427,7 @@ flex-wrap: wrap;
 .containerFormDelivery{
 display: flex;
 margin: 0px;
-justify-content: space-around;
+justify-content: space-evenly;
 }
 
 
@@ -678,8 +856,13 @@ text-align: right;
   .logo { 
   font-size: 3rem;;
   color:#ffffff;}
-  
 
+
+  .data span, .data a {
+    text-transform: uppercase;
+    color: grey;
+    font-weight: 700;
+  }
 /* EXTRAS REVISAR */
 
 * {box-sizing: border-box}
@@ -751,6 +934,250 @@ background-color: #fefefe;
 margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
 border: 1px solid #888;
 width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+border: 1px solid #f1f1f1;
+margin-bottom: 25px;
+}
+
+/* The Close Button (x) */
+.close {
+position: absolute;
+right: 35px;
+top: 15px;
+font-size: 40px;
+font-weight: bold;
+color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+color: #f44336;
+cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+content: "";
+clear: both;
+display: table;
+}
+
+/* media queries 360px wide */
+@media (min-width: 360px) {
+  .main, .navbar {   
+  flex-direction: column;
+  margin-left: 0;
+  }
+
+
+  .slide1, .slide2 {padding:6px;}
+
+
+  .main .right-div,
+  .main .left-div 
+  {margin-left: 0;}
+ 
+ 
+  ul.dropdown-content li {
+  
+  font-size:12px;
+  }
+  
+  ul li a {
+  padding: 15px 1px;
+  font-size: 1rem
+  }
+  
+  }
+
+.lv {
+width: 20%;
+flex-wrap: nowrap;
+}
+  /* media queries 768px wide */
+@media (min-width: 768px) {
+.main, .navbar {   
+flex-direction: row;
+margin-left: 0;
+}
+
+
+.footer-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* align-items: baseline; */
+  margin: 0;
+  padding: 0;
+}
+
+.footer-container .footer-left, .footer-container .footer-center, .footer-container .footer-right {
+    margin: 5px;
+    background-color: black;
+    padding: 5px 5px;
+    max-width: 30vw;
+    position: relative;
+    justify-content: space-between;
+    display: inline-block;
+    align-content: center;
+    left: 0px;
+    color: #1259c3;
+    font-size: 0.75em;
+    margin-bottom: 10px;
+    transition: 1s;
+  }
+
+
+img {
+  width: 40vw;
+  /* padding: 10px; */
+  /* margin: 10px auto;*/
+}
+
+.container1{
+  /* margin: auto; */
+  /* background-color: lightsteelblue; */
+  width: 40vw;
+  /* padding: 1vw;*/
+}
+
+.container2{
+  /* margin: auto; */
+  /* background-color: lightsteelblue; */
+  width: 40vw;
+  /* padding: 1vw;*/
+}
+
+#myVideo {
+  /* position: fixed; */
+  right: 0;
+  bottom: 0;
+  max-width: 40vw;
+  /* min-height: 100%; */
+  padding: 5px;
+  margin-top: 4vh;
+}
+
+ul.slider1{
+  position: relative;
+  width: 100%;
+  height:25vw;
+}
+
+ul.slider2{
+  position: relative;
+  width: 100%;
+  height:25vw;
+}
+
+.menu1 li a{
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  background-color: grey;
+  padding: 10px;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  border-radius: 100%;
+}
+
+.menu2 li a{
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  background-color: grey;
+  padding: 10px;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  border-radius: 100%;
+}
+
+#myVideo {
+  /* position: fixed; */
+  right: 0;
+  bottom: 0;
+  max-width: 40vw;
+  /* min-height: 100%; */
+  padding: 5px;
+}
+
+
+.slide1, .slide2 {padding:6px;}
+
+.main .right-div,
+.main .left-div 
+{margin-left: 0;}
+
+ul.dropdown-content li {
+
+font-size:12px;
+}
+
+
+
+}
+
+.block-form{
+border: 1px solid #c5cbd5;
+padding: 10px;
+margin: 5px auto;
+transition-property: border,color,background-color;
+max-width: 50vw;
+}
+/* EXTRAS REVISAR */
+
+* {box-sizing: border-box}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+width: 100%;
+padding: 15px;
+margin: 5px 0 22px 0;
+display: inline-block;
+border: none;
+background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+background-color: #ddd;
+outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+background-color: #04AA6D;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 20vh;
+opacity: 0.9;
+}
+
+button:hover {
+opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+padding: 14px 14px;
+background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+width: 20vw;
+}
+
+/* Add padding to container elements */
+.container {
+padding: 5vw;
 }
 
 /* Style the horizontal ruler */
