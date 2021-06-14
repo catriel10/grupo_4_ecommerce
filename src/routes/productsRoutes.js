@@ -32,10 +32,12 @@ const storage = multer.diskStorage({
 const upload = multer({ storage })
 
 // Proyecto
-productsRoutes.get('/detail', productsController.showDetail)
+//productsRoutes.get('/:id', productsController.showDetail)
 productsRoutes.get('/cart', productsController.showCart)
 productsRoutes.get('/catalogue', productsController.showCatalogue)
 productsRoutes.get('/edit', productsController.showEdit)
+
+productsRoutes.get('/:id', productsController.detail)
 
 // Create
 productsRoutes.get('/create', productsController.formNew);

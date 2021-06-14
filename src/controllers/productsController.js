@@ -5,7 +5,7 @@ const productsController = {
 
  // primera version de los controladores    
 
-    showDetail: (req, res) => {
+ /*   showDetail: (req, res) => {
         // levantamos el id desde la url (parámetro)
         
         //const id = req.params.id
@@ -16,6 +16,7 @@ const productsController = {
         res.render('products/productDetail', { productDetail });
 
     },
+    */
     showCart: (req, res) => {
         res.render('products/productCart');
     },
@@ -30,6 +31,17 @@ const productsController = {
 
     showEdit: (req, res) => {
         res.render('products/productEdit');
+    },
+
+    detail: (req, res) => {
+        // levantamos el id desde la url (parámetro)
+        
+        //const id = req.params.id
+        const { id } = req.params
+        
+        const productDetail = productsModel.findByPk(id)
+        
+        res.render('products/productDetail', { productDetail })
     },
 
     formNew: (req, res) => {

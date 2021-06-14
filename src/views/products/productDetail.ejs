@@ -13,7 +13,9 @@
 <%- include("../partials/nav") %> 
     <main>
       <section class="articulos1">
-        <% productList.forEach((product) => { %>
+        <% if (productDetail == null) {%>
+          UPS no encontramos el producto
+         <% } else { %>
         <article class="lv">
             <div> 
                 <img class="img-cat"src="<%= product.image %>" alt="<%= product.name %>">
@@ -60,7 +62,7 @@
                   </div>
                 </div>
         </article>
-        <% }) %>
+        <% } %>
       </section> 
     </main>
  <!-- Footer -->

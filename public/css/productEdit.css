@@ -751,6 +751,12 @@ margin-left: 0;
   /* vertical-align: top;*/
   max-width: 30vw;
 }
-
-
 }
+
+@media (min-width: 1600px) {
+  .header {
+  
+    padding: 3.5vh;
+  
+    }
+  }

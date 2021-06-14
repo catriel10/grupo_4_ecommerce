@@ -58,7 +58,7 @@ font-size: 1vh;
   max-width: 100vw;
   width: 100%;
   position: fixed;
-  margin-top: -6vh;
+  margin-top: -7vh;
 }
 
 ul.navbar {
@@ -111,6 +111,7 @@ ul.dropdown-content {
 position: absolute;
 display: none;
 z-index: 1;
+background-color: #292c2f;
 }
 
 ul.dropdown-content li {
@@ -127,11 +128,69 @@ width:100%;
 
 /*------------------------------------------------------------------ */
 
+/* ------------ Search ------------------ */ 
+
+.search-box{
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  margin: auto;
+}
+.input-search{
+  height: 50px;
+  width: 50px;
+  border-style: none;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 25px;
+  transition: all .5s ease-in-out;
+  background-color: white;
+  padding-right: 40px;
+  color:#fff;
+}
+.input-search::placeholder{
+  color:rgba(255,255,255,.5);
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+.btn-search{
+  width: 50px;
+  height: 50px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  color:black ;
+  background-color:transparent;
+  pointer-events: painted;  
+}
+.btn-search:focus ~ .input-search{
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom:1px solid rgba(255,255,255,.5);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+.input-search:focus{
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom:1px solid rgba(255,255,255,.5);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
 /* --------------------- Main ------------------ */
 .main {  
   display: flex;
   flex-wrap: wrap;
-  margin-top: 13vh;
+  margin-top: 20vh;
   }
   
   main section article i {
@@ -288,46 +347,7 @@ width:100%;
   .img-cat {
   width: 60vw;
   }
-  
-  /* ------------ cajas ------------- */
-  
-  
-
-
-/* Style the search field */
-form.example input[type=text] {
-padding: 10px;
-font-size: 17px;
-border: 1px solid grey;
-float: left;
-width: 80%;
-background: #f1f1f1;
-}
-
-/* Style the submit button */
-form.example button {
-float: left;
-width: 20%;
-padding: 10px;
-background: #2196F3;
-color: white;
-font-size: 17px;
-border: 1px solid grey;
-border-left: none; /* Prevent double borders */
-cursor: pointer;
-}
-
-form.example button:hover {
-background: #0b7dda;
-}
-
-/* Clear floats */
-form.example::after {
-content: "";
-clear: both;
-display: table;
-}
-
+ 
 
 main {
 padding:1vw
@@ -343,6 +363,7 @@ padding: 10px
 
 article {
 border-bottom: solid 1px grey;
+width: 100%;
 }
 
 .cartProduct{
@@ -1129,34 +1150,37 @@ margin: 5px auto;
 transition-property: border,color,background-color;
 max-width: 50vw;
 }
+
 /* EXTRAS REVISAR */
 
 * {box-sizing: border-box}
 /* Full-width input fields */
 input[type=text], input[type=password] {
-width: 100%;
+    /* width: 100%;*/
 padding: 15px;
-margin: 5px 0 22px 0;
+/*margin: 5px 0 22px 0;*/
 display: inline-block;
 border: none;
 background: #f1f1f1;
+font-size: 2em
 }
 
 /* Add a background color when the inputs get focus */
 input[type=text]:focus, input[type=password]:focus {
 background-color: #ddd;
 outline: none;
+font-size: 2em
 }
 
 /* Set a style for all buttons */
 button {
 background-color: #04AA6D;
 color: white;
-padding: 14px 20px;
-margin: 8px 0;
+padding: 10px;
+    /* margin: 8px 0;*/
 border: none;
 cursor: pointer;
-width: 20vh;
+
 opacity: 0.9;
 }
 
@@ -1173,6 +1197,7 @@ background-color: #f44336;
 /* Float cancel and signup buttons and add an equal width */
 .cancelbtn, .signupbtn {
 width: 20vw;
+font-size: 1.5em;
 }
 
 /* Add padding to container elements */
@@ -1209,4 +1234,10 @@ clear: both;
 display: table;
 }
 
-
+@media (min-width: 1600px) {
+  .header {
+  
+    padding: 3.5vh;
+  
+    }
+  }

@@ -31,7 +31,7 @@ module.exports = {
         const products = this.readFile();
         // Filtrar por el ID
         const productFound = products.find(product => product.id == id);
-        // Devolvemos el planeta
+        // Devolvemos el producta
         return productFound;
     },
     create(product) {
@@ -57,6 +57,13 @@ module.exports = {
             }
             return product;
         });
+
+        this.writeFile(newproducts);
+    },
+    destroy(id) {
+        const products = this.readFile();
+
+        const newproducts = products.filter(product => product.id != id);
 
         this.writeFile(newproducts);
     }
