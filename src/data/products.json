@@ -25,11 +25,12 @@
     ],
     "quantity": "10"
   },
+
   {
-    "id": 3,
-    "image": "/img/article/chaleco-cuadriculado.jpeg",
-    "name": "chaleco-cuadriculado",
-    "description": "chaleco-cuadriculado",
+    "id": 2,
+    "image": "/img/article/chaleco-cuadrille.jpeg",
+    "name": "chaleco-cuadrille",
+    "description": "chaleco-cuadrille",
     "price": 1500,
     "discount": 0.1,
     "colour": [
@@ -45,6 +46,27 @@
       "blue",
       "beige",
       "violet"
+    ],
+    "category": [
+      "sweater"
+    ],
+    "quantity": "10"
+  },
+
+  {
+    "id": 3,
+    "image": "/img/article/chaleco-tejido.jpeg",
+    "name": "chaleco-tejido",
+    "description": "chaleco-tejido",
+    "price": 1500,
+    "discount": 0.1,
+    "colour": [
+      "white",
+      "black",
+      "pink",
+      "grey",
+      "light-blue",
+      "beige"
     ],
     "category": [
       "sweater"
@@ -53,23 +75,30 @@
   },
   {
     "id": 4,
-    "name": "chaleco-cuadrille",
-    "description": "chaleco-cuadrille",
-    "price": "$1500",
+    "image": "/img/article/buzo-oxford.jpeg",
+    "name": "buzo-oxford",
+    "description": "buzo-oxford",
+    "price": 1800,
+    "discount": 0.1,
     "colour": [
+      "white",
       "black",
-      "pink",
-      "green"
+      "grey",
+      "light-blue",
+      "beige",
+      "violet"
     ],
-    "category": "sweater",
-    "image": "/img/article/chaleco-cuadrille.jpeg"
+    "category": [
+      "hoodie"
+    ],
+    "quantity": "10"
   },
   {
     "id": 5,
-    "image": "/img/article/chaleco-cuadriculado.jpeg",
-    "name": "chaleco-cuadriculado",
-    "description": "chaleco-cuadriculado",
-    "price": 1500,
+    "image": "/img/article/remera-angel.jpeg",
+    "name": "remera-angel",
+    "description": "remera-angel",
+    "price": 1000,
     "discount": 0.1,
     "colour": [
       "white",
@@ -86,28 +115,34 @@
       "violet"
     ],
     "category": [
-      "sweater"
+      "t-shirt"
     ],
     "quantity": "10"
   },
   {
     "id": 6,
-    "name": "chaleco-cuadrille",
-    "description": "chaleco-cuadrille",
-    "price": "$1500",
+    "image": "/img/article/buzo-amarillo.jpeg",
+    "name": "buzo-amarillo",
+    "description": "buzo-amarillo",
+    "price": 1900,
+    "discount": 0.1,
     "colour": [
+      "white",
       "black",
-      "pink",
-      "green"
+      "yellow",
+      "orange",
+      "grey"
     ],
-    "category": "sweater",
-    "image": "/img/article/chaleco-cuadrille.jpeg"
+    "category": [
+      "hoodie"
+    ],
+    "quantity": "10"
   },
   {
     "id": 7,
-    "image": "/img/article/chaleco-cuadriculado.jpeg",
-    "name": "chaleco-cuadriculado",
-    "description": "chaleco-cuadriculado",
+    "image": "/img/article/chaleco-trenza.jpeg",
+    "name": "chaleco-trenza",
+    "description": "chaleco-trenza",
     "price": 1500,
     "discount": 0.1,
     "colour": [
@@ -121,8 +156,7 @@
       "grey",
       "light-blue",
       "blue",
-      "beige",
-      "violet"
+      "beige"
     ],
     "category": [
       "sweater"
@@ -131,15 +165,22 @@
   },
   {
     "id": 8,
-    "name": "chaleco-cuadrille",
-    "description": "chaleco-cuadrille",
-    "price": "$1500",
+    "image": "/img/article/polera-gris.jpeg",
+    "name": "polera-gris",
+    "description": "polera-gris",
+    "price": 1200,
+    "discount": 0.1,
     "colour": [
+      "white",
       "black",
-      "pink",
-      "green"
+      "grey",
+      "light-blue",
+      "blue",
+      "beige"
     ],
-    "category": "sweater",
-    "image": "/img/article/chaleco-cuadrille.jpeg"
+    "category": [
+      "sweater"
+    ],
+    "quantity": "10"
   }
 ]
