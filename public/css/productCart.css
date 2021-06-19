@@ -128,6 +128,44 @@ width:100%;
 
 /*------------------------------------------------------------------ */
 
+/* ------------ Form Product ------------------ */ 
+.control-formulario{
+  padding: 10px 15px;
+  display: inline-block;
+  vertical-align: top;
+  }
+  
+  .control-formulario label {
+    margin: 1vw;
+    font-style: italic;
+    display: block;
+    max-width: 250px;
+  }
+  
+  .control {
+    margin: 5px;
+    padding: 8px;
+    max-width: 30vw;
+    font-size: 2em;
+  }
+  
+  .control-product {
+    display: block;
+    padding: 20px 15px;
+    position: relative;
+    margin-bottom: 10vh;
+    border: 1px solid #ebebeb;
+    border-radius: 0%;
+    background-color: #fff;
+    padding: 5px;
+    width: 90vw;
+    position: relative;
+    justify-content: space-between;
+    /* display: inline-block; */
+    align-content: center;
+    left: 2vw;
+    margin: 20px;
+  }
 /* ------------ Search ------------------ */ 
 
 .search-box{
@@ -606,7 +644,7 @@ box-shadow: 0 4px 10px 4px rgba(#13232f, .3);
 .block-cart{
 border: 1px solid #c5cbd5;
 padding: 10px;
-margin: 5px auto;
+margin: 5vw auto;
 transition-property: border,color,background-color;
 max-width: 80vw;
 }
@@ -884,109 +922,8 @@ text-align: right;
     color: grey;
     font-weight: 700;
   }
-/* EXTRAS REVISAR */
 
-* {box-sizing: border-box}
-/* Full-width input fields */
-input[type=text], input[type=password] {
-width: 100%;
-padding: 15px;
-margin: 5px 0 22px 0;
-display: inline-block;
-border: none;
-background: #f1f1f1;
-}
-
-/* Add a background color when the inputs get focus */
-input[type=text]:focus, input[type=password]:focus {
-background-color: #ddd;
-outline: none;
-}
-
-/* Set a style for all buttons */
-button {
-background-color: #04AA6D;
-color: white;
-padding: 14px 20px;
-margin: 8px 0;
-border: none;
-cursor: pointer;
-opacity: 0.9;
-}
-
-button:hover {
-opacity:1;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-padding: 14px 20px;
-background-color: #f44336;
-}
-
-/* Float cancel and signup buttons and add an equal width */
-.cancelbtn, .signupbtn {
-float: left;
-width: 50%;
-}
-
-/* Add padding to container elements */
-.container {
-padding: 16px;
-}
-
-/* The Modal (background) */
-.modal {
-display: none; /* Hidden by default */
-position: fixed; /* Stay in place */
-z-index: 1; /* Sit on top */
-left: 0;
-top: 0;
-width: 100%; /* Full width */
-height: 100%; /* Full height */
-overflow: auto; /* Enable scroll if needed */
-background-color: #474e5d;
-padding-top: 50px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-background-color: #fefefe;
-margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-border: 1px solid #888;
-width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* Style the horizontal ruler */
-hr {
-border: 1px solid #f1f1f1;
-margin-bottom: 25px;
-}
-
-/* The Close Button (x) */
-.close {
-position: absolute;
-right: 35px;
-top: 15px;
-font-size: 40px;
-font-weight: bold;
-color: #f1f1f1;
-}
-
-.close:hover,
-.close:focus {
-color: #f44336;
-cursor: pointer;
-}
-
-/* Clear floats */
-.clearfix::after {
-content: "";
-clear: both;
-display: table;
-}
-
-/* media queries 360px wide */
+  /* media queries 360px wide */
 @media (min-width: 360px) {
   .main, .navbar {   
   flex-direction: column;

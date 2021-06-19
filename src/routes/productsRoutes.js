@@ -8,7 +8,7 @@ const productsController = require('../controllers/productsController')
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         // guardamos el destino de la carpeta absoluta
-        const detinationPath = path.join(__dirname, '../../public/img')
+        const detinationPath = path.join(__dirname, '../../public/img/article')
         // llamamos al callback con error (null) y el path de donde guardaría el archivo
         cb(null, detinationPath)
     },
@@ -32,26 +32,28 @@ const storage = multer.diskStorage({
 const upload = multer({ storage })
 
 // Proyecto
-//productsRoutes.get('/:id', productsController.showDetail)
 productsRoutes.get('/cart', productsController.showCart)
 productsRoutes.get('/catalogue', productsController.showCatalogue)
-productsRoutes.get('/edit', productsController.showEdit)
 
+//productsRoutes.get('/:id', productsController.showDetail)
+productsRoutes.get('/detail/:id', productsController.detail)
 productsRoutes.get('/:id', productsController.detail)
 
 // Create
 productsRoutes.get('/create', productsController.formNew);
-
-// aca deberíamos pasar multer
-productsRoutes.post('/create', upload.single('image'), productsController.store);
+productsRoutes.post ('/create', productsController.store);
 
 // Update
 productsRoutes.get('/:id/edit', productsController.edit);
+
+// aca deberíamos pasar multer
+productsRoutes.post('/create', upload.single('image'), productsController.store);
 
 // aca deberíamos pasar multer
 productsRoutes.put('/:id', upload.single('image'), productsController.update);
 
 // Delete
 productsRoutes.delete('/:id', productsController.destroy);
+
 
 module.exports = productsRoutes

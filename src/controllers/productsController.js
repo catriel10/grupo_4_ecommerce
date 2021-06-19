@@ -5,7 +5,7 @@ const productsController = {
 
  // primera version de los controladores    
 
- /*   showDetail: (req, res) => {
+    showDetail: (req, res) => {
         // levantamos el id desde la url (parámetro)
         
         //const id = req.params.id
@@ -16,7 +16,7 @@ const productsController = {
         res.render('products/productDetail', { productDetail });
 
     },
-    */
+    
     showCart: (req, res) => {
         res.render('products/productCart');
     },
@@ -45,12 +45,12 @@ const productsController = {
     },
 
     formNew: (req, res) => {
-        res.render('products/new')
+        res.render('products/productNew')
     },
 
     store: (req, res) => {
         // Crear el objeto product
-        const { id, foto, name, description, price, colour, category, stock, size} = req.body;
+        const { id, name, description, price, colour, category} = req.body;
 
          // dentro de req.file va a venir la información del archivo
          const { file } = req
@@ -59,20 +59,17 @@ const productsController = {
          const image = file.filename
 
         const product = {
-            id: id,
-            foto: '/img/' + image,
             name: name,
             description: description,
             price: price,
             colour: colour,
             category: category,
-            stock: stock,
-            size: size,
+            image:'/img/article/' + image,
         }
 
         const productCreated = productsModel.create(product);
 
-        res.redirect('/products/detail/' + productCreated.id);
+        res.redirect('/products/productDetail/' + productCreated.id);
     },
     edit: (req, res) => {
         const product = productsModel.findByPk(req.params.id);
@@ -97,7 +94,7 @@ const productsController = {
         let image
 
         if (file) {
-            image = '/images/' + file.filename
+            image = '/img/article/' + file.filename
         } else {
             image = productOriginal.image
         }

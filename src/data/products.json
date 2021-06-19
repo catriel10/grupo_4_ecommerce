@@ -19,25 +19,11 @@
       "blue",
       "beige",
       "violet"
-              ],
+    ],
     "category": [
       "sweater"
     ],
-
     "quantity": "10"
-  },
-  {
-    "id": 2,
-    "name": "chaleco-cuadrille",
-    "description": "chaleco-cuadrille",
-    "price": "$1500",
-    "colour": [
-      "black",
-      "pink",
-      "green"
-    ],
-    "category": "sweater",
-    "image": "/img/article/chaleco-cuadrille.jpeg"
   },
   {
     "id": 3,
@@ -59,11 +45,10 @@
       "blue",
       "beige",
       "violet"
-              ],
+    ],
     "category": [
       "sweater"
     ],
-
     "quantity": "10"
   },
   {
@@ -99,11 +84,10 @@
       "blue",
       "beige",
       "violet"
-              ],
+    ],
     "category": [
       "sweater"
     ],
-
     "quantity": "10"
   },
   {
@@ -139,11 +123,10 @@
       "blue",
       "beige",
       "violet"
-              ],
+    ],
     "category": [
       "sweater"
     ],
-
     "quantity": "10"
   },
   {

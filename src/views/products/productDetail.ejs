@@ -11,38 +11,36 @@
   
   <!-- Barra Navegacion -->
 <%- include("../partials/nav") %> 
-    <main>
+
+    <main class="main">
       <section class="articulos1">
         <% if (productDetail == null) {%>
           UPS no encontramos el producto
          <% } else { %>
         <article class="lv">
             <div> 
-                <img class="img-cat"src="<%= product.image %>" alt="<%= product.name %>">
+                <img class="img-cat"src="<%= productDetail.image %>" alt="<%= productDetail.name %>">
             </div>
             <div class="lv1">
-                <i class="fas fa-truck"></i>
-                    <div class="lv2">
-                      <span class="price"><%= product.price %></span>
-                      <span class="discount"><%= product.discount %></span>                    </div>
-                <h2 class="description"><%= product.description %></h2>
+              <i class="fas fa-truck"></i>
+                <div class="lv2">
+                  <span class="price"><%= productDetail.price %></span>
+                  <span class="discount"><%= productDetail.discount %></span>                    </div>
+                  <h2 class="description"><%= productDetail.description %></h2>
+                </div>   
             </div>
+        </article>    
+        <article class="lv">
             <div class="lv3">
-              <p class = "title"><%= product.name %></p>
+              <p class = "title"><%= productDetail.name %></p>
                 <div class = "product-detail">
-                  <h3>Description: </h3>
+                  <p>Description: Tissue</p>
                   <p>Cloth: Tissue</p>
                   <p>Size: Unique</p>
+                  <p>In Stock <span>10u</span></p>
                   <p>Price: <span>$1500</span></p>
-                  <ul>
-                    <li>IN STOCK</li>
-                  </ul>
-                </div>
-                <div class = "product-price">
-                    
                 </div>
                 <div class = "container">
-                  <div class = "input-container">
                     <label for ="colour">Colors:</label>
                     <select name="colour" id="colour">
                       <option value="option-1">Black</option>
@@ -50,18 +48,17 @@
                       <option value="option-3">Red</option>
                       <option value="option-4">Yellow</option>
                     </select>
-                  </div>
-                  <div class = "input-container">
                     <label for ="quantity">Quantity:</label>
                     <input type = "number" min = "0" value = "1">
-                  </div>
-                  <div class = "input-container">
+                    <form action="/products/<%= productDetail.id %>?_method=DELETE" method="POST">
+                      <button type="submit">Delete</button>
+                    </form> 
                     <button type = "button" class = "button">
-                    Add to Cart
+                      Add to Cart
                     </button>
-                  </div>
                 </div>
-        </article>
+            </div>       
+        </article>       
         <% } %>
       </section> 
     </main>

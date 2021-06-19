@@ -485,9 +485,9 @@ color: #1ab188, 5%;
 .block-form{
 border: 1px solid #c5cbd5;
 padding: 10px;
-margin: 5px auto;
+margin: 35px auto;
 transition-property: border,color,background-color;
-max-width: 60vw;
+max-width: 100%;
 }
 
 .form {
@@ -771,7 +771,7 @@ width: 90vw;
 }
 
 /* media queries 360px wide */
-@media screen and (min-width: 360px) {
+@media (min-width: 360px) {
 .main, .navbar {   
 flex-direction: column;
 margin-left: 0;
@@ -784,11 +784,7 @@ margin-left: 0;
 .main .left-div 
 {margin-left: 0;}
 
-.line1 {font-size:18px;}
 
-.line2 {font-size:12px;}
-
-.line3 {font-size:10px;}
 
 ul.dropdown-content li {
 
@@ -805,7 +801,7 @@ font-size: 1rem
 .block-form{
 border: 1px solid #c5cbd5;
 padding: 10px;
-margin: 5px auto;
+margin: 35px auto;
 transition-property: border,color,background-color;
 max-width: 80vw;
 }
@@ -819,7 +815,8 @@ margin-left: 0;
 }
 
 .block-form{
-max-width: 45vw;
+max-width: 35vw;
+margin: 35px auto;
 }
 
 .cancelbtn, .signupbtn {
