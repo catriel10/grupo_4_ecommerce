@@ -31,29 +31,35 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage })
 
-// Proyecto
+// Routes
+
+//Cart
 productsRoutes.get('/cart', productsController.showCart)
+
+//1. /products (GET) Listado de productos
 productsRoutes.get('/catalogue', productsController.showCatalogue)
 
-//productsRoutes.get('/:id', productsController.showDetail)
-productsRoutes.get('/detail/:id', productsController.detail)
-productsRoutes.get('/:id', productsController.detail)
-
-// Create
+//2. /products/create (GET) Formulario de creación de productos
 productsRoutes.get('/create', productsController.formNew);
-productsRoutes.post ('/create', productsController.store);
-
-// Update
-productsRoutes.get('/:id/edit', productsController.edit);
-
 // aca deberíamos pasar multer
 productsRoutes.post('/create', upload.single('image'), productsController.store);
 
+//3. /products/:id (GET) Detalle de un producto particular
+
+productsRoutes.get('/:id', productsController.showDetail)
+
+//4. /products (POST)Acción de creación (a donde se envía el formulario)
+productsRoutes.post ('/create', productsController.store);
+
+//5. /products/:id/edit (GET) Formulario de edición de productos
+productsRoutes.get('/:id/edit', productsController.edit);
+
+// 6. /products/:id (PUT) Acción de edición (a donde se envía el formulario):
+productsRoutes.put('/:id', productsController.edit)
 // aca deberíamos pasar multer
 productsRoutes.put('/:id', upload.single('image'), productsController.update);
 
-// Delete
+// 7. /products/:id (DELETE) Acción de borrado
 productsRoutes.delete('/:id', productsController.destroy);
-
 
 module.exports = productsRoutes

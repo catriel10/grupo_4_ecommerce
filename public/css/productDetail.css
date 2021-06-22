@@ -421,25 +421,42 @@ margin-left: 20px;
 }
 
 
-.button{
-color: white;
-background-color: black;
-margin: 2vw;
-text-align: center;
-}
-
-.button:hover{
-opacity: 0.8;
-background-color: coral;
-}
+.button {
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  padding: 15px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  background: #1ab188;
+  color: #ffffff;
+  margin: 10px;
+  transition: all .3s ease-out 0s;
+  }
+  
+  .button:hover,
+  :focus {
+  background: #1ab188, 5%;
+  }
+  .button-block {
+  display: block;
+  width: 100%;
+  }
+  
+  .forgot {
+  margin-top: -20px;
+  text-align: right;
+  }
+  
 
 input, optgroup, select, textarea {
   font-family: inherit;
   font-size: 1.5em;
   line-height: 1.15;
   margin: 0;
-  max-width: 20%;
-}
+ }
 
 /* EXTRAS REVISAR */
 
@@ -447,7 +464,7 @@ input, optgroup, select, textarea {
 /* Full-width input fields */
 input[type=text], input[type=password] {
     /* width: 100%;*/
-/*padding: 15px;*/
+padding: 15px;
 /*margin: 5px 0 22px 0;*/
 display: inline-block;
 border: none;
@@ -482,12 +499,19 @@ opacity:1;
 .cancelbtn {
 padding: 14px 14px;
 background-color: #f44336;
+border-radius: 5px;
+margin: 10px;
 }
 
 /* Float cancel and signup buttons and add an equal width */
-.cancelbtn, .signupbtn {
+.cancelbtn, .button {
 width: 20vw;
 font-size: 1.5em;
+}
+
+/* Add padding to container elements */
+.container {
+padding: 5vw;
 }
 
 /* Style the horizontal ruler */
@@ -518,6 +542,77 @@ content: "";
 clear: both;
 display: table;
 }
+/* ------------ Form Product ------------------ */ 
+.control-formulario{
+  display: inline-block;
+  text-align: center;
+  }
+  
+  .control-formulario label {
+    margin: 1.5em;
+    font-style: italic;
+    display: block;
+    max-width: 250px;
+    font-weight: bold;
+    font-size: 2em;
+  }
+
+  .control-formulario li {
+    align-items: center;
+    display: block;
+    font-size: 1.5em;
+  }
+  
+  .control {
+    margin: 5px;
+    padding: 8px;
+    max-width: 30vw;
+    font-size: 1.5em;
+  }
+  
+  .control-product {
+    display: block;
+    padding: 20px 15px;
+    position: relative;
+    margin-bottom: 10vh;
+    border: 1px solid #ebebeb;
+    border-radius: 0%;
+    background-color: #fff;
+    padding: 5px;
+    width: 90vw;
+    position: relative;
+    justify-content: space-between;
+    /* display: inline-block; */
+    align-content: center;
+    left: 2vw;
+    margin: 20px;
+  }
+
+.control-login{
+  margin: 10px;
+  width: 100%;
+}
+
+.imgcontainer {
+text-align: center;
+margin: 24px 0 12px 0;
+}
+
+img.avatar {
+width: 30%;
+border-radius: 50%;
+}
+
+.container {
+padding: 16px;
+}
+
+span.psw {
+float: right;
+padding-top: 16px;
+font-size: 2em
+}
+
 
 
 /* ------------------------------------ Footer -----------------------------*/

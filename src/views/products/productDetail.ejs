@@ -29,35 +29,53 @@
                   <h2 class="description"><%= productDetail.description %></h2>
                 </div>   
             </div>
-        </article>    
+        </article>
         <article class="lv">
-            <div class="lv3">
-              <p class = "title"><%= productDetail.name %></p>
-                <div class = "product-detail">
-                  <p>Description: Tissue</p>
-                  <p>Cloth: Tissue</p>
-                  <p>Size: Unique</p>
-                  <p>In Stock <span>10u</span></p>
-                  <p>Price: <span>$1500</span></p>
-                </div>
-                <div class = "container">
-                    <label for ="colour">Colors:</label>
-                    <select name="colour" id="colour">
-                      <option value="option-1">Black</option>
-                      <option value="option-2">White</option>
-                      <option value="option-3">Red</option>
-                      <option value="option-4">Yellow</option>
-                    </select>
-                    <label for ="quantity">Quantity:</label>
-                    <input type = "number" min = "0" value = "1">
-                    <form action="/products/<%= productDetail.id %>?_method=DELETE" method="POST">
-                      <button type="submit">Delete</button>
-                    </form> 
-                    <button type = "button" class = "button">
-                      Add to Cart
-                    </button>
-                </div>
-            </div>       
+          <div class="lv3">
+            <p class = "title"><%= productDetail.name %></p>
+            <div class="control-formulario">
+                <label>ID:</label>
+                <span type="text" name="id" class="control"><%= productDetail.id %></span>
+            </div>
+            <div class="control-formulario">
+                <label>Product Name:</label>
+                <span type="text" name="name" class="control"><%= productDetail.name %></span>
+            </div>
+            <div class="control-formulario">
+                <label>Description:</label>
+                <span type="text" name="description" class="control"><%= productDetail.description %></span>
+            </div>
+            <div class="control-formulario">
+                <label>Price:</label>
+                <span type="text" name="price" class="control"><%= productDetail.price %></span>
+            </div>
+            <div class="control-formulario">
+                <label>Discount:</label>
+                <span type="text" name="discount" class="control"><%= productDetail.discount %></span>
+            </div>
+            <div class="control-formulario">
+                <label>Quantity:</label>
+                <span type="text" name="Quantity" class="control"><%= productDetail.quantity %></span>
+            </div>
+            <div class="control-formulario">
+                <label>Colours:</label>
+                <li><%= productDetail.colour %></li>
+            </div>
+            <div class="control-formulario">
+                <label for="category">Category:</label>
+                    <li><%= productDetail.category %></li>
+            </div>
+            <form action="/products/<%= productDetail.id %>?_method=DELETE" method="POST">
+              <br>
+              <button type="submit" class="cancelbtn" >DELETE</button>
+            </form>
+            <a href="/products/<%= productDetail.id %>/edit">
+              <button type = "button" class = "button">Edit</button>
+            </a>
+            <a href="/products/productCart">
+              <button type = "button" class = "button">Add to Cart</button>
+            </a> 
+          </div>       
         </article>       
         <% } %>
       </section> 
