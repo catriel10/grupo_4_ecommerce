@@ -59,6 +59,7 @@ const productsController = {
          const image = file.filename
 
         const product = {
+            id: id,
             name: name,
             description: description,
             price: price,
@@ -69,7 +70,7 @@ const productsController = {
 
         const productCreated = productsModel.create(product);
 
-        res.redirect('/products/productDetail/' + productCreated.id);
+        res.redirect('/products/' + productCreated.id);
     },
     edit: (req, res) => {
         const product = productsModel.findByPk(req.params.id);
@@ -103,7 +104,7 @@ const productsController = {
         
         productsModel.update(data, id);
 
-        res.redirect('/products/detail/' + id);
+        res.redirect('/products/' + id);
     },
     destroy: (req, res) => {
         const id = req.params.id;

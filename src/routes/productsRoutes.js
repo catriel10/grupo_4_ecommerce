@@ -1,7 +1,8 @@
 const express = require ("express")
 const productsRoutes = express.Router()
 const multer = require('multer')
-const productsController = require('../controllers/productsController')
+const path = require ("path")
+
 
 // destino donde guardar el archivo
 // nombre del archivo
@@ -31,6 +32,8 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage })
 
+const productsController = require('../controllers/productsController')
+
 // Routes
 
 //Cart
@@ -49,13 +52,13 @@ productsRoutes.post('/create', upload.single('image'), productsController.store)
 productsRoutes.get('/:id', productsController.showDetail)
 
 // 4. /products (POST)Acción de creación (a donde se envía el formulario)
-productsRoutes.post ('/create', productsController.store);
+//productsRoutes.post ('/create', productsController.store);
 
 // 5. /products/:id/edit (GET) Formulario de edición de productos
 productsRoutes.get('/:id/edit', productsController.edit);
 
 // 6. /products/:id (PUT) Acción de edición (a donde se envía el formulario):
-productsRoutes.put('/:id', productsController.edit)
+//productsRoutes.put('/:id', productsController.edit)
 // aca deberíamos pasar multer
 productsRoutes.put('/:id', upload.single('image'), productsController.update);
 
