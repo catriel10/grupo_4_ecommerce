@@ -242,7 +242,7 @@ width:100%;
   
   
   .lv {
-  border-top: 1px solid #ebebeb;
+  border: 1px solid #ebebeb;
   border-radius: 0%;
   margin: 20px;
   background-color: #fff;
@@ -373,7 +373,7 @@ display: inline-block;
   font-size: 2em;
 }
 
-.control-product {
+/*.control-product {
   display: block;
   padding: 20px 15px;
   position: relative;
@@ -385,11 +385,10 @@ display: inline-block;
   width: 90vw;
   position: relative;
   justify-content: space-between;
-  /* display: inline-block; */
   align-content: center;
   left: 2vw;
   margin: 20px;
-}
+}*/
 
 .fotoadmin {
   display: block;
@@ -417,6 +416,18 @@ display: inline-block;
   display: inline-block;
   align-content: center;
   /* left: 20px;*/
+  }
+
+  .create-user {
+    display: block;
+    padding: 20px 15px;
+    position: relative;
+    margin-top: 220px;
+    margin-left: 30px;
+    max-width: 80vw;
+    align-content: center;
+    padding: 40px;
+    margin: 40px auto;
   }
 
 .button-submit {

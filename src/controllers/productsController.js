@@ -1,5 +1,6 @@
 const path = require ("path")
 const productsModel = require('../models/productsModel')
+const fs = require('fs')
 
 const productsController = {
 
@@ -49,6 +50,25 @@ const productsController = {
     },
 
     store: (req, res) => {
+        const formValidation = validationResult(req)
+        
+        /* si encuentro un error devuelvo el formulario
+        con los valores ya cargados y los errores */
+        console.log('formValidation.mapped()',formValidation.mapped())
+        
+        if (!formValidation.isEmpty()) {
+            // borrar imagen
+            if (req.file) {
+                // primero chequeamos que exista
+                fs.unlinkSync(req.file.path)
+            }
+
+            // tenemos errores
+            const oldValues = req.body
+            res.render('products/productNew', { oldValues, errors: formValidation.mapped() })
+          return  
+        }
+    
         // Crear el objeto product
         const { id, name, description, price, colour, category} = req.body;
 

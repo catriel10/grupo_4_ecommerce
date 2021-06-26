@@ -8,6 +8,23 @@ const method = require('method-override');
 const app = express ();
 const path = require ("path"); //requiere el modulo nativo path de node
 const port = process.env.PORT || 4444;
+const session = require('express-session')
+const config = require('./config/config')
+
+// middlewares
+
+app.use(session({
+    secret: config.sessionSecret
+  }))
+  
+  app.use(cookieParser())
+  
+  const cookiesSessionMiddleware = require('./middlewares/cookiesSessionMiddleware')
+  const sessionToLocals = require('./middlewares/sessionToLocals')
+  const notFoundMiddleware = require('./middlewares/notFound')
+  
+  app.use(cookiesSessionMiddleware)
+  app.use(sessionToLocals)
 
 // Indica a express la ruta que contiene los recursos estaticos  para consumir de manera sencilla
 app.use(express.static(path.join(__dirname, '../public')));
@@ -20,17 +37,17 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(method('_method'));
 app.use(logger('dev'));  
-module.exports = app;
 
 //Levantamos el Servidor
 app.listen (port, ()=>{
     console.log ("Mi servidor GRUPO 4 esta funcionando en port 4444")
     });
-/*
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-next(createError(404));
-});*/
+
+
+// users
+const usersRoutes = require('./routes/usersRoutes')
+app.use('/users', usersRoutes)
+
 
 // error handler
 app.use(function(err, req, res, next) {
@@ -62,3 +79,7 @@ app.get('/login', (req, res) => {
 const productsRoutes = require('./routes/productsRoutes');
 
 app.use('/products', productsRoutes)
+
+app.use(notFoundMiddleware)
+
+module.exports = app;

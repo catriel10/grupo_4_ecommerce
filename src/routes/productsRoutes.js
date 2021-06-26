@@ -3,6 +3,9 @@ const productsRoutes = express.Router()
 const multer = require('multer')
 const path = require ("path")
 
+const { isFileImage } = require('../helpers/file')
+
+const validationNewProduct = require('../middlewares/validationNewProduct')
 
 // destino donde guardar el archivo
 // nombre del archivo
@@ -30,9 +33,35 @@ const storage = multer.diskStorage({
     },
 })
 
-const upload = multer({ storage })
+// fileFilter es un byPass para que multer guarde o no el archivo
+const fileFilter = (req, file, cb)  => {
+    if (!file) {
+        cb(null, false)
+
+        // corta ejecución
+        return
+    }
+
+    if (!isFileImage(file.originalname)) {
+        // gonza workaround para que llegue a express-validator el archivo
+        req.file = file
+
+        cb(null, false)
+
+        // corta ejecución
+        return
+    }
+   
+    // Si aceptamos el archivo
+    cb(null, true)
+
+  }
+
+const upload = multer({ storage, fileFilter })
 
 const productsController = require('../controllers/productsController')
+
+const { fstat } = require('fs')
 
 // Routes
 
@@ -45,7 +74,7 @@ productsRoutes.get('/catalogue', productsController.showCatalogue)
 // 2. /products/create (GET) Formulario de creación de productos
 productsRoutes.get('/create', productsController.formNew);
 // aca deberíamos pasar multer
-productsRoutes.post('/create', upload.single('image'), productsController.store);
+productsRoutes.post('/create', upload.single('image'), validationNewProduct,  productsController.store);
 
 // 3. /products/:id (GET) Detalle de un producto particular
 
