@@ -44,9 +44,22 @@ app.listen (port, ()=>{
     });
 
 
+// Home
+app.get('/', (req, res) => {
+    res.render('home')
+});
+
 // users
-const usersRoutes = require('./routes/usersRoutes')
+const usersRoutes = require('./routes/usersRoutes');
+
 app.use('/users', usersRoutes)
+  
+// products
+const productsRoutes = require('./routes/productsRoutes');
+
+app.use('/products', productsRoutes)
+
+
 
 
 // error handler
@@ -59,26 +72,6 @@ res.locals.error = req.app.get('env') === 'development' ? err : {};
 res.status(err.status || 500);
 res.render('error');
 });
-
-// Home
-app.get('/', (req, res) => {
-    res.render('home')
-});
-
-// Register
-app.get('/register', (req, res) => {
-    res.render('register')
-});
-
-// Login
-app.get('/login', (req, res) => {
-    res.render('login')
-});
-  
-// products
-const productsRoutes = require('./routes/productsRoutes');
-
-app.use('/products', productsRoutes)
 
 app.use(notFoundMiddleware)
 

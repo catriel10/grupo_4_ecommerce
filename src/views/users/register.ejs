@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+<%- include ("../partials/head") %> 
+
+<link rel="stylesheet" href="/css/register.css">
+
+<body>
+<!-- Header -->
+<%- include ("../partials/header") %> 
+  
+  <!-- Barra Navegacion -->
+<%- include("../partials/nav") %>
+<main class="main">
+    <div class="body">
+        <div class="block-form">
+            <h2>Register</h2>
+            <form action="/users/register" method="POST" class="create-user" enctype="multipart/form-data"> 
+                <div class="control-user">
+                    <div class="control-formulario">
+                        <label>Please enter your name</label>
+                     <!--   <input type="text" name="name-lastname" placeholder="Name and Lastname" class="control">-->
+
+                        <input type="text" name="name" id="name" class="<%= (locals.errors && errors.name) ? 'input-error' : '' %>" value="<%= locals.oldValues && oldValues.name %>"/>
+                    
+                    <% if (locals.errors && errors.name) { %>
+                        <p class='msg-error'><%= errors.name.msg %></p>
+                    <% } %>
+
+                    </div>
+                    <div class="control-formulario">
+                        <label>Enter your email</label>
+                     <!--  <input type="text" name="usuario" placeholder="User" class="control">-->
+
+                        <input type="text" name="email" id="email" class="<%= (locals.errors && errors.email) ? 'input-error' : '' %>" value="<%= locals.oldValues && oldValues.email %>"/>
+                    
+                    <% if (locals.errors && errors.email) { %>
+                        <p class='msg-error'><%= errors.email.msg %></p>
+                    <% } %>
+
+                    </div>
+
+                    <div class="control-formulario">
+                        <label>Direction</label>
+                    <!--    <input type="text" name="address" placeholder="address" class="control">-->
+                       
+                        <input type="address" name="address" id="address" class="<%= (locals.errors && errors.address) ? 'input-error' : '' %>" value="<%= locals.oldValues && oldValues.address %>"/>
+                    
+                        <% if (locals.errors && errors.address) { %>
+                            <p class='msg-error'><%= errors.address.msg %></p>
+                        <% } %>
+                    </div>
+                    <div class="control-formulario">
+                        <label for="password">Enter your password</label>
+                      <!--  <input type="password" name="password" placeholder="password" id="password" required />-->
+
+                        <input type="password" name="password" id="password" class="<%= (locals.errors && errors.password) ? 'input-error' : '' %>" value="<%= locals.oldValues && oldValues.password %>"/>
+                    
+                        <% if (locals.errors && errors.password) { %>
+                            <p class='msg-error'><%= errors.password.msg %></p>
+                        <% } %>
+                    </div>
+                    <div class="control-formulario">
+                        <label for="confirm-password">Confirm your password</label>
+                      <!--   <input type="password" name="confirm-password" placeholder="confirm-password" id="password" required />-->
+
+                        <input type="password" name="confirm-password" id="confirm-password" class="<%= (locals.errors && errors.password) ? 'input-error' : '' %>" value="<%= locals.oldValues && oldValues.password %>"/>
+                    
+                        <% if (locals.errors && errors.password) { %>
+                            <p class='msg-error'><%= errors.password.msg %></p>
+                        <% } %>
+                    </div>
+                    <div class="control-formulario">
+                        <label for="image">Profile picture</label>
+
+                      <input type="file" name="image" id="image" />
+                      <% if (locals.errors && errors.image) { %>
+                          <p class='msg-error'><%= errors.image.msg %></p>
+                      <% } %>
+  
+                    </div>
+                    <div>
+                        <button type="reset" class="button-reset">Reset</button>
+                        
+                        <button type="submit" class="button-submit">Sign up</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+
+ <!-- Footer -->
+ <%- include ("../partials/footer") %>
+</body> 
+</html>

@@ -228,7 +228,7 @@ width:100%;
 .main {  
   display: flex;
   flex-wrap: wrap;
-  margin-top: 20vh;
+  margin-top: 24vh;
   }
   
   main section article i {
@@ -916,6 +916,9 @@ text-align: right;
   font-size: 3rem;;
   color:#ffffff;}
 
+  .img-logo {
+    width: 50px;
+    }
 
   .data span, .data a {
     text-transform: uppercase;
@@ -1171,7 +1174,7 @@ clear: both;
 display: table;
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1000px) {
   .header {
   
     padding: 3.5vh;

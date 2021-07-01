@@ -201,7 +201,7 @@ width:100%;
 
 /* --------------------- Main ------------------ */
 .main {  
-  margin-top: 20vh;
+  margin-top: 24vh;
   }
   
   main section article i {
@@ -424,7 +424,7 @@ font-size: 3em
 }
 
 label {
-position: absolute;
+/*position: absolute;*/
 transform: translateY(6px);
 left: 13px;
 color: rgba(#ffffff, .5);
@@ -506,7 +506,6 @@ border-radius: 4px;
 padding: 15px;
 font-size: 1rem;
 font-weight: 500;
-text-transform: uppercase;
 letter-spacing: .1em;
 background: #1ab188;
 color: #ffffff;
@@ -521,7 +520,6 @@ outline: none;
 padding: 15px;
 font-size: 1rem;
 font-weight: 500;
-text-transform: uppercase;
 letter-spacing: .1em;
 background-color: #f44336;
 color: #ffffff;
@@ -679,6 +677,10 @@ text-align: right;
     font-size: 3rem;
     color: #ffffff;
 }
+
+.img-logo {
+  width: 50px;
+  }
 
 .data span, .data a {
   text-transform: uppercase;
@@ -857,7 +859,7 @@ display: table;
     }
   }
 
-  @media (min-width: 1600px) {
+  @media (min-width: 1000px) {
     .header {
     
       padding: 3.5vh;

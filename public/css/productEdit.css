@@ -59,7 +59,7 @@ font-size: 1vh;
   max-width: 100vw;
   width: 100%;
   position: fixed;
-  margin-top: -6vh;
+  margin-top: -7vh;
 }
 
 ul.navbar {
@@ -191,7 +191,7 @@ width:100%;
 .main {  
   display: flex;
   flex-wrap: wrap;
-  margin-top: 20vh;
+  margin-top: 24vh;
   }
   
   main section article i {
@@ -645,7 +645,10 @@ color: #ffffff;
   .logo { 
   font-size: 3rem;;
   color:#ffffff;}
-  
+ 
+  .img-logo {
+    width: 50px;
+    }
   
   .data span, .data a {
     text-transform: uppercase;
@@ -715,7 +718,7 @@ width: 20vw;
     
     
       }
-  @media (min-width: 1600px) {
+  @media (min-width: 1000px) {
     .header {
     
       padding: 3.5vh;

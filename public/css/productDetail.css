@@ -191,7 +191,7 @@ width:100%;
 .main {  
 display: flex;
 flex-wrap: wrap;
-margin-top: 20vh;
+margin-top: 26vh;
 }
 
 main section article i{
@@ -751,7 +751,10 @@ font-size: 2em
   .logo { 
   font-size: 3rem;;
   color:#ffffff;}
-  
+ 
+  .img-logo {
+    width: 50px;
+    }
   
   .data span, .data a {
     text-transform: uppercase;
@@ -813,7 +816,7 @@ img {
   
   
     }
-@media (min-width: 1600px) {
+@media (min-width: 1000px) {
   .header {
   
     padding: 3.5vh;

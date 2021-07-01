@@ -1,14 +1,12 @@
 <div class="header">
+    <div>
+      <img class="img-logo"src="/img/Logo-Brand-You-New.png" alt="Logo Brand You">
+    </div>
     <a class="site-logo" href="/" title="Logo BrandYou" target="_self">
-      <h1>Brand You</h1>
-    </a>
-      <p>NEW VIBES.STYLE.TRENDY</p>
-
-      <div class="session-nav">
-        <% if (locals.logged) { %>
-           <%- include('nav-auth') %> 
-        <% } else {%>
-           <%- include('nav-guest') %> 
-       <% }%>
-      </div>  
+      <h1>Brand you</h1>
+    </a>      
+<!-- session -->
+<%- include ("../partials/session") %> 
+   <!-- <p>NEW VIBES.STYLE.TRENDY</p> 
+   --> 
 </div>

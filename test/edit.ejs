@@ -47,6 +47,18 @@
                     <button type="button" class="cancelbtn">Cancel</button>
                     <button type="submit" class="button">Save</button>
                   </div>
+
+                  <div class="control-formulario">
+                    <label>Fecha de nacimiento</label>
+                   <input type="date" name="birth-date" placeholder="date of birth" class="control">
+
+                    <input type="birth-date" name="birth-date" id="birth-date" class="<%= (locals.errors && errors.birth-date) ? 'input-error' : '' %>" value="<%= locals.oldValues && oldValues.birth-date %>"/>
+                
+                    <% if (locals.errors && errors.birth-date) { %>
+                        <p class='msg-error'><%= errors.birth-date.msg %></p>
+                    <% } %>
+
+                </div>
           </form>
 </div>
  <!-- Footer -->

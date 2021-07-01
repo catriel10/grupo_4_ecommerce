@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
-<%- include('../partials/head') %>
+<!-- Head -->
+<%- include ("../partials/head") %> 
+<link rel="stylesheet" href="/css/profile.css">
 
 <body>
+  <!-- Header -->
+  <%- include ("../partials/header") %> 
     
-    <%- include('../partials/header') %>
+    <!-- Barra Navegacion -->
+  <%- include("../partials/nav") %> 
+  <main class="main">
+        <div class="lv3">
+          <div class="control-formulario">
+              <label>Name:</label>
+              <span type="text" name="name" class="control"></span>
+          </div>
+        </div>       
+  </main>
+   <!-- Footer -->
+   <%- include ("../partials/footer") %>
+  </body> 
+  
+<body>
+    
         <main class="profile">
             BIENVENIDX! <u>[NOMBRE]</u><br/>
             [IMAGEN]
@@ -12,9 +31,6 @@
 
 
    </main>
-
-   <div id="space-x-banner"></div>
-
 
 </body>
 </html> 

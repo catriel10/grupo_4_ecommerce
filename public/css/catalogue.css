@@ -193,7 +193,7 @@ width:100%;
 .section {  
 display: flex;
 flex-wrap: wrap;
-margin-top: 20vh;
+margin-top: 24vh;
 }
 
 main section article i {
@@ -491,6 +491,10 @@ margin-bottom: 5px;
 font-size: 3rem;;
 color:#ffffff;}
 
+.img-logo {
+  width: 50px;
+  }
+
 img {
 width: 90vw;
 }
@@ -561,11 +565,9 @@ justify-content: space-between;
 justify-content: space-between;
 }
 
+.header {
+
+  padding: 3.5vh;
+
+  }
 }
-@media (min-width: 1600px) {
-    .header {
-    
-      padding: 3.5vh;
-    
-      }
-    }

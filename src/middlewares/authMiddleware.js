@@ -4,6 +4,7 @@ module.exports = (req, res, next) => {
     
     if (!userSession) {
         res.redirect('/users/login')
+        return
     }
 
     next()

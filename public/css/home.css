@@ -245,6 +245,10 @@ ul.dropdown-content li {
   width: 60vw;
   }
 
+.img-logo {
+  width: 50px;
+  }
+
 ul, li {
     padding: 0;
     margin: 0;
@@ -362,7 +366,7 @@ ul.slider2 li:target {
 .main {  
 display: flex;
 flex-wrap: wrap;
-margin-top: 20vh;
+margin-top: 24vh;
 }
 
 .main, .navbar {   
@@ -405,7 +409,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: baseline;
+  align-items: flex-end;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -946,7 +950,7 @@ transition-property: border,color,background-color;
 max-width: 50vw;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
 .header {
 
   padding: 3.5vh;
