@@ -11,26 +11,67 @@
     <!-- Barra Navegacion -->
   <%- include("../partials/nav") %> 
   <main class="main">
-        <div class="lv3">
-          <div class="control-formulario">
-              <label>Name:</label>
-              <span type="text" name="name" class="control"></span>
-          </div>
-        </div>       
+    <div class="body">
+      <div class="block-form">
+          <h2>Welcome <%= user.name %> </h2>
+   <!--        <form action="/users/register" method="POST" class="create-user" enctype="multipart/form-data">  -->
+              <div class="control-user">
+                  <div class="control-formulario">
+                      <label>Please enter your name</label>
+                   <!--   <input type="text" name="name-lastname" placeholder="Name and Lastname" class="control">-->
+
+                      <input type="text" name="name" id="name" class="control" value="<%= user.name %>"/>
+         
+                  </div>
+                  <div class="control-formulario">
+                      <label>Enter your email</label>
+                   <!--  <input type="text" name="usuario" placeholder="User" class="control">-->
+
+                      <input type="text" name="email" id="email" class="control" value="<%= user.email %>"/>
+                  
+                  </div>
+
+                  <div class="control-formulario">
+                      <label>Direction</label>
+                  <!--    <input type="text" name="address" placeholder="address" class="control">-->
+                     
+                      <input type="address" name="address" id="address" class="control" value="<%= user.address %>"/>
+                  
+                  </div>
+                  <div class="control-formulario">
+                      <label for="password">Enter your password</label>
+                    <!--  <input type="password" name="password" placeholder="password" id="password" required />-->
+
+                      <input type="password" name="password" id="password" class="control" value="<%= user.password %>"/>
+                  
+                  </div>
+                  <div class="control-formulario">
+                      <label for="confirm-password">Confirm your password</label>
+                    <!--   <input type="password" name="confirm-password" placeholder="confirm-password" id="password" required />-->
+
+                      <input type="password" name="confirm-password" id="confirm-password" class="control" value="<%= user.password %>"/>
+                  
+                  </div>
+                  <div class="control-formulario">
+                      <label for="image">Profile picture</label>
+
+                    <input type="file" name="image" id="image" class="control" value="<%= user.image %>"/>
+
+                  </div>
+                  <div>
+                    <a>
+                      <button type="submit" class="button-submit">Save Changes</button>
+                    </a>
+                    <a href="/users/logout">
+                      <button type="reset" class="button-reset">Log Out</button>
+                    </a>  
+                      
+                  </div>
+              </div>
+      </div>
+  </div>
   </main>
-   <!-- Footer -->
+     <!-- Footer -->
    <%- include ("../partials/footer") %>
-  </body> 
-  
-<body>
-    
-        <main class="profile">
-            BIENVENIDX! <u>[NOMBRE]</u><br/>
-            [IMAGEN]
-        </section>
-
-
-   </main>
-
 </body>
 </html> 

@@ -14,7 +14,9 @@ const config = require('./config/config')
 // middlewares
 
 app.use(session({
-    secret: config.sessionSecret
+    secret: "config.sessionSecret",
+    resave: false,
+    saveUninitialized: false,
   }))
   
   app.use(cookieParser())

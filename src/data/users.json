@@ -57,5 +57,12 @@
     "password": "$2a$10$iaHyYqQlpVuKjwunXLhhbORgonzLe0faOQqUNMgYgx7Q8kwqGQ8Le",
     "image": "/images/users/1625173874142.jpg",
     "id": 5
+  },
+  {
+    "name": "fulanito",
+    "email": "fulanito@fulanito.com",
+    "password": "$2a$10$zXMthoIl5chAzJweY0vLfu8sQjR2ZTGZ2FwKzu7hVEWE6xJwAXa5.",
+    "image": "/images/users/1625521975028.jpg",
+    "id": 6
   }
 ]

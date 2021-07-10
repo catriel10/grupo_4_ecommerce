@@ -38,9 +38,27 @@ const usersController = {
             res.cookie('user', user.id, {
                 maxAge: maxAgeUserCookie
             })
-        }
 
-      
+    
+        }
+/*
+        let userToLogin = User.findByField("email", req.body.email);
+
+        If(userToLogin){
+            let isOkThePassword = bcryptjs.compareSync (req.body.password, userToLogin.password);
+            if (isOkThePassword){
+                   req.session.userLogged = userToLogin;
+                   return res.redirect("/user/profile");
+        }
+            return res.render("userLoginForm") {
+              errors: {
+                  email: {
+                        msg: ("las credenciales son inválidas")
+        }
+        }
+        });
+        }
+    */  
         // redirigimos al profile
         res.redirect('/users/profile')
     },
@@ -91,7 +109,8 @@ const usersController = {
     },
 
     profile: (req, res) => {
-        res.render('users/profile')
+        res.render('users/profile',
+        {user: req.session.logged})
     },
 
     logout: (req, res) => {
