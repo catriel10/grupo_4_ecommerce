@@ -16,3 +16,20 @@
 
 - What are you going to do today?
 > Comenazamos el Sprint5.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+13 de julio del 2021 - Brand You - weekly 2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+- What did you do yesterday?
+> Mejoramos con CSS las vistas.
+> Agregamos el FOLLOW para redes sociales.
+> Terminamos el Sprint5.
+ 
+- If she encountered any impediment.
+
+> Nos faltaria dejar en pantalla al usuario que esta logueado.
+> Nos gustaria bloquear el acceso al carrito para comprar un producto si el usuario no esta logueado.
+
+- What are you going to do today?
+> Mejorar la experiencia de las rutas Guest y Auth.
