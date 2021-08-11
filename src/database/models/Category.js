@@ -17,9 +17,9 @@ module.exports = (sequelize, DataType) => {
     const CategoryModel = sequelize.define(alias, cols, config)
 
     CategoryModel.associate = models => {
-        CategoryModel.hasMany(models.Product, {
+        CategoryModel.hasMany(models.Products, {
             as: 'products',
-            foreignKey: 'Category_id',
+            foreignKey: 'category_id',
         })
     }
 

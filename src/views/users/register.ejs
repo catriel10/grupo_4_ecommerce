@@ -15,7 +15,7 @@
     <div class="body">
         <div class="block-form">
             <h2>Register</h2>
-            <form action="/users/register" method="POST" class="create-user" enctype="multipart/form-data"> 
+            <form id="create-user" action="/users/register" method="POST" class="create-user" enctype="multipart/form-data"> 
                 <div class="control-user">
                     <div class="control-formulario">
                         <label>Please enter your name</label>
@@ -26,7 +26,7 @@
                     <% if (locals.errors && errors.name) { %>
                         <p class='msg-error'><%= errors.name.msg %></p>
                     <% } %>
-
+                    <span class='msg-error msg-error-name'></span>
                     </div>
                     <div class="control-formulario">
                         <label>Enter your email</label>
@@ -37,7 +37,7 @@
                     <% if (locals.errors && errors.email) { %>
                         <p class='msg-error'><%= errors.email.msg %></p>
                     <% } %>
-
+                    <span class='msg-error msg-error-email'></span>
                     </div>
 
                     <div class="control-formulario">
@@ -49,6 +49,7 @@
                         <% if (locals.errors && errors.address) { %>
                             <p class='msg-error'><%= errors.address.msg %></p>
                         <% } %>
+                    <span class='msg-error msg-error-address'></span>
                     </div>
                     <div class="control-formulario">
                         <label for="password">Enter your password</label>
@@ -59,6 +60,7 @@
                         <% if (locals.errors && errors.password) { %>
                             <p class='msg-error'><%= errors.password.msg %></p>
                         <% } %>
+                    <span class='msg-error msg-error-password'></span>
                     </div>
                     <div class="control-formulario">
                         <label for="confirm-password">Confirm your password</label>
@@ -69,6 +71,7 @@
                         <% if (locals.errors && errors.password) { %>
                             <p class='msg-error'><%= errors.password.msg %></p>
                         <% } %>
+                        <span class='msg-error msg-error-confirm-password'></span>
                     </div>
                     <div class="control-formulario">
                         <label for="image">Profile picture</label>
@@ -77,7 +80,7 @@
                       <% if (locals.errors && errors.image) { %>
                           <p class='msg-error'><%= errors.image.msg %></p>
                       <% } %>
-  
+                    <span class='msg-error msg-error-image'></span>
                     </div>
                     <div>
                         <button type="reset" class="button-reset">Reset</button>
@@ -92,5 +95,6 @@
 
  <!-- Footer -->
  <%- include ("../partials/footer") %>
+ <script src="/js/form-validation-create-user.js"></script>
 </body> 
 </html>

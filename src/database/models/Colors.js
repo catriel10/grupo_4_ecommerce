@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
     const ColorModel = sequelize.define(name, columns, config)
 
     ColorModel.associate = models => {
-        ColorModel.belongsToMany(models.Product, {
+        ColorModel.belongsToMany(models.Products, {
             as: 'products',
             through: 'product_color',
             foreignKey: 'color_id', // fk de color dentro de la tabla pivote

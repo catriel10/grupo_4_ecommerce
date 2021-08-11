@@ -11,12 +11,6 @@ module.exports = (sequelize, DataType) => {
         name: {
             type: DataType.STRING
         },
-        category: {
-            type: DataType.STRING
-        },
-        colors: {
-            type: DataType.STRING
-        },
         quantity: {
             type: DataType.INTEGER
         },
@@ -57,9 +51,5 @@ module.exports = (sequelize, DataType) => {
             timestamps: false, // tabla pivot
         })
     }
-
-    
-
-
     return ProductsModel
 }           

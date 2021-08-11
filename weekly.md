@@ -33,3 +33,20 @@
 
 - What are you going to do today?
 > Mejorar la experiencia de las rutas Guest y Auth.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+10 de agosto del 2021 - Brand You - weekly 2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+- What did you do yesterday?
+> Hicimos el diagrama de BD, con las relaciones de las diferentes tablas y los tipos de datos de cada campo.
+> Se realizo el script de la estructura de datos de productos y usuarios structure.sql .
+> Creacion de las carpetas Sequelize, archivo .sequelizerc incluyendo los archivos de modelo y configuracion.
+ 
+- If she encountered any impediment.
+
+> Al intentar realizar el CRUD tuvimos inconvenientes en resolverlo.
+> Nos olvidamos de colocar el los archivos EJS el <span> con el mensaje de error.
+
+- What are you going to do today?
+> Intetaremos mejorar nuestro CRUD.

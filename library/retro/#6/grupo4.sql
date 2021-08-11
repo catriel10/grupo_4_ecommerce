@@ -1,0 +1,37 @@
+DROP DATABASE IF EXISTS grupo4;
+CREATE DATABASE grupo4;
+USE grupo4;
+
+CREATE TABLE users (
+    id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(45) NOT NULL,
+    lastname VARCHAR(45) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    password VARCHAR(45) NOT NULL,
+    address VARCHAR(45) NOT NULL,
+    is_admin TINYINT(45) NOT NULL,
+    image BINARY(255) NOT NULL
+);
+CREATE TABLE products (
+    id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    quantity TINYINT(100) NOT NULL,
+    name VARCHAR(45) NOT NULL,
+    price DECIMAL(65) NOT NULL,
+    discount DECIMAL(65) NOT NULL,
+    image BINARY(255) NOT NULL,
+    description VARCHAR(500) NOT NULL,
+    color_id INT(100) NOT NULL,
+    category_id INT NOT NULL
+);
+CREATE TABLE categories (
+    id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(45) NOT NULL
+);
+CREATE TABLE product_color (
+    product_id INT(100) NOT NULL,
+    color_id INT(100) NOT NULL
+);
+CREATE TABLE colors (
+    id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(45) NOT NULL
+);

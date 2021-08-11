@@ -14,7 +14,7 @@
 <div class="body">
         <div class="block-form">
                   <h2>Log in</h2>
-          <form action="/users/login" method="POST" class="login-user">
+          <form id="login-user" action="/users/login" method="POST" class="login-user">
   <!--            <div class="imgcontainer">
                 <a href="/products/edit"><img src="/img/img_avatar2.png" alt="avatar" class="avatar" ></a>
               </div>
@@ -54,7 +54,9 @@
                   </div>
           </form>
 </div>
+
  <!-- Footer -->
  <%- include ("../partials/footer") %>
+ <script src="/js/form-validation-login-user.js"></script>
 </body> 
 </html>

@@ -1,6 +1,8 @@
 const path = require ("path")
-const productsModel = require('../models/productsModel')
+ //const productsModel = require('../models/productsModel')
 const fs = require('fs')
+const db = require ("../database/models")
+const { Op } = require('sequelize')
 
 const productsController = {
 
@@ -10,8 +12,8 @@ const productsController = {
         res.render('products/productCart');
     },
 
-    showCatalogue: (req, res) => {
-        const productList = productsModel.findAll()
+    showCatalogue: async (req, res) => {
+        const productList = await db.Products.findAll()
 
         // aca leo el json y se lo paso al template
         // res.render('products/list', { productList: productList })
