@@ -1,10 +1,10 @@
-module.exports = (sequelize, DataType) => {
+module.exports = (sequelize, DataTypes) => {
     const alias = 'Category'
     /* camelCase por default */
     const cols = {
         /* opcional */
         name: {
-            type: DataType.STRING
+            type: DataTypes.STRING
         },
 
     }
@@ -17,8 +17,8 @@ module.exports = (sequelize, DataType) => {
     const CategoryModel = sequelize.define(alias, cols, config)
 
     CategoryModel.associate = models => {
-        CategoryModel.hasMany(models.Products, {
-            as: 'products',
+        CategoryModel.hasMany(models.Product, {
+            as: 'product',
             foreignKey: 'category_id',
         })
     }

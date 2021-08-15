@@ -3,25 +3,33 @@ const { validationResult } = require('express-validator')
 const bcrypt = require('bcryptjs')
 const usersModel = require('../models/usersModel')
 const { maxAgeUserCookie } = require('../config/config')
+const {User} = require("../database/models")
+
 
 const usersController = {
     login: (req, res) => {
          res.render('users/login')
     },
     
-    processLogin: (req, res) => {
-        const formValidation = validationResult(req)
+    processLogin: async (req, res) => {
+/*        const formValidation = validationResult(req)
         const oldValues = req.body
 
         if (!formValidation.isEmpty()) {
             return res.render('users/login', { oldValues, errors: formValidation.mapped() })
         } 
-
+*/
         // lo que viene del login
         const { email, remember } = req.body
         
         // le pedimos al modelo el usuario
-        const user = usersModel.findByField('email', email)
+        User.findOne({
+            where: {
+                email
+            }
+        })
+        .then ((user) =>{
+
         //req.session = {}
 
         // cargamos los datos del usuario en la sesión
@@ -36,10 +44,11 @@ const usersController = {
         if (remember) {
             // clave
             res.cookie('user', user.id, {
-                maxAge: maxAgeUserCookie
+                maxAge: maxAgeUserCookie,
+                // pasamos esta propiedad para que firme la cookie
+                signed: true,  
             })
 
-    
         }
 /*
         let userToLogin = User.findByField("email", req.body.email);
@@ -59,14 +68,16 @@ const usersController = {
         });
         }
     */  
-        // redirigimos al profile
-        res.redirect('/users/profile')
+                // redirigimos al profile
+                res.redirect('/users/profile')
+            })
+            .catch (err => console.log ("Entre en el catch", err))
     },
     register: (req, res) => {
         res.render('users/register')
     },
-    processRegister: (req, res) => {
-        const formValidation = validationResult(req)
+    processRegister:(req, res) => {
+/*         const formValidation = validationResult(req)
         const oldValues = req.body
         
         if (!formValidation.isEmpty()) {
@@ -80,7 +91,7 @@ const usersController = {
             // tenemos errores
             res.render('users/register', { oldValues, errors: formValidation.mapped() })
           return  
-        } 
+        }  */
 
 
 
@@ -98,12 +109,16 @@ const usersController = {
 
         const user = {
             name,
+            isAdmin: 0,
             email,
             password: hashPassword,
             image: '/images/users/' + image,
         }
         
-        usersModel.create(user);
+        User.create(user)
+            .then(() => {
+                res.redirect('/users/login');
+            })
 
         res.redirect('/users/login');
     },

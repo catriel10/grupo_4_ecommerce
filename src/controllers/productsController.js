@@ -3,6 +3,8 @@ const path = require ("path")
 const fs = require('fs')
 const db = require ("../database/models")
 const { Op } = require('sequelize')
+const {Product,User,Color, Category} = require("../database/models")
+const { name } = require("ejs")
 
 const productsController = {
 
@@ -13,7 +15,11 @@ const productsController = {
     },
 
     showCatalogue: async (req, res) => {
-        const productList = await db.Products.findAll()
+        const productList = await Product.findAll({
+            order:[
+                ["name","ASC"],
+            ],
+        })
 
         // aca leo el json y se lo paso al template
         // res.render('products/list', { productList: productList })
@@ -24,31 +30,28 @@ const productsController = {
         res.render('products/productEdit');
     },
 
-    showDetail: (req, res) => {
+    showDetail: async (req, res) => {
         // levantamos el id desde la url (parámetro)
         
         //const id = req.params.id
         const { id } = req.params
         
-        const productDetail = productsModel.findByPk(id)
-        
-        res.render('products/productDetail', { productDetail });
+        const productDetail = await Product.findByPk(id,{
+            include:[{
+                association:"category",
+            },
+            {
+                association:"colors"
+            }          
+            ]
+        })
+        const categories = await Category.findAll()
+        res.render('products/productDetail', { productDetail, categories });
 
     },
-    
-    detail: (req, res) => {
-        // levantamos el id desde la url (parámetro)
-        
-        //const id = req.params.id
-        const { id } = req.params
-        
-        const productDetail = productsModel.findByPk(id)
-        
-        res.render('products/productDetail', { productDetail })
-    },
-
-    formNew: (req, res) => {
-        res.render('products/productNew')
+    formNew: async (req, res) => {
+        const categories = await Category.findAll()
+        res.render('products/productNew', {categories})
     },
 
     store: (req, res) => {
@@ -90,23 +93,32 @@ const productsController = {
             image:'/img/article/' + image,
         }
 
-        const productCreated = productsModel.create(product);
-
-        res.redirect('/products/' + productCreated.id);
+        Product.create(product)
+            .then((productCreated)=>{
+                res.redirect('/products/productDetail' + productCreated.id);
+            }
+            )
+        
     },
-    edit: (req, res) => {
-        const product = productsModel.findByPk(req.params.id);
+    edit: async (req, res) => {
+        const {id}= req.params
+        
+        const product = await Product.findByPk(id);
+        const categories = await Galaxy.findAll()
+        const colors = await Color.findAll()
 
         res.render('products/productEdit', {
-            product
+            product,
+            categories,
+            colors
         });
     },
-    update: (req, res) => {
+    update: async (req, res) => {
         const data = req.body;
         const { id } = req.params;
 
         // el product original
-        const productOriginal = productsModel.findByPk(id)
+        const productOriginal = Product.findByPk(id)
         // la imagen original: productOriginal.image
 
         // dentro de req.file va a venir la información del archivo
@@ -121,19 +133,38 @@ const productsController = {
         } else {
             image = productOriginal.image
         }
+        const {name, category, colors, price, description} =req.body
 
-        data.image = image
+        productOriginal.setColors(colors)
         
-        productsModel.update(data, id);
+        const propertiesToEdit = {
+            name: name,
+            category_id: category,
+            colors:colors,
+            price:price,
+            description:description,
+            }
+        
+        await Product.update(propertiesToEdit, {
+            where: {
+                id
+            }
+        });
 
-        res.redirect('/products/' + id);
+        res.redirect('/products/productDetail' + id);
     },
     destroy: (req, res) => {
         const id = req.params.id;
         
-        productsModel.destroy(id);
-
-        res.redirect('/products/list');
+        Product.destroy({
+            where:{
+                id
+            }
+        })
+            .then(() => {
+                res.redirect('/products/list');
+            })
+       
     }
 }
 

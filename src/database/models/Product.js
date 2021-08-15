@@ -1,33 +1,33 @@
-module.exports = (sequelize, DataType) => {
-    const alias = 'Products'
+module.exports = (sequelize, DataTypes) => {
+    const alias = 'Product'
     /* camelCase por default */
     const cols = {
         /* opcional */
         id: {
-            type: DataType.INTEGER,
+            type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         },
         name: {
-            type: DataType.STRING
+            type: DataTypes.STRING
         },
         quantity: {
-            type: DataType.INTEGER
+            type: DataTypes.INTEGER
         },
         price: {
-            type: DataType.INTEGER
+            type: DataTypes.INTEGER
         },
         discount: {
-            type: DataType.INTEGER
+            type: DataTypes.INTEGER
         },
         description: {
-            type: DataType.STRING
+            type: DataTypes.STRING
         },
         image: {
-            type: DataType.STRING
+            type: DataTypes.STRING
         },
-        category_id: DataType.INTEGER,
-        color_id: DataType.INTEGER,
+        category_id: DataTypes.INTEGER,
+        color_id: DataTypes.INTEGER,
     }
     
     const config = {
@@ -35,21 +35,21 @@ module.exports = (sequelize, DataType) => {
         timestamps: false /* no va a buscar las columnas de timestamps */
     }
     
-    const ProductsModel = sequelize.define(alias, cols, config)
+    const Product = sequelize.define(alias, cols, config)
     
-    ProductsModel.associate = models => {
-        ProductsModel.belongsTo(models.Category, {
+    Product.associate = models => {
+        Product.belongsTo(models.Category, {
             as: 'category',
             foreignKey: 'category_id'
         });
 
-        ProductsModel.belongsToMany(models.Color, {
-            as: 'colors',
+        Product.belongsToMany(models.Color, {
+            as: 'color',
             through: 'product_color',
             foreignKey: 'product_id', // fk de Products dentro de la tabla pivote
             otherKey: 'color_id',
             timestamps: false, // tabla pivot
         })
     }
-    return ProductsModel
+    return Product
 }           

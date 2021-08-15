@@ -1,24 +1,24 @@
-module.exports = (sequelize, DataType) => {
-    const alias = 'Users'
+module.exports = (sequelize, DataTypes) => {
+    const alias = 'User'
     /* camelCase por default */
     const cols = {  
         name: {
-            type: DataType.STRING
+            type: DataTypes.STRING
         },
         lastname: {
-            type: DataType.STRING
+            type: DataTypes.STRING
         },
         email: {
-            type: DataType.INTEGER
+            type: DataTypes.INTEGER
         },
         password: {
-            type: DataType.BOOLEAN
+            type: DataTypes.BOOLEAN
         },
         address:{
-            type: DataType.STRING
+            type: DataTypes.STRING
         },
         image: {
-            type: DataType.STRING
+            type: DataTypes.STRING
         },
     }
     
@@ -27,7 +27,7 @@ module.exports = (sequelize, DataType) => {
         timestamps: false /* no va a buscar las columnas de timestamps */
     }
     
-    const UsersModel = sequelize.define(alias, cols, config)
+    const User = sequelize.define(alias, cols, config)
 
-    return UsersModel
+    return User
 }           
