@@ -14,6 +14,7 @@ const validationRegisterUser = [
         .withMessage('It is not in e-mail format')
         .bail()
         .custom((email) => {
+            // FIXME Modificar el método de búsqueda
             const userFound = userModel.findByField('email', email)
 
             if (userFound) {

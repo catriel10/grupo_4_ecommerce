@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false /* no va a buscar las columnas de timestamps */
     }
     
-    const User = sequelize.define(alias, cols, config)
+    const UserModel = sequelize.define(alias, cols, config)
 
-    return User
+    return UserModel
 }           

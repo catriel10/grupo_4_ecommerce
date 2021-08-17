@@ -112,7 +112,7 @@ const usersController = {
             isAdmin: 0,
             email,
             password: hashPassword,
-            image: '/images/users/' + image,
+            image: '/img/users/' + image,
         }
         
         User.create(user)
