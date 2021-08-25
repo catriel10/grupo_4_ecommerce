@@ -1,8 +1,8 @@
 {
     "development": {
     "username": "root",
-    "password": "root",
-    "database": "brandyou",
+    "password": null,
+    "database": "grupo4",
     "host": "localhost",
     "dialect": "mysql",
     "port": 3306,

@@ -54,11 +54,12 @@ const productsController = {
         res.render('products/productNew', {categories})
     },
 
-    store: (req, res) => {
-        const formValidation = validationResult(req)
+    store: async (req, res) => {
+        const formValidation = await validationResult(req)
         
         /* si encuentro un error devuelvo el formulario
         con los valores ya cargados y los errores */
+        
         console.log('formValidation.mapped()',formValidation.mapped())
         
         if (!formValidation.isEmpty()) {
@@ -67,8 +68,8 @@ const productsController = {
                 // primero chequeamos que exista
                 fs.unlinkSync(req.file.path)
             }
-
-            // tenemos errores
+        
+          // tenemos errores
             const oldValues = req.body
             res.render('products/productNew', { oldValues, errors: formValidation.mapped() })
           return  

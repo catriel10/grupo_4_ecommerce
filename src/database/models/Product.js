@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING
         },
         category_id: DataTypes.INTEGER,
-        color_id: DataTypes.INTEGER,
+        //color_id: DataTypes.INTEGER,
     }
     
     const config = {
