@@ -42,31 +42,22 @@
                     </div>
                     <div class="control-formulario">
                         <label>Choose colour</label>
-                        <li type="none"><input type="checkbox" name="colour" id="colour" value="white" <%= product.colour.indexOf('white') == -1 ? "" : "checked"%>/> White</li>
-                        <li type="none"><input type="checkbox" name="colour" id="colour" value="black" <%= product.colour.indexOf('black') == -1 ? "" : "checked"%>/> Black</li>
-                        <li type="none"><input type="checkbox" name="colour" id="colour" value="pink" <%= product.colour.indexOf('pink') == -1 ? "" : "checked"%>/> Pink</li>
-                        <li type="none"><input type="checkbox" name="colour" id="colour" value="green" <%= product.colour.indexOf('green') == -1 ? "" : "checked"%>/> Green</li>
-                        <li type="none"><input type="checkbox" name="colour" id="colour" value="red" <%= product.colour.indexOf('red') == -1 ? "" : "checked"%>/> Red</li>
-                        <li type="none"><input type="checkbox" name="colour" id="colour" value="yellow" <%= product.colour.indexOf('yellow') == -1 ? "" : "checked"%> /> Yellow</li>
-                        <li type="none"><input type="checkbox" name="colour" id="colour" value="orange" <%= product.colour.indexOf('orange') == -1 ? "" : "checked"%>/> Orange</li>
-                        <li type="none"><input type="checkbox" name="colour" id="colour" value="grey" <%= product.colour.indexOf('grey') == -1 ? "" : "checked"%>/> Grey</li>
-                        <li type="none"><input type="checkbox" name="colour" id="colour" value="light-Blue" <%= product.colour.indexOf('light-blue') == -1 ? "" : "checked"%>/> Light Blue</li>
-                        <li type="none"><input type="checkbox" name="colour" id="colour" value="blue" <%= product.colour.indexOf('blue') == -1 ? "" : "checked"%>/> Blue</li>
-                        <li type="none"><input type="checkbox" name="colour" id="colour" value="beige" <%= product.colour.indexOf('beige') == -1 ? "" : "checked"%>/> Beige</li>
-                        <li type="none"><input type="checkbox" name="colour" id="colour" value="violet" <%= product.colour.indexOf('violet') == -1 ? "" : "checked"%>/> Violet</li>
+                                <% colors.forEach(color=>{%>
+                                  <li type="none"><input type="checkbox" name="colour" id="<%= color.id %>" value="<%= color.id %>" <%= product.colors.find (col=> col.id === color.id)  ? "checked" : ""%>/> <%= color.name %> </li>
+                                <% }) %> 
+                             
                     </div>
                     <div class="control-formulario">
                         <label for="category">Category</label>
-                            <li type="none"><input type="radio" name="category" id="category" value="t-shirt" required  <%= product.category.indexOf('t-shirt') == -1 ? "" : "checked"%> /> T-shirt</li>
-                            <li type="none"><input type="radio" name="category" id="category" value="skirt" required <%= product.category.indexOf('skirt') == -1 ? "" : "checked"%> /> Skirt</li>
-                            <li type="none"><input type="radio" name="category" id="category" value="shorts" required <%= product.category.indexOf('shorts') == -1 ? "" : "checked"%> /> Shorts</li>
-                            <li type="none"><input type="radio" name="category" id="category" value="sweater" required <%= product.category.indexOf('sweater') == -1 ? "" : "checked"%> /> Sweater</li>
-                            <li type="none"><input type="radio" name="category" id="category" value="hoodie" required <%= product.category.indexOf('hoodie') == -1 ? "" : "checked"%> /> Hoodie</li>
-                            <li type="none"><input type="radio" name="category" id="category" value="jacket" required <%= product.category.indexOf('jacket') == -1 ? "" : "checked"%> /> Jacket</li>
+
+                        <% categories.forEach(category => {%>
+                            <li type="none"><input type="radio" name="category" id="<% category.id %>" value="<% category.id %>" required  <%= product.category.id == category.id ? "checked" : ""%> /> <%= category.name %></li> 
+                            
+                        <%})%>
                     </div>
                     <div class="control-formulario">
                             <label>Foto</label>
-                            <img src="<%= product.image %>" width="10vw" />
+                            <img src="/img/article/<%= product.image %>" width="10vw" />
                             <input type="file" name="image" id="image" accept=".jpg" multiple class="control">
                     </div>
                     <div class="control-formulario">

@@ -36,28 +36,18 @@
                     <input type="text" name="discount" class="control" required value="discount">
                 </div>
                 <div class="control-formulario">
-                    <label>Choose colour</label>
-                    <li type="none"><input type="checkbox" name="colour" id="colour" value="white"/> White</li>
-                    <li type="none"><input type="checkbox" name="colour" id="colour" value="black"/> Black</li>
-                    <li type="none"><input type="checkbox" name="colour" id="colour" value="pink"/> Pink</li>
-                    <li type="none"><input type="checkbox" name="colour" id="colour" value="green"/> Green</li>
-                    <li type="none"><input type="checkbox" name="colour" id="colour" value="red" /> Red</li>
-                    <li type="none"><input type="checkbox" name="colour" id="colour" value="yellow"/> Yellow</li>
-                    <li type="none"><input type="checkbox" name="colour" id="colour" value="orange"/> Orange</li>
-                    <li type="none"><input type="checkbox" name="colour" id="colour" value="grey"/> Grey</li>
-                    <li type="none"><input type="checkbox" name="colour" id="colour" value="light-Blue"/> Light Blue</li>
-                    <li type="none"><input type="checkbox" name="colour" id="colour" value="blue"/> Blue</li>
-                    <li type="none"><input type="checkbox" name="colour" id="colour" value="beige"/> Beige</li>
-                    <li type="none"><input type="checkbox" name="colour" id="colour" value="violet"/> Violet</li>
+                    <label>Choose color</label>
+                    <% colors.forEach(color=>{%>
+                        <li type="none"><input type="checkbox" name="color" id="<%= color.id %>" value="<%= color.id %>" /> <%= color.name %> </li>
+                      <% }) %> 
+                    
                 </div>
                 <div class="control-formulario">
                     <label for="category">Category</label>
-                        <li type="none"><input type="radio" name="category" id="category" value="t-shirt" required /> T-shirt</li>
-                        <li type="none"><input type="radio" name="category" id="category" value="skirt" required /> Skirt</li>
-                        <li type="none"><input type="radio" name="category" id="category" value="shorts" required /> Shorts</li>
-                        <li type="none"><input type="radio" name="category" id="category" value="sweater" required /> Sweater</li>
-                        <li type="none"><input type="radio" name="category" id="category" value="hoodie" required /> Hoodie</li>
-                        <li type="none"><input type="radio" name="category" id="category" value="jacket" required /> Jacket</li>
+                    <% categories.forEach(category => {%>
+                        <li type="none"><input type="radio" name="category" id="<%= category.id %>" value="<%= category.id %>" required /> <%= category.name %></li> 
+                    <%})%>
+                
                 </div>
                 <div class="control-formulario">
                         <label>Image</label>

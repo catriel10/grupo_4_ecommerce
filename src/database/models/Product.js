@@ -44,7 +44,7 @@ module.exports = (sequelize, DataTypes) => {
         });
 
         Product.belongsToMany(models.Color, {
-            as: 'color',
+            as: 'colors',
             through: 'product_color',
             foreignKey: 'product_id', // fk de Products dentro de la tabla pivote
             otherKey: 'color_id',

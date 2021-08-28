@@ -5,6 +5,7 @@ const db = require ("../database/models")
 const { Op } = require('sequelize')
 const {Product,User,Color, Category} = require("../database/models")
 const { name } = require("ejs")
+const { validationResult } = require('express-validator')
 
 const productsController = {
 
@@ -51,7 +52,11 @@ const productsController = {
     },
     formNew: async (req, res) => {
         const categories = await Category.findAll()
-        res.render('products/productNew', {categories})
+        const colors = await Color.findAll()
+        res.render('products/productNew', {
+            categories,
+            colors
+        })
     },
 
     store: async (req, res) => {
@@ -76,8 +81,8 @@ const productsController = {
         }
     
         // Crear el objeto product
-        const { id, name, description, price, colour, category} = req.body;
-
+        const { id, name, description, price, discount, color, category} = req.body;
+console.log (req.body)
          // dentro de req.file va a venir la información del archivo
          const { file } = req
         
@@ -89,13 +94,14 @@ const productsController = {
             name: name,
             description: description,
             price: price,
-            colour: colour,
-            category: category,
-            image:'/img/article/' + image,
+            discount: discount,
+            category_id: category,
+            image: image,
         }
 
         Product.create(product)
-            .then((productCreated)=>{
+            .then(async (productCreated)=>{
+                await productCreated.setColors (color)
                 res.redirect('/products/productDetail' + productCreated.id);
             }
             )
@@ -104,8 +110,16 @@ const productsController = {
     edit: async (req, res) => {
         const {id}= req.params
         
-        const product = await Product.findByPk(id);
-        const categories = await Galaxy.findAll()
+        const product = await Product.findByPk(id,{
+            include:[{
+                association:"category",
+            },
+            {
+                association:"colors"
+            }          
+            ]
+        });
+        const categories = await Category.findAll()
         const colors = await Color.findAll()
 
         res.render('products/productEdit', {

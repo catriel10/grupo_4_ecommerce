@@ -19,7 +19,7 @@
          <% } else { %>
         <article class="lv">
             <div> 
-                <img class="img-cat"src="<%= productDetail.image %>" alt="<%= productDetail.name %>">
+                <img class="img-cat"src="/img/article/<%= productDetail.image %>" alt="<%= productDetail.name %>">
             </div>
             <div class="lv1">
               <i class="fas fa-truck"></i>
@@ -59,11 +59,13 @@
             </div>
             <div class="control-formulario">
                 <label>Colours:</label>
-                <li><%= productDetail.colour %></li>
+                <% productDetail.colors.forEach(color => { %>
+                      <li> <%= color.name %></li>
+                 <%})%>
             </div>
             <div class="control-formulario">
                 <label for="category">Category:</label>
-                    <li><%= productDetail.category %></li>
+                    <li><%= productDetail.category.name %></li>
             </div>
             <form action="/products/<%= productDetail.id %>?_method=DELETE" method="POST">
               <br>

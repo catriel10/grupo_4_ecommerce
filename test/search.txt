@@ -1,0 +1,10 @@
+•	Formulario por GET 
+input text con "name" boton "submit"
+action -> ruta 
+•	Crear la ruta que ataje el pedido
+•	Crear el metodo en un controlador que le vamos a pasar a la ruta
+•	Tenemos que obtener los datos de req.query
+•	Requerimos el modelo de producto , luego findAll que contenga un WHERE: 
+where: {
+   [Op.substring] : tuDato (req.query."busqueda")
+}
