@@ -550,7 +550,7 @@ transition: 1s;
 @media (min-width: 1024px) {
 
 .lv {
-width: 20%;
+/*width: 20%;*/
 flex-wrap: nowrap;
 }
 .img-cat {

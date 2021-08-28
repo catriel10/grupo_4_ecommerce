@@ -16,12 +16,26 @@ const productsController = {
     },
 
     showCatalogue: async (req, res) => {
-        const productList = await Product.findAll({
+        const searchText = req.query.text
+        let productList; 
+        
+        if (!searchText){
+            productList = await Product.findAll()
+        } else {
+            productList = await Product.findAll({
             order:[
                 ["name","ASC"],
             ],
+            where: {
+                name: {
+                    [Op.substring] : searchText
+                }
+            
+             }
+             
         })
-
+        }
+ 
         // aca leo el json y se lo paso al template
         // res.render('products/list', { productList: productList })
         res.render('products/catalogue', { productList })
