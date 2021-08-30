@@ -44,14 +44,15 @@ function validateForm(e) {
     resetErrors()
 
     // name
-    if (inputName.value.length < 3) {
+    if (inputName.value.length < 2) {
         hasErrors = true
         errorName.innerHTML = "Write your Name"
         inputName.focus()
     }
+    
 
     // Email
-    if (!isNumeric(inputEmail.value) || inputDiameter.value < 0) {
+    if (inputEmail.value.length < 8) {
         errorEmail.innerHTML = "Write your Email"
         
         if (!hasErrors) {
@@ -73,8 +74,8 @@ function validateForm(e) {
     }
 
     // Password
-    if (!inputPassword.value) {
-        errorPassword.innerHTML = "Write your Password"
+    if ( inputPassword.value.length < 8 ) {
+        errorPassword.innerHTML = "Write your Password Correctly"
         
         if (!hasErrors) {
             inputPassword.focus()
@@ -84,9 +85,9 @@ function validateForm(e) {
     }
 
     // ConfirmPassword
-    if (!inputConfirmPassword.value) {
+    if ( inputPassword.value.length < 8 ) {
         
-        errorConfirmPassword.innerHTML = "Confirm your Password"
+        errorConfirmPassword.innerHTML = "Confirm your Password Correctly"
         
         if (!hasErrors) {
             inputConfirmPassword.focus()

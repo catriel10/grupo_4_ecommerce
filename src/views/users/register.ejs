@@ -18,7 +18,7 @@
             <form id="create-user" action="/users/register" method="POST" class="create-user" enctype="multipart/form-data"> 
                 <div class="control-user">
                     <div class="control-formulario">
-                        <label>Please enter your name</label>
+                        <label>Please enter your full name</label>
                      <!--   <input type="text" name="name-lastname" placeholder="Name and Lastname" class="control">-->
 
                         <input type="text" name="name" id="name" class="<%= (locals.errors && errors.name) ? 'input-error' : '' %>" value="<%= locals.oldValues && oldValues.name %>"/>
