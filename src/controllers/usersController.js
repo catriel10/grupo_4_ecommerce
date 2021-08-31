@@ -11,7 +11,7 @@ const usersController = {
          res.render('users/login')
     },
     
-    processLogin: async (req, res) => {
+    processLogin: (req, res) => {
 /*        const formValidation = validationResult(req)
         const oldValues = req.body
 
@@ -28,28 +28,28 @@ const usersController = {
                 email
             }
         })
-        .then ((user) =>{
+            .then ((user) =>{
 
         //req.session = {}
 
         // cargamos los datos del usuario en la sesión
         
-        // le sacamos el password
-        delete user.password
+                // le sacamos el password
+                delete user.password
 
-        // cargamos dentro de la sesión la propieda logged con el usuario (menos el password)
-        req.session.logged = user
+                // cargamos dentro de la sesión la propieda logged con el usuario (menos el password)
+                req.session.logged = user
 
-        // guardamos un dato de nuestro usuario en la sesión (email, user_id)
-        if (remember) {
-            // clave
-            res.cookie('user', user.id, {
-                maxAge: maxAgeUserCookie,
-                // pasamos esta propiedad para que firme la cookie
-                signed: true,  
-            })
+                // guardamos un dato de nuestro usuario en la sesión (email, user_id)
+                if (remember) {
+                    // clave
+                    res.cookie('user', user.id, {
+                        maxAge: maxAgeUserCookie,
+                        // pasamos esta propiedad para que firme la cookie
+                    signed: true,  
+                    })
 
-        }
+                }
 /*
         let userToLogin = User.findByField("email", req.body.email);
 

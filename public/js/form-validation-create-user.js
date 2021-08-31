@@ -5,24 +5,26 @@ console.log(form)
 // los inputs
 const inputName = form.querySelector('#name')
 const inputEmail = form.querySelector('#email')
-const inputDirection = form.querySelector('#address')
+const inputAddress = form.querySelector('#address')
 const inputPassword = form.querySelector('#password')
 const inputConfirmPassword = form.querySelector('#confirm-password')
 const inputImage = form.querySelector('#image')
+
+
 // los mensajes de error
 const errorName = form.querySelector('.msg-error-name')
 const errorEmail = form.querySelector('.msg-error-email')
-const errorDirection = form.querySelector('.msg-error-direction')
+const errorAddress = form.querySelector('.msg-error-address')
 const errorPassword = form.querySelector('.msg-error-password')
 const errorConfirmPassword = form.querySelector('.msg-error-confirm-password')
 const errorImage = form.querySelector('.msg-error-image')
 
 const inputArray = [
-    inputName, inputEmail, inputDirection, inputPassword, inputConfirmPassword, inputImage
+    inputName, inputEmail, inputAddress, inputPassword, inputConfirmPassword, inputImage
 ] 
 
 const msgErrorsArray = [
-    errorName, errorEmail, errorDirection, errorPassword, errorConfirmPassword, errorImage
+    errorName, errorEmail, errorAddress, errorPassword, errorConfirmPassword, errorImage
 ] 
 
 
@@ -46,7 +48,7 @@ function validateForm(e) {
     // name
     if (inputName.value.length < 2) {
         hasErrors = true
-        errorName.innerHTML = "Write your Name"
+        errorName.innerHTML = "Write your full name"
         inputName.focus()
     }
     
@@ -62,12 +64,12 @@ function validateForm(e) {
         hasErrors = true
     }
 
-    // Direction
-    if (!inputDirection.value) {
-        errorDirection.innerHTML = "Write your Address"
+    // Address
+    if (!inputAddress.value) {
+        errorAddress.innerHTML = "Write your Address"
         
         if (!hasErrors) {
-            inputDirection.focus()
+            inputAddress.focus()
         }
 
         hasErrors = true
@@ -85,7 +87,7 @@ function validateForm(e) {
     }
 
     // ConfirmPassword
-    if ( inputPassword.value.length < 8 ) {
+    if ( inputConfirmPassword.value.length < 8 ) {
         
         errorConfirmPassword.innerHTML = "Confirm your Password Correctly"
         
