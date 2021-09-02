@@ -77,7 +77,7 @@ const usersController = {
         res.render('users/register')
     },
     processRegister:(req, res) => {
-/*         const formValidation = validationResult(req)
+        const formValidation = validationResult(req)
         const oldValues = req.body
         
         if (!formValidation.isEmpty()) {
@@ -91,7 +91,7 @@ const usersController = {
             // tenemos errores
             res.render('users/register', { oldValues, errors: formValidation.mapped() })
           return  
-        }  */
+        }  
 
 
 
@@ -109,7 +109,8 @@ const usersController = {
 
         const user = {
             name,
-            isAdmin: 0,
+            isAdmin: 1,
+            address,
             email,
             password: hashPassword,
             image: '/img/users/' + image,
