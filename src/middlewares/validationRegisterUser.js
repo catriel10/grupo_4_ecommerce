@@ -7,6 +7,9 @@ const validationRegisterUser = [
     body('name')
         .notEmpty()
         .withMessage('Please enter your name'),
+    body('address')
+        .notEmpty()
+        .withMessage('Please enter your address'),
     body('email')
         .notEmpty()
         .withMessage('Please enter your e-mail')

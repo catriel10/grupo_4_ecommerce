@@ -12,13 +12,13 @@ const usersController = {
     },
     
     processLogin: (req, res) => {
-/*        const formValidation = validationResult(req)
+       const formValidation = validationResult(req)
         const oldValues = req.body
 
         if (!formValidation.isEmpty()) {
             return res.render('users/login', { oldValues, errors: formValidation.mapped() })
         } 
-*/
+
         // lo que viene del login
         const { email, remember } = req.body
         
