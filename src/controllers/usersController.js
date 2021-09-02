@@ -96,7 +96,7 @@ const usersController = {
 
 
         // Crear el objeto usuario
-        const { name, email, password } = req.body;
+        const { name, lastname, email, address, password } = req.body;
 
         // dentro de req.file va a venir la información del archivo
         const { file } = req
@@ -109,11 +109,12 @@ const usersController = {
 
         const user = {
             name,
+            lastname,
             isAdmin: 1,
-            address,
             email,
+            address,
             password: hashPassword,
-            image: '/img/users/' + image,
+            image: image,
         }
         
         User.create(user)

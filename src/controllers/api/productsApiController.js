@@ -94,7 +94,7 @@ module.exports = {
         })
     },
 
-    async updatePlanet(req, res) {
+    async updateProduct(req, res) {
         const planet = await Planet.findByPk(req.params.id)
 
         if (!planet) {

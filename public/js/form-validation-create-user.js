@@ -4,6 +4,7 @@ console.log(form)
 
 // los inputs
 const inputName = form.querySelector('#name')
+const inputLastName = form.querySelector('#lastname')
 const inputEmail = form.querySelector('#email')
 const inputAddress = form.querySelector('#address')
 const inputPassword = form.querySelector('#password')
@@ -13,6 +14,7 @@ const inputImage = form.querySelector('#image')
 
 // los mensajes de error
 const errorName = form.querySelector('.msg-error-name')
+const errorLastName = form.querySelector('.msg-error-lastname')
 const errorEmail = form.querySelector('.msg-error-email')
 const errorAddress = form.querySelector('.msg-error-address')
 const errorPassword = form.querySelector('.msg-error-password')
@@ -20,11 +22,11 @@ const errorConfirmPassword = form.querySelector('.msg-error-confirm-password')
 const errorImage = form.querySelector('.msg-error-image')
 
 const inputArray = [
-    inputName, inputEmail, inputAddress, inputPassword, inputConfirmPassword, inputImage
+    inputName, inputLastName, inputEmail, inputAddress, inputPassword, inputConfirmPassword, inputImage
 ] 
 
 const msgErrorsArray = [
-    errorName, errorEmail, errorAddress, errorPassword, errorConfirmPassword, errorImage
+    errorName, errorLastName, errorEmail, errorAddress, errorPassword, errorConfirmPassword, errorImage
 ] 
 
 
@@ -48,8 +50,15 @@ function validateForm(e) {
     // name
     if (inputName.value.length < 2) {
         hasErrors = true
-        errorName.innerHTML = "Write your Full Name"
+        errorName.innerHTML = "Write your Name"
         inputName.focus()
+    }
+
+    // lastname
+    if (inputLastName.value.length < 2) {
+        hasErrors = true
+        errorLastName.innerHTML = "Write your LastName"
+        inputLastName.focus()
     }
     
 
