@@ -51,14 +51,18 @@ function validateForm(e) {
     if (inputName.value.length < 2) {
         hasErrors = true
         errorName.innerHTML = "Write your Name"
-        inputName.focus()
+        if(hasErrors){
+            inputName.focus()
+        }
     }
 
     // lastname
     if (inputLastName.value.length < 2) {
         hasErrors = true
         errorLastName.innerHTML = "Write your LastName"
-        inputLastName.focus()
+        if(hasErrors){
+            inputLastName.focus()
+        }
     }
     
 
