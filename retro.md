@@ -112,7 +112,7 @@ Stop Doing: En este punto exponemos aquellas practicas que a pesar de ser [Less 
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
-6 de julio del 2021 - Brand You - Retro3
+6 de julio del 2021 - Brand You - Retro4
 ---------------------------------------------------------------------------------------------------------------------------------------------
 Start Doing: Aquí van todas aquellas cosas innovadoras o que por cierta curiosidad queremos probar. O tal vez son soluciones comprobadas que notamos que deberíamos usar. Por ejemplo usar una wiki para la comunicación o repositorio interno.
 
@@ -148,7 +148,7 @@ Stop Doing: En este punto exponemos aquellas practicas que a pesar de ser [Less 
     - No hay.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
-10 de agosto del 2021 - Brand You - Retro4
+10 de agosto del 2021 - Brand You - Retro5
 ---------------------------------------------------------------------------------------------------------------------------------------------
 Start Doing: Aquí van todas aquellas cosas innovadoras o que por cierta curiosidad queremos probar. O tal vez son soluciones comprobadas que notamos que deberíamos usar. Por ejemplo usar una wiki para la comunicación o repositorio interno.
 
@@ -177,3 +177,31 @@ Less of: En este punto ponemos aquello que tal vez en una retrospectiva fue [Sta
 Stop Doing: En este punto exponemos aquellas practicas que a pesar de ser [Less of] pues podemos eliminarlas. Cuando el equipo ve que no le da valor o simplemente no le gusta una practica puede optar por eliminarla.
 
     - No hay.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+2 de septiembre del 2021 - Brand You - Retro7
+---------------------------------------------------------------------------------------------------------------------------------------------
+Start Doing: Aquí van todas aquellas cosas innovadoras o que por cierta curiosidad queremos probar. O tal vez son soluciones comprobadas que notamos que deberíamos usar. Por ejemplo usar una wiki para la comunicación o repositorio interno.
+
+- SERA NECESARIO LA DIVISION DE FUNCIONES PARA LOS SPRINTS SIGUIENTES.
+
+
+More of: Este paso personalmente considero que será alimentado por el anterior en las siguiente retrospectiva (espero). Es decir que los [Start Doing] se convertirán en [More of]. Esto significa aquellas cosas que estamos usando o haciendo y que queremos que mejoren. Son practicas que creemos que requiere mas refinamiento y que nos gustan mucho por ello hay que darles mas.
+
+- REPASAR CONCEPTOS CENTRALES PARA PODER RESOLVER EL SPRINT.
+
+Keep Doing : Como secuencia lógica aquello que fue un [More of] llegaría a un nivel de maduración y se convertirá en [Keep Doing]. Es aquello que venimos haciendo y que nos brinda valor. Debemos seguir haciéndolo pero no será preocupación mejorarlo. Está bien como esta.
+
+- DIVISION DE TAREAS
+- REALIZAR ENCUENTROS SEMANALES PARA PODER RESOLVER DUDAS 
+- IR A LOS COLEARNINGS
+
+Less of: En este punto ponemos aquello que tal vez en una retrospectiva fue [Start Doing] pero no nos genero el valor que queriamos. Aquello que intentamos pero no nos dan tanto beneficio como se esperaba. Está bien, démosle como una segunda oportunidad, pero no esta en nuestras prioridades. Tal vez no nos funcione. También puede ser el quitar una parte de una práctica como el reporte de horas mensual o cosas por el estilo, es decir, obligatorias de cumplir pero no nos aportan valor. Y es ahí donde seguimos con el
+
+- NADA
+
+Stop Doing: En este punto exponemos aquellas practicas que a pesar de ser [Less of] pues podemos eliminarlas. Cuando el equipo ve que no le da valor o simplemente no le gusta una practica puede optar por eliminarla.
+
+- ENFOCARNOS MUCHO EN DETALLES QUE NO SON IMPORTANTES Y POR ELLO DEJAR DE LADO PUNTOS IMPORTANTES DEL PROYECTO
+
+
