@@ -44,7 +44,7 @@ function validateForm(e) {
     // name
     if (inputName.value.length < 3) {
         hasErrors = true
-        errorName.innerHTML = "Write your Name"
+        errorName.innerHTML = "Write Name please"
         inputName.focus()
     }
 

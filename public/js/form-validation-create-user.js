@@ -51,7 +51,7 @@ function validateForm(e) {
     if (inputName.value.length < 2) {
         hasErrors = true
         errorName.innerHTML = "Write your Name"
-        if(hasErrors){
+        if(!hasErrors){
             inputName.focus()
         }
     }
@@ -60,7 +60,7 @@ function validateForm(e) {
     if (inputLastName.value.length < 2) {
         hasErrors = true
         errorLastName.innerHTML = "Write your LastName"
-        if(hasErrors){
+        if(!hasErrors){
             inputLastName.focus()
         }
     }
@@ -68,47 +68,46 @@ function validateForm(e) {
 
     // Email
     if (inputEmail.value.length < 8) {
+        hasErrors = true
+
         errorEmail.innerHTML = "Write your Email"
         
         if (!hasErrors) {
             inputEmail.focus()
         }
-
-        hasErrors = true
     }
 
     // Address
     if (!inputAddress.value) {
+        hasErrors = true
+
         errorAddress.innerHTML = "Write your Address"
         
         if (!hasErrors) {
             inputAddress.focus()
         }
-
-        hasErrors = true
     }
 
     // Password
     if ( inputPassword.value.length < 8 ) {
+        hasErrors = true
+
         errorPassword.innerHTML = "Password must be at least 8 characters long"
         
         if (!hasErrors) {
             inputPassword.focus()
-        }
-
-        hasErrors = true
+        }    
     }
 
     // ConfirmPassword
     if ( inputConfirmPassword.value.length < 8 ) {
-        
+        hasErrors = true
+
         errorConfirmPassword.innerHTML = "Confirm your Password Correctly"
         
         if (!hasErrors) {
             inputConfirmPassword.focus()
         }
-
-        hasErrors = true
     }
 
     if (hasErrors) {
@@ -117,14 +116,13 @@ function validateForm(e) {
 
     // image
     if (!inputImage.value) {
-        
+        hasErrors = true
+
         errorImage.innerHTML = "Insert your Image"
         
         if (!hasErrors) {
             inputImage.focus()
         }
-
-        hasErrors = true
     }
 
     if (hasErrors) {
