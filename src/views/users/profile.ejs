@@ -43,7 +43,10 @@
                       <label for="image">Profile picture</label>
 
                     <input type="file" name="image" id="image" class="control" value="<%= user.image %>"/>
-
+                  <div class="user-image">
+                    <img class="user-image" src="/img/users/<%= user.image %>"/>
+                  </div>  
+                    
                   </div>
                   <div>
                     <a>

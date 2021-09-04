@@ -359,6 +359,12 @@ width:100%;
   width: 60vw;
   }
   
+  .user-image {
+    width: 100px;
+    padding: 5px;
+    margin: 5px;
+    }
+
   .fa-sign {
     padding: 5px 5px;
     color: white;
