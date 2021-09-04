@@ -50,7 +50,7 @@ function validateForm(e) {
     // name
     if (inputName.value.length < 2) {
         hasErrors = true
-        errorName.innerHTML = "Write your Name"
+        errorName.innerHTML = "Name must be at least 2 characters long"
         if(hasErrors){
             inputName.focus()
         }
@@ -59,7 +59,7 @@ function validateForm(e) {
     // lastname
     if (inputLastName.value.length < 2) {
         hasErrors = true
-        errorLastName.innerHTML = "Write your LastName"
+        errorLastName.innerHTML = "Lastname must be at least 2 characters long"
         if(hasErrors){
             inputLastName.focus()
         }
