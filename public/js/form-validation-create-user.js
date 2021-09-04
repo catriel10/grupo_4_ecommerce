@@ -90,7 +90,7 @@ function validateForm(e) {
 
     // Password
     if ( inputPassword.value.length < 8 ) {
-        errorPassword.innerHTML = "Write your Password Correctly"
+        errorPassword.innerHTML = "Password must be at least 8 characters long"
         
         if (!hasErrors) {
             inputPassword.focus()
