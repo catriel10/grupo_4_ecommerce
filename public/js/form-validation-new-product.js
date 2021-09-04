@@ -45,53 +45,62 @@ function validateForm(e) {
     if (inputName.value.length < 5) {
         hasErrors = true
         errorName.innerHTML = "Write product name"
-        inputName.focus()
+        if (!hasErrors) {
+            inputName.focus()
+        }
     }
 
     // Description
     if (inputDescription.value.length< 20) {
+        hasErrors = true
+        
         errorDescription.innerHTML = "Write product description"
         
         if (!hasErrors) {
             inputDescription.focus()
         }
 
-        hasErrors = true
+        
     }
 
     // Price
     if (!inputPrice.value) {
+        hasErrors = true
+        
         errorPrice.innerHTML = "Write product price"
         
         if (!hasErrors) {
             inputPrice.focus()
         }
 
-        hasErrors = true
+        
     }
 
     // Discount
     if (!inputDiscount.value) {
+        hasErrors = true
+        
         errorDiscount.innerHTML = "Write product discount"
         
         if (!hasErrors) {
             inputDiscount.focus()
         }
 
-        hasErrors = true
+        
     }
 
     
     // image
     if (!inputImage.value) {
-        
+        hasErrors = true
+
         errorImage.innerHTML = "Insert product Image"
         
         if (!hasErrors) {
             inputImage.focus()
         }
 
-        hasErrors = true
+        
     }
 
     if (hasErrors) {
