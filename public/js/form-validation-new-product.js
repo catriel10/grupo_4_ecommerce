@@ -42,18 +42,18 @@ function validateForm(e) {
     resetErrors()
 
     // name
-    if (inputName.value.length < 3) {
+    if (inputName.value.length < 5) {
         hasErrors = true
-        errorName.innerHTML = "Write your Name"
+        errorName.innerHTML = "Write product name"
         inputName.focus()
     }
 
     // Description
-    if (!isNumeric(inputDescription.value) || inputDiameter.value < 0) {
-        errorDiameter.innerHTML = "Write your Description"
+    if (inputDescription.value.length< 20) {
+        errorDescription.innerHTML = "Write product description"
         
         if (!hasErrors) {
-            inputDiameter.focus()
+            inputDescription.focus()
         }
 
         hasErrors = true
@@ -61,7 +61,7 @@ function validateForm(e) {
 
     // Price
     if (!inputPrice.value) {
-        errorPrice.innerHTML = "Write your Address"
+        errorPrice.innerHTML = "Write product price"
         
         if (!hasErrors) {
             inputPrice.focus()
@@ -72,7 +72,7 @@ function validateForm(e) {
 
     // Discount
     if (!inputDiscount.value) {
-        errorDiscount.innerHTML = "Write your Discount"
+        errorDiscount.innerHTML = "Write product discount"
         
         if (!hasErrors) {
             inputDiscount.focus()
@@ -85,7 +85,7 @@ function validateForm(e) {
     // image
     if (!inputImage.value) {
         
-        errorImage.innerHTML = "Insert your Image"
+        errorImage.innerHTML = "Insert product Image"
         
         if (!hasErrors) {
             inputImage.focus()
