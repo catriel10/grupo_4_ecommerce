@@ -35,7 +35,7 @@
 > Mejorar la experiencia de las rutas Guest y Auth.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
-10 de agosto del 2021 - Brand You - weekly 2
+10 de agosto del 2021 - Brand You - weekly 3
 ---------------------------------------------------------------------------------------------------------------------------------------------
 
 - What did you do yesterday?
@@ -50,3 +50,20 @@
 
 - What are you going to do today?
 > Intetaremos mejorar nuestro CRUD.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+2 de septiembre del 2021 - Brand You - weekly 4
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+- What did you do yesterday?
+> Modificamos las tablas y los tipos de datos de cada campo
+> Pudimos avanzar con el sprint que nos quedó pendiente (Sprint 6)
+> Nos dividimos las tareas a realizar
+
+ 
+- If she encountered any impediment.
+
+> Tuvimos inconvenientes a la hora de realizar las validaciones del login y registro
+
+- What are you going to do today?
+> Vamos a avanzar con las validaciones que nos quedan pendientes del sprint 7
