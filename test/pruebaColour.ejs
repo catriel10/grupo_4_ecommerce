@@ -1,0 +1,18 @@
+                                <div class="control-formulario">
+                    <label>Choose color</label>
+                        <div class="<%= (locals.errors && errors.color) ? 'input-error' : '' %>">
+                            <% colors.forEach(color=> { %>
+                                <li type="none"><input type="checkbox" name="color" id="<%= color.id %>" value="<%= color.id %>"/> <%= color.name %> </li>
+                              <% }) %> 
+                                </div>
+                                 <span class='msg-error msg-error-color'></span>
+                        </div>
+                        
+                        <div class="control-formulario">
+                            <label>Choose colour</label>
+                            <div class="<%= (locals.errors && errors.color) ? 'input-error' : '' %>">
+                                    <% colors.forEach(color=>{%>
+                                      <li type="none"><input type="checkbox" name="colors" id="<%= color.id %>" value="<%= color.id %>" <%= product.colors.find (col=> col.id === color.id)  ? "checked" : ""%>/> <%= color.name %> </li>
+                                    <% }) %> 
+                            </div>     
+                        </div>   

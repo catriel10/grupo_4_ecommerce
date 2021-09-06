@@ -86,8 +86,7 @@
                     </div>
                     <div class="control-formulario">
                         <label for="image">Profile picture</label>
-
-                      <input type="file" name="image" id="image" />
+                        <input type="file" name="image" id="image" accept=".jpg,.png,.jpeg,.gif" multiple class="control">
                       <% if (locals.errors && errors.image) { %>
                           <p class='msg-error'><%= errors.image.msg %></p>
                       <% } %>

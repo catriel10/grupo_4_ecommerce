@@ -8,11 +8,14 @@ const validationNewProduct = [
         .withMessage('Please enter a product name')
         .bail()
         //
-        .isLength({ min: 3 })
+        .isLength({ min: 5 })
         .withMessage('Please put a longer name'),
         // como es la última no usamos bail()
     body('description')
-        .notEmpty().withMessage('Please indicate your description'),
+        .notEmpty()
+        .withMessage('Please indicate your description')
+        .isLength({ min: 20 })
+        .withMessage('Please put a longer name'),
     body('price')
         .notEmpty().withMessage('Please indicate your price'),
     body('discount')

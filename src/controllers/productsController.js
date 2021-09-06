@@ -114,8 +114,8 @@ console.log (req.body)
         }
 
         Product.create(product)
-            .then(async (productCreated)=>{
-                await productCreated.setColors (color)
+            .then((productCreated)=>{
+                productCreated.setColors (color)
                 res.redirect('/products/productDetail' + productCreated.id);
             }
             )
@@ -147,7 +147,7 @@ console.log (req.body)
         const { id } = req.params;
 
         // el product original
-        const productOriginal = Product.findByPk(id)
+        const productOriginal = await Product.findByPk(id)
         // la imagen original: productOriginal.image
 
         // dentro de req.file va a venir la información del archivo
@@ -191,7 +191,7 @@ console.log (req.body)
             }
         })
             .then(() => {
-                res.redirect('/products/list');
+                res.redirect('/products/catalogue');
             })
        
     }

@@ -20,40 +20,84 @@
         <article class="lv">
             <div class="control-user">
                 <div class="control-formulario">
-                    <label>Product Name</label>
-                    <input type="text" name="name" class="control" required value="name">
-                </div>
-                <div class="control-formulario">
-                    <label>Description</label>
-                    <input type="text" name="description" class="control" required value="description">
-                </div>
-                <div class="control-formulario">
-                    <label>Price</label>
-                    <input type="text" name="price" class="control" required value="price">
-                </div>
-                <div class="control-formulario">
-                    <label>Discount</label>
-                    <input type="text" name="discount" class="control" required value="discount">
-                </div>
-                <div class="control-formulario">
-                    <label>Choose color</label>
-                    <% colors.forEach(color=>{%>
-                        <li type="none"><input type="checkbox" name="color" id="<%= color.id %>" value="<%= color.id %>" /> <%= color.name %> </li>
-                      <% }) %> 
+
+                        <label for="name">Product Name</label>
+                        <input type="text" name="name" id="name" class="<%= (locals.errors && errors.name) ? 'input-error' : '' %>" value="<%= locals.oldValues && oldValues.name %>"/>
+                        
+                        <% if (locals.errors && errors.name) { %>
+                            <p class='msg-error'><%= errors.name.msg %></p>
+                        <% } %>
+    
+                        <span class='msg-error msg-error-name'></span>
                     
                 </div>
                 <div class="control-formulario">
+                    
+                        <label for="description">Description</label>
+                        <input type="text" name="description" id="description" class="<%= (locals.errors && errors.description) ? 'input-error' : '' %>" value="<%= locals.oldValues && oldValues.description %>"/>
+                        
+                        <% if (locals.errors && errors.description) { %>
+                            <p class='msg-error'><%= errors.description.msg %></p>
+                        <% } %>
+    
+                        <span class='msg-error msg-error-description'></span>
+                                 
+                </div>
+                <div class="control-formulario">
+                    
+                        <label for="price">Price</label>
+                        <input type="text" name="price" id="price" class="<%= (locals.errors && errors.price) ? 'input-error' : '' %>" value="<%= locals.oldValues && oldValues.price %>"/>
+                        
+                        <% if (locals.errors && errors.price) { %>
+                            <p class='msg-error'><%= errors.price.msg %></p>
+                        <% } %>
+    
+                        <span class='msg-error msg-error-price'></span>
+                                 
+                </div>
+                <div class="control-formulario">
+                    <div class="input-container">
+                        <label for="discount">Discount</label>
+                        <input type="text" name="discount" id="discount" class="<%= (locals.errors && errors.discount) ? 'input-error' : '' %>" value="<%= locals.oldValues && oldValues.discount %>"/>
+                        
+                        <% if (locals.errors && errors.discount) { %>
+                            <p class='msg-error'><%= errors.discount.msg %></p>
+                        <% } %>
+    
+                        <span class='msg-error msg-error-discount'></span>
+                    </div>                
+                </div>
+
+                <div class="control-formulario">
+                    <label>Choose color</label>
+                        <div class="<%= (locals.errors && errors.color) ? 'input-error' : '' %>">
+                            <% colors.forEach(color=> { %>
+                                <li type="none"><input type="checkbox" name="color" id="<%= color.id %>" value="<%= color.id %>"/> <%= color.name %> </li>
+                              <% }) %> 
+                                </div>
+                                 <span class='msg-error msg-error-color'></span>
+                </div>
+
+                <div class="control-formulario">
                     <label for="category">Category</label>
+                    <div class="<%= (locals.errors && errors.category) ? 'input-error' : '' %>">
                     <% categories.forEach(category => {%>
                         <li type="none"><input type="radio" name="category" id="<%= category.id %>" value="<%= category.id %>" required /> <%= category.name %></li> 
                     <%})%>
                 
+                    </div>
+                        <span class='msg-error msg-error-category'></span>
                 </div>
                 <div class="control-formulario">
-                        <label>Image</label>
-                        <img src="" width="10vw" />
-                        <input type="file" name="image" id="image" accept=".jpg" multiple class="control">
+                    <label for="image">Image</label>
+                    <img src="" width="10vw" />
+                    <input type="file" name="image" id="image" accept=".jpg,.png,.jpeg,.gif" multiple class="control">
+                    <% if (locals.errors && errors.image) { %>
+                        <p class='msg-error'><%= errors.image.msg %></p>
+                    <% } %>
+                    <span class='msg-error msg-error-image'></span>
                 </div>
+
                 <div class="control-formulario">
                     <button type="reset" class="button-reset">Reset</button>
                     <button type="submit" class="button-submit">Create</button>

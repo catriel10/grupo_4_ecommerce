@@ -121,8 +121,6 @@ const usersController = {
             .then(() => {
                 res.redirect('/users/login');
             })
-
-        res.redirect('/users/login');
     },
 
     profile: (req, res) => {
