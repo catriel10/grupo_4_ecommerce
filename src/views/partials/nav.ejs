@@ -19,10 +19,13 @@
         <li class="dropdown">
           <a href="#"> User  <i class="fas fa-user"></i></a>
           <ul class="dropdown-content">
-            <li><a href="/users/login"> Login <i class="fas fa-user"></i></a></li>
-            <li><a href="/users/register"> Register <i class="fas fa-clipboard-check"></i></a></li>
-            <li><a href="/users/profile"> Profile <i class="far fa-address-card"></i></a></li>
-            <li><a href="/users/logout"> Logout <i class="fas fa-sign-out-alt"></i></a></li> 
+            <div class="session-nav">
+              <% if (locals.logged) { %>
+                 <%- include('nav-auth') %> 
+              <% } else {%>
+                 <%- include('nav-guest') %> 
+             <% }%>
+            </div>
           </ul>	 
           </li>
         <li type="none"><a href="/products/cart" style="text-decoration:none"> My shopping <i class="fas fa-shopping-basket"></i> </a> </li>
