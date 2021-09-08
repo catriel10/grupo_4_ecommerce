@@ -4,23 +4,26 @@ console.log("Hola Mundo!!!")
 const inputName = form.querySelector('#name')
 const inputDescription = form.querySelector('#description')
 const inputPrice = form.querySelector('#address')
-const inputDiscount = form.querySelector('#Discount')
-
+const inputDiscount = form.querySelector('#discount')
+const inputColor = form.querySelector('#color')
+const inputCategory = form.querySelector('#category')
 const inputImage = form.querySelector('#image')
+
 // los mensajes de error
 const errorName = form.querySelector('.msg-error-name')
-const errorDescription = form.querySelector('.msg-error-Description')
-const errorPrice = form.querySelector('.msg-error-Price')
-const errorDiscount = form.querySelector('.msg-error-Discount')
-
+const errorDescription = form.querySelector('.msg-error-description')
+const errorPrice = form.querySelector('.msg-error-price')
+const errorDiscount = form.querySelector('.msg-error-discount')
+const errorColor = form.querySelector('.msg-error-color')
+const errorCategory = form.querySelector('.msg-error-category')
 const errorImage = form.querySelector('.msg-error-image')
 
 const inputArray = [
-    inputName, inputDescription, inputPrice, inputDiscount, inputImage
+    inputName, inputDescription, inputPrice, inputDiscount, inputColor, inputCategory, inputImage
 ] 
 
 const msgErrorsArray = [
-    errorName, errorDescription, errorPrice, errorDiscount, errorImage
+    errorName, errorDescription, errorPrice, errorDiscount, errorColor, errorCategory, errorImage
 ] 
 
 
@@ -44,7 +47,7 @@ function validateForm(e) {
     // name
     if (inputName.value.length < 5) {
         hasErrors = true
-        errorName.innerHTML = "Write product name"
+        errorName.innerHTML = "Product name must be at least 5 characters long"
         if (!hasErrors) {
             inputName.focus()
         }
@@ -54,7 +57,7 @@ function validateForm(e) {
     if (inputDescription.value.length< 20) {
         hasErrors = true
         
-        errorDescription.innerHTML = "Write product description"
+        errorDescription.innerHTML = "Product description must be at least 20 characters long"
         
         if (!hasErrors) {
             inputDescription.focus()
@@ -81,6 +84,32 @@ function validateForm(e) {
         hasErrors = true
         
         errorDiscount.innerHTML = "Write product discount"
+        
+        if (!hasErrors) {
+            inputDiscount.focus()
+        }
+
+        
+    }
+
+     // Color
+     if (!inputColor.value) {
+        hasErrors = true
+        
+        errorColor.innerHTML = "Select color/colors"
+        
+        if (!hasErrors) {
+            inputDiscount.focus()
+        }
+
+        
+    }
+
+     // Category
+     if (!inputCategory.value) {
+        hasErrors = true
+        
+        errorCategory.innerHTML = "Select category"
         
         if (!hasErrors) {
             inputDiscount.focus()

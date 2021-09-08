@@ -17,9 +17,13 @@ const validationNewProduct = [
         .isLength({ min: 20 })
         .withMessage('Please put a longer name'),
     body('price')
-        .notEmpty().withMessage('Please indicate your price'),
+        .notEmpty().withMessage('Please indicate product price'),
     body('discount')
-        .notEmpty().withMessage('Please indicate your discount'),
+        .notEmpty().withMessage('Please indicate product discount'),
+    body('color')
+        .notEmpty().withMessage('Please select the color or colors'),
+    body('category')
+        .notEmpty().withMessage('Please select the category'),
     body('image')
         .custom((value, { req }) => {
             const { file } = req
