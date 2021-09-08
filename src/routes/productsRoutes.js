@@ -74,7 +74,7 @@ productsRoutes.get('/catalogue', productsController.showCatalogue)
 // 2. /products/create (GET) Formulario de creación de productos
 productsRoutes.get('/create', productsController.formNew);
 // aca deberíamos pasar multer
-productsRoutes.post('/create', upload.single('image'), validationNewProduct,  productsController.store);
+productsRoutes.post('/create', upload.single('image'), validationNewProduct, productsController.store);
 
 // 3. /products/:id (GET) Detalle de un producto particular
 

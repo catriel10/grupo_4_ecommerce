@@ -72,7 +72,7 @@
                     <label>Choose color</label>
                         <div class="<%= (locals.errors && errors.color) ? 'input-error' : '' %> ">
                             <% colors.forEach(color=> { %>
-                                <li type="none"><input type="checkbox" name="color" id="<%= color.id %>" value="<%= color.id %>"/> <%= color.name %> </li>
+                                <li><input type="checkbox" name="color" id="<%= color.id %>" value="<%= color.id %>"/> <%= color.name %> </li>
                               <% }) %> 
                                 </div>
                                  <span class='msg-error msg-error-color'></span>
@@ -82,7 +82,7 @@
                     <label for="category">Category</label>
                     <div class="<%= (locals.errors && errors.category) ? 'input-error' : '' %>">
                     <% categories.forEach(category => {%>
-                        <li type="none"><input type="radio" name="category" id="<%= category.id %>" value="<%= category.id %>" required /> <%= category.name %></li> 
+                        <li type="none"><input type="radio" name="category" id="<%= category.id %>" value="<%= category.id %>"/> <%= category.name %></li> 
                     <%})%>
                 
                     </div>

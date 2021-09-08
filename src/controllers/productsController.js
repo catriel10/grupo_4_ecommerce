@@ -75,11 +75,12 @@ const productsController = {
 
     store: async (req, res) => {
         const formValidation = await validationResult(req)
-        
+        const categories = await Category.findAll()
+
         /* si encuentro un error devuelvo el formulario
         con los valores ya cargados y los errores */
         
-        console.log('formValidation.mapped()',formValidation.mapped())
+       // console.log('formValidation.mapped()',formValidation.mapped())
         
         if (!formValidation.isEmpty()) {
             // borrar imagen
@@ -90,12 +91,13 @@ const productsController = {
         
           // tenemos errores
             const oldValues = req.body
-            res.render('products/productNew', { oldValues, errors: formValidation.mapped() })
+            const colors = await Color.findAll()
+            res.render('products/productNew', {colors,categories, oldValues, errors: formValidation.mapped() })
           return  
         }
     
         // Crear el objeto product
-        const { id, name, description, price, discount, color, category} = req.body;
+        const {name, description,color, price, discount, category} = req.body;
 console.log (req.body)
          // dentro de req.file va a venir la información del archivo
          const { file } = req
@@ -104,7 +106,6 @@ console.log (req.body)
          const image = file.filename
 
         const product = {
-            id: id,
             name: name,
             description: description,
             price: price,
