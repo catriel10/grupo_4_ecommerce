@@ -1,33 +1,33 @@
-module.exports = (sequelize, DataTypes) => {
+module.exports = (sequelize, DataType) => {
     const alias = 'Product'
     /* camelCase por default */
     const cols = {
         /* opcional */
         id: {
-            type: DataTypes.INTEGER,
+            type: DataType.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         },
         name: {
-            type: DataTypes.STRING
+            type: DataType.STRING
         },
         quantity: {
-            type: DataTypes.INTEGER
+            type: DataType.INTEGER
         },
         price: {
-            type: DataTypes.INTEGER
+            type: DataType.INTEGER
         },
         discount: {
-            type: DataTypes.INTEGER
+            type: DataType.INTEGER
         },
         description: {
-            type: DataTypes.STRING
+            type: DataType.STRING
         },
         image: {
-            type: DataTypes.STRING
+            type: DataType.STRING
         },
-        category_id: DataTypes.INTEGER,
-        //color_id: DataTypes.INTEGER,
+        category_id: DataType.INTEGER,
+        //color_id: DataType.INTEGER,
     }
     
     const config = {

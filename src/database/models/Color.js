@@ -1,7 +1,7 @@
-module.exports = (sequelize, DataTypes) => {
+module.exports = (sequelize, DataType) => {
     const name = "Color"
     const columns = {
-        name: DataTypes.STRING
+        name: DataType.STRING
     }
     const config = {
         timestamps: false

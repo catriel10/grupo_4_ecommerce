@@ -60,8 +60,8 @@ const productsController = {
             }          
             ]
         })
-        const categories = await Category.findAll()
-        res.render('products/productDetail', { productDetail, categories });
+       
+        res.render('products/productDetail', { productDetail });
 
     },
     formNew: async (req, res) => {
@@ -162,14 +162,14 @@ console.log (req.body)
         } else {
             image = productOriginal.image
         }
-        const {name, category, colors, price, description} =req.body
-
-        productOriginal.setColors(colors)
+        const {name, category, color, price, description} =req.body
+        //return res.send (req.body)
+        productOriginal.setColors(color)
         
         const propertiesToEdit = {
             name: name,
             category_id: category,
-            colors:colors,
+            colors:color,
             price:price,
             description:description,
             }
@@ -180,7 +180,7 @@ console.log (req.body)
             }
         });
 
-        res.redirect('/products/productDetail' + id);
+        res.redirect('/products/' + id);
     },
     destroy: (req, res) => {
         const id = req.params.id;

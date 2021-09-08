@@ -1,27 +1,27 @@
-module.exports = (sequelize, DataTypes) => {
+module.exports = (sequelize, DataType) => {
     const alias = 'User'
     /* camelCase por default */
     const cols = {  
         name: {
-            type: DataTypes.STRING
+            type: DataType.STRING
         },
         lastname: {
-            type: DataTypes.STRING
+            type: DataType.STRING
         },
         email: {
-            type: DataTypes.INTEGER
+            type: DataType.INTEGER
         },
         password: {
-            type: DataTypes.BOOLEAN
+            type: DataType.BOOLEAN
         },
         address:{
-            type: DataTypes.STRING
+            type: DataType.STRING
         },
         image: {
-            type: DataTypes.STRING
+            type: DataType.STRING
         },
         isAdmin: {
-            type: DataTypes.BOOLEAN
+            type: DataType.BOOLEAN
         },
     }
     
