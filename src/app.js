@@ -59,9 +59,13 @@ app.use('/users', usersRoutes)
 // products
 const productsRoutes = require('./routes/productsRoutes');
 
+
 app.use('/products', productsRoutes)
 
 
+// api
+const apiRoutes = require('./routes/api')
+app.use('/api', apiRoutes)
 
 
 // error handler
