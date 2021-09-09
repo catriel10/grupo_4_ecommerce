@@ -62,17 +62,7 @@ const fileFilter = (req, file, cb)  => {
 const upload = multer({ storage, fileFilter })
 
 const usersController = require('../controllers/usersController')
-/*
-// Register
-app.get('/register', (req, res) => {
-    res.render('register')
-});
 
-// Login
-app.get('/login', (req, res) => {
-    res.render('login')
-});
-*/
 
 usersRoutes.get('/login', guestMiddleware, usersController.login)
 usersRoutes.post('/login', guestMiddleware, validationLoginUser, usersController.processLogin);
