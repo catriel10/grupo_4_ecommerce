@@ -75,6 +75,9 @@
                                 <li><input type="checkbox" name="color" id="<%= color.id %>" value="<%= color.id %>"/> <%= color.name %> </li>
                               <% }) %> 
                                 </div>
+                                <% if (locals.errors && errors.color) { %>
+                                    <p class='msg-error'><%= errors.color.msg %></p>
+                                <% } %>
                                  <span class='msg-error msg-error-color'></span>
                 </div>
 
@@ -84,7 +87,9 @@
                     <% categories.forEach(category => {%>
                         <li type="none"><input type="radio" name="category" id="<%= category.id %>" value="<%= category.id %>"/> <%= category.name %></li> 
                     <%})%>
-                
+                    <% if (locals.errors && errors.category) { %>
+                        <p class='msg-error'><%= errors.category.msg %></p>
+                    <% } %>
                     </div>
                         <span class='msg-error msg-error-category'></span>
                 </div>

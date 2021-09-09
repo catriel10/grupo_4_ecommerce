@@ -12,7 +12,7 @@ text-decoration:none;
 
 .header {
   text-align:center;
-  padding: 2.5vh;
+  padding: 5.5vh;
   background: #ffffff;
   color: #000000;
   z-index:100;
@@ -58,7 +58,7 @@ font-size: 1vh;
   max-width: 100vw;
   width: 100%;
   position: fixed;
-  margin-top: -7vh;
+  margin-top: -90px;
 }
 
 ul.navbar {
@@ -228,7 +228,7 @@ width:100%;
 .main {  
   display: flex;
   flex-wrap: wrap;
-  margin-top: 24vh;
+  margin-top: 250px;
   }
   
   main section article i {
@@ -1177,7 +1177,7 @@ display: table;
 @media (min-width: 1000px) {
   .header {
   
-    padding: 3.5vh;
+    padding: 5.5vh;
   
     }
   }

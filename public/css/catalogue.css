@@ -12,7 +12,7 @@ text-decoration:none;
 
 .header {
 text-align:center;
-padding: 2.5vh;
+padding: 5.5vh;
 background: #ffffff;
 color: #000000;
 z-index:100;
@@ -60,7 +60,7 @@ z-index: 100;
 max-width: 100vw;
 width: 100%;
 position: fixed;
-margin-top: -7vh;
+margin-top: -90px;
 }
 
 ul.navbar {
@@ -193,7 +193,7 @@ width:100%;
 .section {  
 display: flex;
 flex-wrap: wrap;
-margin-top: 24vh;
+margin-top: 250px;
 }
 
 main section article i {
@@ -348,7 +348,7 @@ transition: 1s;
 }
 
 .img-cat {
-width: 60vw;
+width: 40vw;
 }
 
 /* ------------ cajas ------------- */
@@ -554,7 +554,7 @@ transition: 1s;
 flex-wrap: nowrap;
 }
 .img-cat {
-width:17vw
+width:10vw
 }
 
 .articulos1 {
@@ -567,7 +567,7 @@ justify-content: space-between;
 
 .header {
 
-  padding: 3.5vh;
+  padding: 5.5vh;
 
   }
 }

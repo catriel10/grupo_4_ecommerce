@@ -11,7 +11,7 @@ text-decoration:none;
 
 .header {
   text-align:center;
-  padding: 2.5vh;
+  padding: 5.5vh;
   background: #ffffff;
   color: #000000;
   z-index:100;
@@ -72,7 +72,7 @@ letter-spacing:0.8em;
   max-width: 100vw;
   width: 100%;
   position: fixed;
-  margin-top: -7vh;
+  margin-top: -90px;
 }
 
 ul.navbar {
@@ -201,7 +201,7 @@ width:100%;
 
 /* --------------------- Main ------------------ */
 .main {  
-  margin-top: 24vh;
+  margin-top: 250px;
   }
   
   main section article i {
@@ -879,7 +879,7 @@ display: table;
   @media (min-width: 1000px) {
     .header {
     
-      padding: 3.5vh;
+      padding: 5.5vh;
     
       }
     }
