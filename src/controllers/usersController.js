@@ -4,6 +4,7 @@ const bcrypt = require('bcryptjs')
 const usersModel = require('../models/usersModel')
 const { maxAgeUserCookie } = require('../config/config')
 const {User} = require("../database/models")
+const path = require('path')
 
 
 const usersController = {
@@ -81,12 +82,7 @@ const usersController = {
         const oldValues = req.body
         
         if (!formValidation.isEmpty()) {
-            // borrar imagen
-            if (req.file) {
-                // primero chequeamos que exista
-                fs.unlinkSync(req.file.path)
-            }
-            
+            // borrar imagen          
 
             // tenemos errores
             res.render('users/register', { oldValues, errors: formValidation.mapped() })

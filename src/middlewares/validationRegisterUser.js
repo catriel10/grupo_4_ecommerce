@@ -2,6 +2,7 @@
 const { body } = require('express-validator')
 const userModel = require('../../src/models/usersModel')
 const { isFileImage } = require('../../src/helpers/file')
+const path = require('path')
 
 const validationRegisterUser = [
     body('name')
@@ -16,7 +17,24 @@ const validationRegisterUser = [
         .isEmail()
         .withMessage('It is not in e-mail format')
         .bail()
-        .custom((email) => {
+        .custom(async (value, { req }) => {
+            const {email} = req.body
+            
+            // encontrar un usuario con el email
+            const userFound = await User.findOne({
+                where: {
+                    email
+                }
+            })
+
+            if (userFound) {
+                return false
+            }
+
+            return true 
+            
+        })
+ /*        .custom((email) => {
             // FIXME Modificar el método de búsqueda
             const userFound = userModel.findByField('email', email)
 
@@ -26,6 +44,7 @@ const validationRegisterUser = [
 
             return true
         })
+*/
         .withMessage('User already exists'),
     body('password')
         .notEmpty()
