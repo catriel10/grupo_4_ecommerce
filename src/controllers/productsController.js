@@ -97,7 +97,7 @@ const productsController = {
         }
     
         // Crear el objeto product
-        const {name, description,color, price, discount, category} = req.body;
+        const {name, quantity, description,color, price, discount, category} = req.body;
 console.log (req.body)
          // dentro de req.file va a venir la información del archivo
          const { file } = req
@@ -107,6 +107,7 @@ console.log (req.body)
 
         const product = {
             name: name,
+            quantity: quantity,
             description: description,
             price: price,
             discount: discount,
