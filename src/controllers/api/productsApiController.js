@@ -1,5 +1,5 @@
 const { Op } = require('sequelize')
-const { Product } = require('../../database/models')
+const { Product, Category } = require('../../database/models')
 
 module.exports = {
     async searchProducts(req, res) {
@@ -25,7 +25,27 @@ module.exports = {
     },
     async listProducts(req, res) {
         try {
-            const products = await Product.findAndCountAll()
+            const products = await Product.findAndCountAll({
+                attributes: ['id', 'name', 'description', 'price', 'quantity', 'discount'],
+                include: ['category', 'color', 'image']
+            })
+
+            const productsMapped = products.rows.map(products=> {
+                const urlDetail = 'http://localhost:4444/api/products/' + product.id
+                product.setDataValue('detail', urlDetail)
+                return product;
+            });
+
+            const categories = await Category.findAll({
+                include: [products]
+            })
+
+            const objectCategories = categories.reduce((acum, category)=> {
+                acum[category.name] = category.products.name
+                return acum
+            }, {})
+
+            return res.json(objectCategories);
 
             res.status(200).json({
                 meta: {
@@ -33,7 +53,7 @@ module.exports = {
                     total: products.count
                 },
                 data: {
-                    products: products.rows
+                    products: productsMapped
                 }
             })
         } catch(err) {

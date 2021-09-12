@@ -5,7 +5,15 @@ const { User } = require('../../database/models')
 module.exports = {
     async listUsers(req, res) {
         try {
-            const users = await User.findAndCountAll()
+            const users = await User.findAndCountAll({
+                attributes: ['id', 'name', 'lastname', 'address', 'email', 'password', 'image']
+            })
+
+            const usersMapped = users.rows.map(users=> {
+                const urlDetail = 'http://localhost:4444/api/users/' + user.id
+                user.setDataValue('detail', urlDetail)
+                return user;
+            });
 
             res.status(200).json({
                 meta: {
@@ -13,7 +21,7 @@ module.exports = {
                     total: users.count
                 },
                 data: {
-                    users: users.rows
+                    users: usersMapped
                 }
             })
         } catch(err) {
