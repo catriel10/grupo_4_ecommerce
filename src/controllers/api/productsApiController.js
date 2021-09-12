@@ -72,18 +72,21 @@ module.exports = {
     },
 
     async createProduct(req, res) {
-        const { id, name, description, price, discount, color, category } = req.body
+        const { name, quantity, description, price, discount, color, category,image } = req.body
 
         const product = await Product.create({
-            id: id,
-            name: name,
-            description: description,
-            price: price,
-            discount: discount,
-            color: color, /*Preguntar*/
+            name,
+            quantity,
+            description,
+            price,
+            discount,
+            color, 
             category_id: category,
-            image: image,
-        })
+            image
+        }
+        )
+
+        
         res.status(201).json({
             meta: {
                 status: "success",
@@ -95,9 +98,9 @@ module.exports = {
     },
 
     async updateProduct(req, res) {
-        const planet = await Planet.findByPk(req.params.id)
+        const product = await Product.findByPk(req.params.id)
 
-        if (!planet) {
+        if (!product) {
             res.status(404).json({
                 meta: {
                     status: "not_found",
@@ -106,12 +109,15 @@ module.exports = {
             return
         }
 
-        const { name, discovered, hasRings } = req.body
+        const { name, category, color, price, description, image } = req.body
 
-        const planetUpdated = await planet.update({
-            name, 
-            discovered, 
-            hasRings,
+        const productUpdated = await product.update({
+            name,
+            color: color, /*Preguntar*/
+            category_id: category,
+            price,
+            description,
+            image
         })
 
         res.status(201).json({
@@ -119,15 +125,15 @@ module.exports = {
                 status: "success",
             },
             data: {
-                planet: planetUpdated,
+                product: productUpdated,
             }
         })
     },
 
-    async destroyPlanet(req, res) {
-        const planet = await Planet.findByPk(req.params.id)
+    async destroyProduct(req, res) {
+        const product = await Product.findByPk(req.params.id)
 
-        if (!planet) {
+        if (!product) {
             res.status(404).json({
                 meta: {
                     status: "not_found",
@@ -136,7 +142,7 @@ module.exports = {
             return
         }
 
-        await planet.destroy()
+        await product.destroy()
 
         res.status(200).json({
             meta: {
