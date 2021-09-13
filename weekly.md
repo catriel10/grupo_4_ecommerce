@@ -1,5 +1,52 @@
 ---------------------------------------------------------------------------------------------------------------------------------------------
-29 de junio del 2021 - Brand You - weekly 1
+7 de mayo del 2021 - Brand You - weekly 1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+- What did you do yesterday?
+> Empezamos con el primer sprint de la cursada
+> Empezamos a diseñar y tirar ideas para el armado de la página
+ 
+- If she encountered any impediment.
+
+> Nada por el momento
+
+- What are you going to do today?
+> Seguiremos con el sprint.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+7 de mayo del 2021 - Brand You - weekly 2
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+- What did you do yesterday?
+> Empezamos con el segundo sprint de la cursada
+> Mejoramos la página 
+ 
+- If she encountered any impediment.
+
+> Nada por el momento
+
+- What are you going to do today?
+> Seguiremos con el sprint.
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+20 de junio del 2021 - Brand You - weekly 3
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+- What did you do yesterday?
+> Empezamos con el tercer sprint de la cursada
+> Mejoramos la página con cambios realizados en el CSS y el html
+ 
+- If she encountered any impediment.
+
+> Nada por el momento
+
+- What are you going to do today?
+> Seguiremos con el sprint.
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+29 de junio del 2021 - Brand You - weekly 4
 ---------------------------------------------------------------------------------------------------------------------------------------------
 
 - What did you do yesterday?
@@ -18,7 +65,7 @@
 > Comenazamos el Sprint5.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
-13 de julio del 2021 - Brand You - weekly 2
+13 de julio del 2021 - Brand You - weekly 5
 ---------------------------------------------------------------------------------------------------------------------------------------------
 
 - What did you do yesterday?
@@ -35,7 +82,7 @@
 > Mejorar la experiencia de las rutas Guest y Auth.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
-10 de agosto del 2021 - Brand You - weekly 3
+10 de agosto del 2021 - Brand You - weekly 6
 ---------------------------------------------------------------------------------------------------------------------------------------------
 
 - What did you do yesterday?
