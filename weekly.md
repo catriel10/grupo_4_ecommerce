@@ -52,7 +52,7 @@
 > Intetaremos mejorar nuestro CRUD.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
-2 de septiembre del 2021 - Brand You - weekly 4
+2 de septiembre del 2021 - Brand You - weekly 7
 ---------------------------------------------------------------------------------------------------------------------------------------------
 
 - What did you do yesterday?
@@ -67,3 +67,25 @@
 
 - What are you going to do today?
 > Vamos a avanzar con las validaciones que nos quedan pendientes del sprint 7
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+2 de septiembre del 2021 - Brand You - weekly 8
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+- What did you do yesterday?
+
+> Pudimos terminar con el sprint que nos quedó pendiente (Sprint 7)
+> Nos dividimos las tareas a realizar
+> Trabajamos cada vez más en equipo
+> Logramos avanzar con el sprint 8 con pocas dificultades
+
+ 
+- If she encountered any impediment.
+
+> Tuvimos inconvenientes a la hora de utilizar el postman pero lo pudimos resolver
+
+- What are you going to do today?
+
+
+> Vamos a terminar con los últimos puntos que nos quedan de este último sprint que son los dashboards
