@@ -31,17 +31,18 @@ module.exports = {
             })
 
             const productsMapped = products.rows.map(products=> {
-                const urlDetail = 'http://localhost:4444/api/products/' + product.id
-                product.setDataValue('detail', urlDetail)
-                return product;
+                const urlDetail = 'http://localhost:4444/api/products/' + products.id
+                products.setDataValue('detail', urlDetail)
+                return products;
             });
 
-            const categories = await Category.findAll({
-                include: [products]
+           const categories = await Category.findAll({
+                include: ["products"]
             })
 
             const objectCategories = categories.reduce((acum, category)=> {
-                acum[category.name] = category.products.name
+                acum[category.name] = category.products.length
+                               
                 return acum
             }, {})
 

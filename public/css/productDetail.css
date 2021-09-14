@@ -613,7 +613,14 @@ padding-top: 16px;
 font-size: 2em
 }
 
-
+.msg-error {
+  display: block;
+  font-size: 10px;
+  color: red;
+  width: 70%;
+  margin-top: 5px;
+  text-align: center
+  }
 
 /* ------------------------------------ Footer -----------------------------*/
 
