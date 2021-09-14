@@ -10,9 +10,9 @@ module.exports = {
             })
 
             const usersMapped = users.rows.map(users=> {
-                const urlDetail = 'http://localhost:4444/api/users/' + user.id
-                user.setDataValue('detail', urlDetail)
-                return user;
+                const urlDetail = 'http://localhost:4444/api/users/' + users.id
+                users.setDataValue('detail', urlDetail)
+                return users;
             });
 
             res.status(200).json({
@@ -40,6 +40,8 @@ module.exports = {
     async detailUser(req, res) {
         const user = await User.findByPk(req.params.id)   
         
+
+
         if (!user) {
             res.status(404).json({
                 meta: {

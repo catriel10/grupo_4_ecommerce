@@ -26,26 +26,28 @@ module.exports = {
     async listProducts(req, res) {
         try {
             const products = await Product.findAndCountAll({
-                attributes: ['id', 'name', 'description', 'price', 'quantity', 'discount'],
-                include: ['category', 'color', 'image']
+                attributes: ['id', 'name', 'description', 'price', 'quantity', 'discount', 'image'],
+                include: ['colors', 'category']
             })
 
             const productsMapped = products.rows.map(products=> {
-                const urlDetail = 'http://localhost:4444/api/products/' + product.id
-                product.setDataValue('detail', urlDetail)
-                return product;
+                const urlDetail = 'http://localhost:4444/api/products/' + products.id
+                products.setDataValue('detail', urlDetail)
+                return products;
             });
 
             const categories = await Category.findAll({
-                include: [products]
+                include: ['product']
             })
 
             const objectCategories = categories.reduce((acum, category)=> {
-                acum[category.name] = category.products.name
+                acum[category.name] = category.product.length
                 return acum
             }, {})
 
-            return res.json(objectCategories);
+            /*return res.json(objectCategories);
+
+            /*return res.send(products)*/
 
             res.status(200).json({
                 meta: {
@@ -70,7 +72,12 @@ module.exports = {
     },
 
     async detailProduct(req, res) {
-        const product = await Product.findByPk(req.params.id)   
+        const product = await Product.findByPk(req.params.id)
+
+        const productsFind = await Product.findAndCountAll({
+            attributes: ['id', 'name', 'description', 'price', 'quantity', 'discount', 'image'],
+            include: ['colors', 'category']
+        })
         
         if (!product) {
             res.status(404).json({
@@ -86,7 +93,7 @@ module.exports = {
                 status: "success",
             },
             data: {
-                product,
+                product: productsFind,
             }
         })
     },
