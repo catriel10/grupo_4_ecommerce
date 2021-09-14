@@ -40,12 +40,8 @@ module.exports = {
     async detailUser(req, res) {
         const user = await User.findByPk(req.params.id)   
         
-        const usersMapped = users.rows.map(user=> {
-            const urlDetail = 'http://localhost:4444/api/img/users/' + user.image
-            user.setDataValue('detail', urlDetail)
-            return user;
-        });
-        
+
+
         if (!user) {
             res.status(404).json({
                 meta: {
