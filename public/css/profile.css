@@ -376,6 +376,15 @@ width:100%;
     height: 30px;
     transition: 1s;
     }
+
+    .msg-error {
+      display: block;
+      font-size: 10px;
+      color: red;
+      width: 70%;
+      margin-top: 5px;
+      text-align: center
+      }
   /* ------------ cajas ------------- */
   
   

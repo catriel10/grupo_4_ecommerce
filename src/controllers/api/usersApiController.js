@@ -55,7 +55,7 @@ module.exports = {
                 status: "success",
             },
             data: {
-                user,
+                users: usersMapped,
             }
         })
     },
