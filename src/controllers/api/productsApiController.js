@@ -45,7 +45,7 @@ module.exports = {
                 return acum
             }, {})
 
-            /*return res.json(objectCategories);
+            /*return res.json(objectCategories);*/
 
             /*return res.send(products)*/
 
@@ -55,7 +55,7 @@ module.exports = {
                     total: products.count
                 },
                 data: {
-                    products: productsMapped
+                    products: productsMapped, objectCategories
                 }
             })
         } catch(err) {

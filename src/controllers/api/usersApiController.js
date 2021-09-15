@@ -41,7 +41,6 @@ module.exports = {
         const user = await User.findByPk(req.params.id)   
         
 
-
         if (!user) {
             res.status(404).json({
                 meta: {
