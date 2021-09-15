@@ -10,8 +10,8 @@ module.exports = {
             })
 
             const usersMapped = users.rows.map(users=> {
-                const urlDetail = 'http://localhost:4444/api/users/' + users.id
-                users.setDataValue('detail', urlDetail)
+                const urlList = 'http://localhost:4444/api/users/' + users.id
+                users.setDataValue('detail', urlList)
                 return users;
             });
 
@@ -38,9 +38,24 @@ module.exports = {
     },
 
     async detailUser(req, res) {
-        const user = await User.findByPk(req.params.id)   
-        
+           
+            const user = await User.findOne({
+                attributes: ['id', 'name', 'lastname', 'address', 'email', 'image'],
+                where: { 
+                    id: req.params.id,
+                }
+            })
+ /* 
+            const user = await User.findByPk(req.params.id, {
+                attributes: ['id', 'name', 'lastname', 'address', 'email', 'image']
+            })
 
+      const userMapped = user.rows.map(user=> {
+            const urlDetail = 'http://localhost:4444/api/users/' + user.id
+            user.setDataValue('detail', urlDetail)
+            return user;
+        });
+*/
         if (!user) {
             res.status(404).json({
                 meta: {
@@ -55,7 +70,7 @@ module.exports = {
                 status: "success",
             },
             data: {
-                users: usersMapped,
+                user //userMapped,
             }
         })
     },

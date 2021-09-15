@@ -1,6 +1,6 @@
 
 const { body } = require('express-validator')
-const userModel = require('../../src/models/usersModel')
+const { User } = require('../database/models');
 const { isFileImage } = require('../../src/helpers/file')
 const path = require('path')
 
@@ -19,13 +19,14 @@ const validationRegisterUser = [
         .bail()
         .custom(async (value, { req }) => {
             const {email} = req.body
-            
+            console.log (123)
             // encontrar un usuario con el email
             const userFound = await User.findOne({
                 where: {
                     email
                 }
             })
+            console.log (123)
 
             if (userFound) {
                 return false
