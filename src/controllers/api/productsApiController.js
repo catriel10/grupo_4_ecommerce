@@ -72,13 +72,21 @@ module.exports = {
     },
 
     async detailProduct(req, res) {
-        const product = await Product.findByPk(req.params.id)
+        /*const product = await Product.findByPk(req.params.id)*/
 
-        const productsFind = await Product.findAndCountAll({
+        const product = await Product.findOne({
+            attributes: ['id', 'name', 'description', 'price', 'quantity', 'discount', 'image'],
+            include: ['colors', 'category'],
+            where: { 
+                id: req.params.id,
+            }
+        })
+
+       /* const productsFind = await Product.findAndCountAll({
             attributes: ['id', 'name', 'description', 'price', 'quantity', 'discount', 'image'],
             include: ['colors', 'category']
         })
-        
+        */
         if (!product) {
             res.status(404).json({
                 meta: {
@@ -93,7 +101,7 @@ module.exports = {
                 status: "success",
             },
             data: {
-                product: productsFind,
+                product: product,
             }
         })
     },
