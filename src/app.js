@@ -10,6 +10,7 @@ const path = require ("path"); //requiere el modulo nativo path de node
 const port = process.env.PORT || 4444;
 const session = require('express-session')
 const config = require('./config/config')
+const cors = require('cors')
 
 // middlewares
 
@@ -18,7 +19,8 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
   }))
-  
+
+  app.use(cors())
   app.use(cookieParser())
   
   const cookiesSessionMiddleware = require('./middlewares/cookiesSessionMiddleware')
