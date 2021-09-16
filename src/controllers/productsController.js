@@ -118,7 +118,7 @@ console.log (req.body)
         Product.create(product)
             .then((productCreated)=>{
                 productCreated.setColors (color)
-                res.redirect('/products/productDetail' + productCreated.id);
+                res.redirect('/products/' + productCreated.id);
             }
             )
         
