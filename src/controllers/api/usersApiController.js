@@ -95,4 +95,39 @@ module.exports = {
             }
         })
     },
+    
+    async lastUser (req, res) {
+		let users = await User.findAll({
+			attributes: ['id', 'name', 'lastname', 'address', 'email', 'image']
+		})
+		let lastUser = users[users.length - 1]
+
+		let response = {
+			meta: {
+				status: 200,
+				url: 'http://localhost:4444/api/users/',
+				message: 'last user in DB'
+			},
+            data:{
+                users: lastUser
+            } 
+		}
+		res.json(response)
+        },
+
+    async qty (req, res) {
+            let totalUsers = await User.count()
+            let response = {
+                meta: {
+                    status: 200,
+                    url: 'api/users/qty',
+                    message: 'total amount of users in DB'
+                },
+                data:{
+                    users: totalUsers
+                } 
+            }
+                        
+            res.json(response)
+        },
 }
