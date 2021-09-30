@@ -5,6 +5,8 @@ const fs = require('fs')
 const path = require('path')
 const { count } = require('console')
 const resourcesPath = path.join(__dirname, '../../../public')
+const productImagePath = '/img/'
+const productFilePath = '/pdf/'
 
 module.exports = {
     async searchProducts(req, res) {
@@ -118,7 +120,7 @@ module.exports = {
     async lastProduct (req, res) {
 		let products = await Product.findAll()
 		let last = products[products.length - 1]
-		let url = 'http://localhost:4444/img/'
+		let url = 'http://localhost:4444/img/article/'
 		let productToShow = await Product.findByPk(last.id,
             {
                     attributes: ['id', 'name', 'description', 'price', 'quantity', 'discount', 'image'],
@@ -128,13 +130,13 @@ module.exports = {
             
         
 		if (productToShow) {
-			productToShow.setDataValue('image', url + productToShow.images[0].name)
+			productToShow.setDataValue('image', url + productToShow.image)
 		}
 
 		let response = {
 			meta: {
 				status: 200,
-				url: 'api/products/last'
+				url: 'http://localhost:4444/api/products/last'
 			},
             data: {
                 products: productToShow,

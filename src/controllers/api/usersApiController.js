@@ -38,24 +38,17 @@ module.exports = {
     },
 
     async detailUser(req, res) {
-           
+           console.log("Entro...........")
             const user = await User.findOne({
                 attributes: ['id', 'name', 'lastname', 'address', 'email', 'image'],
                 where: { 
                     id: req.params.id,
                 }
             })
- /* 
-            const user = await User.findByPk(req.params.id, {
-                attributes: ['id', 'name', 'lastname', 'address', 'email', 'image']
-            })
 
-      const userMapped = user.rows.map(user=> {
-            const urlDetail = 'http://localhost:4444/api/users/' + user.id
-            user.setDataValue('detail', urlDetail)
-            return user;
-        });
-*/
+        let url = 'http://localhost:4444/img/users/'
+        user.image = url + image
+
         if (!user) {
             res.status(404).json({
                 meta: {
@@ -95,7 +88,7 @@ module.exports = {
             }
         })
     },
-    
+
     async lastUser (req, res) {
 		let users = await User.findAll({
 			attributes: ['id', 'name', 'lastname', 'address', 'email', 'image']
@@ -105,7 +98,7 @@ module.exports = {
 		let response = {
 			meta: {
 				status: 200,
-				url: 'http://localhost:4444/api/users/',
+				url: 'http://localhost:4444/api/users/last',
 				message: 'last user in DB'
 			},
             data:{
