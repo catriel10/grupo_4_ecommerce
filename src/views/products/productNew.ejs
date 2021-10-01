@@ -67,6 +67,18 @@
                         <span class='msg-error msg-error-discount'></span>
                     </div>                
                 </div>
+                <div class="control-formulario">
+                    <div class="input-container">
+                        <label for="quantity">Quantity</label>
+                        <input type="text" name="quantity" id="quantity" class="<%= (locals.errors && errors.quantity) ? 'input-error' : '' %> control" value="<%= locals.oldValues && oldValues.quantity %>"/>
+                        
+                        <% if (locals.errors && errors.quantity) { %>
+                            <p class='msg-error'><%= errors.quantity.msg %></p>
+                        <% } %>
+    
+                        <span class='msg-error msg-error-quantity'></span>
+                    </div>                
+                </div>
 
                 <div class="control-formulario">
                     <label>Choose color</label>

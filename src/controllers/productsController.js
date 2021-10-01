@@ -47,12 +47,12 @@ const productsController = {
         })
         }
  
-      //AGREGO RUTA A LAS IMAGENES
-      products.forEach(product => {
-        product.images.forEach(image => {
-          addProductImagePath(image)
-        })
-      })
+    //   //AGREGO RUTA A LAS IMAGENES
+    //   products.forEach(product => {
+    //     product.images.forEach(image => {
+    //       addProductImagePath(image)
+    //     })
+    //   })
         // aca leo el json y se lo paso al template
         // res.render('products/list', { productList: productList })
         res.render('products/catalogue', { productList })
