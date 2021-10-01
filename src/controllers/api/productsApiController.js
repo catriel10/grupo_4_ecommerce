@@ -36,11 +36,16 @@ module.exports = {
                 attributes: ['id', 'name', 'description', 'price', 'quantity', 'discount', 'image'],
                 include: ['colors', 'category']
             })
+            // let urlList = 'http://localhost:4444/api/products/' + products.id
+            //const url = 'http://localhost:4444/api/prodcuts/'
 
             const productsMapped = products.rows.map(products=> {
                 const urlDetail = 'http://localhost:4444/api/products/' + products.id
+                const urlImage = 'http://localhost:4444/img/article/'
                 products.setDataValue('detail', urlDetail)
+                products.setDataValue('image', urlImage + products.image)
                 return products;
+            
             });
 
             const categories = await Category.findAll({

@@ -6,6 +6,17 @@ const { Op } = require('sequelize')
 const {Product,User,Color, Category} = require("../database/models")
 const { name } = require("ejs")
 const { validationResult } = require('express-validator')
+const productImagePath = '/img/'
+const productFilePath = '/pdf/'
+
+//funciones auxiliares para no repetir en el codigo
+function addProductImagePath(element) {
+  return element.dataValues.name = productImagePath + element.name
+}
+
+function addProductFilePath(element) {
+  return element.dataValues.name = productFilePath + element.name
+}
 
 const productsController = {
 
@@ -36,6 +47,12 @@ const productsController = {
         })
         }
  
+      //AGREGO RUTA A LAS IMAGENES
+      products.forEach(product => {
+        product.images.forEach(image => {
+          addProductImagePath(image)
+        })
+      })
         // aca leo el json y se lo paso al template
         // res.render('products/list', { productList: productList })
         res.render('products/catalogue', { productList })

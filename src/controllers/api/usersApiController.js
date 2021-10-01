@@ -8,10 +8,15 @@ module.exports = {
             const users = await User.findAndCountAll({
                 attributes: ['id', 'name', 'lastname', 'address', 'email', 'password', 'image']
             })
+            
+            let urlList = 'http://localhost:4444/api/users/' + users.id
 
+            //const url = 'http://localhost:4444/api/users/'
             const usersMapped = users.rows.map(users=> {
-                const urlList = 'http://localhost:4444/api/users/' + users.id
+                
+                let urlImage = 'http://localhost:4444/img/users/'
                 users.setDataValue('detail', urlList)
+                users.setDataValue('image', urlImage + users.image)
                 return users;
             });
 
@@ -38,7 +43,9 @@ module.exports = {
     },
 
     async detailUser(req, res) {
-           console.log("Entro...........")
+          
+        //    let urlImage = 'http://localhost:4444/img/users/'
+        //    users.setDataValue('image', urlImage + users.image)
             const user = await User.findOne({
                 attributes: ['id', 'name', 'lastname', 'address', 'email', 'image'],
                 where: { 
@@ -46,8 +53,8 @@ module.exports = {
                 }
             })
 
-        let url = 'http://localhost:4444/img/users/'
-        user.image = url + image
+        // let url = 'http://localhost:4444/img/users/'
+        // user.image = url + image
 
         if (!user) {
             res.status(404).json({
@@ -61,6 +68,8 @@ module.exports = {
         res.status(200).json({
             meta: {
                 status: "success",
+				
+				message: "user detail"
             },
             data: {
                 user //userMapped,
