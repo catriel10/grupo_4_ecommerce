@@ -509,7 +509,7 @@
   
   .msg-error {
     display: block;
-    font-size: 10px;
+    font-size: 20px;
     color: red;
     width: 70%;
     margin-top: 5px;

@@ -20,6 +20,8 @@ const validationNewProduct = [
         .notEmpty().withMessage('Please indicate product price'),
     body('discount')
         .notEmpty().withMessage('Please indicate product discount'),
+    body('quantity')
+        .notEmpty().withMessage('Please indicate product quantity'),
     body('color')
         .notEmpty().withMessage('Please select the color or colors'),
     body('category')
